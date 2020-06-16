@@ -1,41 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
+import "../mystyles.scss"
 import styles from "./layout.module.css"
+import Navbar from "../components/navbar"
+import Footer from "../components/footer"
 
-console.log(styles)
 
-const ListLink = props => (
-  <li style={{ display: `inline-block`, marginRight: `1rem`}}>
-    <Link to={props.to} activeClassName={styles.active}>
-      {props.children}
-    </Link>
-  </li>
-)
-
-const NavBar = props => (
-  <header style={{ marginBottom: `1.5rem` }}>
-    <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-      <h1 style={{ display: `inline` }}>Tommy's Cool Website</h1>
-    </Link>
-    <ul style={{ listStyle: `none`, float: `right`}}>
-      <ListLink to="/">Home</ListLink>
-      <ListLink to="/about/">About</ListLink>
-    </ul>
-  </header>
-)
-
-const Footer = props => (
-  <footer>
-    <hr />
-    <p style={{fontSize:`8px`}}>Test Footer!</p>
-  </footer>
-)
 
 export default function Layout({ children }) {
   return (
-    <div style={{ margin: `3rem auto`, maxWidth: 900, padding: `0 1rem` }}>
-      <NavBar />
-      {children}
+    <div>
+      <Navbar />
+      <div style={{ margin: `3rem auto`, maxWidth: 900, padding: `0 1rem` }}>
+        {children}
+      </div>
       <Footer />
     </div>
   )

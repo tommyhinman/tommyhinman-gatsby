@@ -1,8 +1,8 @@
 import Typography from "typography"
-import altonTheme from "typography-theme-alton"
+import lincolnTheme from "typography-theme-lincoln"
 
 const typography = new Typography({
-  ...altonTheme,
+  ...lincolnTheme,
   // headerColor: 'blue'
   overrideThemeStyles: () => ({
     // 'a:hover, a:active, a:focus': {

@@ -1,4 +1,5 @@
 import React from "react"
+import "../mystyles.scss"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 
@@ -10,8 +11,14 @@ export default function Home() {
         <title>Home | tommyhinman</title>
       </Helmet>
       <Layout>
-        <h3>Test Website!</h3>
-        <p>Some addl text.</p>
+
+
+        <div className="content">
+          <h1>Home</h1>
+          <p className="is-small">Some add'l text.</p>
+        </div>
+
+
       </Layout>
     </div>
   )

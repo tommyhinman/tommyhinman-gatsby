@@ -10,10 +10,19 @@ export default function About() {
       <title>About | tommyhinman</title>
     </Helmet>
     <Layout>
-      <h3>Testing an About page</h3>
-      <p>
-        <a href="mailto:me@example.com">me@example.com</a>
-      </p>
+
+
+      <div class="content">
+        <h1>About</h1>
+        <p>
+          This website is a work in progress!
+        </p>
+        <p>
+          <a href="mailto:me@example.com">me@example.com</a>
+        </p>
+      </div>
+
+      
     </Layout>
     </div>
   )

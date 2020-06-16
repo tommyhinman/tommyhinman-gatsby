@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+// Import initial values to use in overrides
+@import "~bulma/sass/utilities/initial-variables.sass";
+// Import fonts!
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700');
+
+// If need, change your variables before importing Bulma
+// $title-color: #ff0000;
+
+$title-family: "Work Sans", serif;
+$title-size: $size-4;
+
+$family-primary: "Quattrocento Sans", sans-serif;
+
+
+@import "~bulma/bulma.sass";
