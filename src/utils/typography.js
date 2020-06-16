@@ -1,8 +1,8 @@
 import Typography from "typography"
-import twinPeaksTheme from "typography-theme-twin-peaks"
+import altonTheme from "typography-theme-alton"
 
 const typography = new Typography({
-  ...twinPeaksTheme,
+  ...altonTheme,
   // headerColor: 'blue'
   overrideThemeStyles: () => ({
     // 'a:hover, a:active, a:focus': {
