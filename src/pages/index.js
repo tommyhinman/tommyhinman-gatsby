@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>tommyhinman.com</title>
+        <title>Home | tommyhinman</title>
       </Helmet>
       <Layout>
         <h3>Test Website!</h3>
