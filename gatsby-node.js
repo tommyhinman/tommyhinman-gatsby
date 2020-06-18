@@ -5,7 +5,9 @@ const util = require('util')
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
   if (node.relativeDirectory === `data/aoty`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    // Cut the 'data' folder out of the slug, since it's not necessary. There's probably a cleaner way to do this.
+    const slug = createFilePath({ node, getNode, basePath: `pages` }).replace('\/data','')
+
     console.log("Creating slug: " + slug)
     createNodeField({
       node,
@@ -35,7 +37,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allFile.nodes.forEach(( node ) => {
     // This is a pretty ugly way to get the year out of the file path to insert as context... There's probably a cleaner way.
-    var aotyYear = node.fields.slug.split('/')[3]
+    var aotyYear = node.fields.slug.split('/')[2]
     console.log("Creating page for year: " + aotyYear);
     createPage({
       path: node.fields.slug,
