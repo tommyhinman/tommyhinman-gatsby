@@ -6,10 +6,10 @@ class Footer extends Component {
 
   render() {
     return (
-      <footer class="footer">
-        <div class="content has-text-centered">
-          <p>
-            Test footer!
+      <footer className="footer sticky">
+        <div className="content has-text-centered">
+          <p className="is-size-7">
+           2020 - tommy hinman. source at <a href="https://github.com/tommyhinman/tommyhinman-gatsby">github</a>.
           </p>
         </div>
       </footer>

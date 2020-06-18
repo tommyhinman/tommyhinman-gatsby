@@ -3,15 +3,15 @@
 // Import initial values to use in overrides
 @import "~bulma/sass/utilities/initial-variables.sass";
 // Import fonts!
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:600');
+@import url('https://fonts.googleapis.com/css?family=Domine:700');
 @import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700');
 
 // If need, change your variables before importing Bulma
 // $title-color: #ff0000;
 
-$title-family: "Work Sans", serif;
-$title-size: $size-4;
-
+$title-family: "Domine", serif;
+// $title-size: $size-4;
+$dimensions: 16 24 32 48 64 96 128 256;
 $family-primary: "Quattrocento Sans", sans-serif;
 
 

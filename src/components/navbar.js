@@ -1,21 +1,25 @@
 import React, { Component } from "react"
-import Link from "gatsby-link"
+import { StaticQuery, Link, graphql } from "gatsby"
+import { RiMacbookLine } from "react-icons/ri"
 import "../mystyles.scss"
 import "./navbar.scss"
+const util = require('util')
 
 class Navbar extends Component {
-  state = {
-    //This sets the state of Bulma elements
-    navbarDropdownIsActive: false,
-    navbarDropdownActiveClass: "navbar-item has-dropdown is-hoverable",
+  constructor(props) {
+    super(props)
+    this.state = {
+      //This sets the state of Bulma elements
+      navbarDropdownIsActive: false,
+      navbarDropdownActiveClass: "navbar-item has-dropdown is-hoverable",
 
-    navbarMenuIsActive: false,
-    navbarMenuActiveClass: "navbar-menu",
+      navbarMenuIsActive: false,
+      navbarMenuActiveClass: "navbar-menu",
+    }
   }
 
-
   navbarDropdownToggle = () => {
-    if(this.state.navbarDropdownIsActive) {
+    if (this.state.navbarDropdownIsActive) {
       this.setState({
         navbarDropdownIsActive: false,
         navbarDropdownActiveClass: "navbar-item has-dropdown is-hoverable",
@@ -23,7 +27,8 @@ class Navbar extends Component {
     } else {
       this.setState({
         navbarDropdownIsActive: true,
-        navbarDropdownActiveClass: "navbar-item has-dropdown is-hoverable is-active"
+        navbarDropdownActiveClass:
+          "navbar-item has-dropdown is-hoverable is-active",
       })
     }
   }
@@ -36,7 +41,7 @@ class Navbar extends Component {
   }
 
   navbarMenuToggle = () => {
-    if(this.state.navbarMenuIsActive) {
+    if (this.state.navbarMenuIsActive) {
       this.setState({
         navbarMenuIsActive: false,
         navbarMenuActiveClass: "navbar-menu",
@@ -50,6 +55,7 @@ class Navbar extends Component {
   }
 
   render() {
+    console.log(util.inspect(this.props, false, null, true /* enable colors */));
     return (
       <div>
         <nav
@@ -57,11 +63,10 @@ class Navbar extends Component {
           role="navigation"
           aria-label="dropdown navigation"
         >
-
           <div className="navbar-brand">
-            <div className="navbar-item" >
+            <div className="navbar-item">
               <Link to="/">
-                <h1 class="title">Tommy</h1>
+                <RiMacbookLine class="has-text-black" size={32} />
               </Link>
               {/*}<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />*/}
             </div>
@@ -79,58 +84,55 @@ class Navbar extends Component {
               <span aria-hidden="true"></span>
             </a>
           </div>
-
-          <div id="navbarBasicExample" className={this.state.navbarMenuActiveClass}>
+          <div
+            id="navbarBasicExample"
+            className={this.state.navbarMenuActiveClass}
+          >
             <div className="navbar-start">
-
-              <Link to="about" className="navbar-item">
-              About
-              </Link>
-
               <div
                 className={this.state.navbarDropdownActiveClass}
                 onClick={this.navbarDropdownToggle}
                 onMouseLeave={this.navbarDropdownHide}
               >
-                <a className="navbar-link">
-                More
-                </a>
-
+                <a className="navbar-link">Music</a>
                 <div className="navbar-dropdown">
-                  <Link to="about" className="navbar-item">
-                  About
-                  </Link>
-                  <a className="navbar-item">
-                  Jobs
-                  </a>
-                  <a className="navbar-item">
-                  Contact
-                  </a>
-                  <hr className="navbar-divider" />
-                  <a className="navbar-item">
-                  Report an issue
-                  </a>
-                </div> {/* navbar-dropdown  */}
-              </div> {/* navbar-item  */}
-            </div> {/* navbar-start  */}
-
-            <div className="navbar-end">
-              <div className="navbar-item">
-                <div className="buttons">
-                  <a className="button is-primary">
-                    <strong>Sign up</strong>
-                  </a>
-                  <a className="button is-light">
-                  Log in
-                  </a>
-                </div> {/* buttons */}
-              </div> {/* navbar-item  */}
-            </div> {/* navbar-end  */}
-          </div> {/* navbar-menu  */}
+                  {this.props.years.map( (year) => (
+                    <Link to={year.context.slug} className="navbar-item">
+                      Best Albums {year.context.aotyYear}
+                    </Link>
+                  ))}
+                </div>{" "}
+                {/* navbar-dropdown  */}
+              </div>{" "}
+              <Link to="about" className="navbar-item">
+                About
+              </Link>
+              {/* navbar-item  */}
+            </div>{" "}
+            {/* navbar-start  */}
+            <div className="navbar-end" />
+          </div>{" "}
+          {/* navbar-menu  */}
         </nav>
       </div>
     )
   }
 }
 
-export default Navbar
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allSitePage(filter: {context: {aotyYear: {gt: "0"}}}, sort: {fields: context___aotyYear, order: DESC}) {
+          nodes {
+            context {
+              slug
+              aotyYear
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Navbar years={data.allSitePage.nodes} />}
+  />
+)
