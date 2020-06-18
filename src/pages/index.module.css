@@ -1,0 +1,5 @@
+.spacefiller {
+  flex: 1;
+  background: gold;
+  overflow: auto;
+}

@@ -1,5 +1,6 @@
 import React from "react"
 import "../mystyles.scss"
+import styles from "./index.module.css"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 import { IoIosGitBranch } from "react-icons/io"
@@ -15,13 +16,15 @@ export default function Home() {
         <title>home | tommyhinman.com</title>
       </Helmet>
       <Layout>
-
-
         <div className="content">
           <h1 class="title">tommy hinman</h1>
+          <hr />
           <div class="tile is-ancestor">
             <div class="tile is-parent">
-              <a href="mailto:tommyhinman@gmail.com" class="button is-medium is-fullwidth">
+              <a
+                href="mailto:tommyhinman@gmail.com"
+                class="button is-medium is-fullwidth"
+              >
                 <span class="icon">
                   <MdMailOutline />
                 </span>
@@ -29,7 +32,10 @@ export default function Home() {
               </a>
             </div>
             <div class="tile is-parent">
-              <a href="http://twitter.com/tommyhinman" class="button is-medium is-fullwidth">
+              <a
+                href="http://twitter.com/tommyhinman"
+                class="button is-medium is-fullwidth"
+              >
                 <span class="icon">
                   <RiTwitterLine />
                 </span>
@@ -37,7 +43,10 @@ export default function Home() {
               </a>
             </div>
             <div class="tile is-parent">
-              <a href="https://github.com/tommyhinman" class="button is-medium is-fullwidth">
+              <a
+                href="https://github.com/tommyhinman"
+                class="button is-medium is-fullwidth"
+              >
                 <span class="icon">
                   <IoIosGitBranch />
                 </span>
@@ -45,7 +54,10 @@ export default function Home() {
               </a>
             </div>
             <div class="tile is-parent">
-              <a href="https://last.fm/smnighthawk" class="button is-medium is-fullwidth">
+              <a
+                href="https://last.fm/smnighthawk"
+                class="button is-medium is-fullwidth"
+              >
                 <span class="icon">
                   <FaLastfm />
                 </span>
@@ -53,7 +65,10 @@ export default function Home() {
               </a>
             </div>
             <div class="tile is-parent">
-              <a href="http://steamcommunity.com/id/tommyh" class="button is-medium is-fullwidth">
+              <a
+                href="http://steamcommunity.com/id/tommyh"
+                class="button is-medium is-fullwidth"
+              >
                 <span class="icon">
                   <RiGamepadLine />
                 </span>
@@ -62,8 +77,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-
       </Layout>
     </div>
   )

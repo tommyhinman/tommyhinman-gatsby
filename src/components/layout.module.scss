@@ -2,3 +2,20 @@
   /* color: black;
   background-image: none; */
 }
+
+.spaceFiller {
+  flex: 1;
+  overflow: auto;
+}
+
+.parentContainer {
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layoutBody {
+  margin: 4rem auto;
+  max-width: 900;
+  padding: 0 1rem;
+}
