@@ -101,6 +101,10 @@ class Navbar extends Component {
                       Best Albums {year.context.aotyYear}
                     </Link>
                   ))}
+                  <hr className="navbar-divider"/>
+                  <a href="https://docs.google.com/spreadsheets/d/1sMt1AlNPOb1MYUlfPD6Gv65Y75rodJeF8nDOQPq_R-s" className="navbar-item">
+                    Meta Album List
+                  </a>
                 </div>{" "}
                 {/* navbar-dropdown  */}
               </div>{" "}

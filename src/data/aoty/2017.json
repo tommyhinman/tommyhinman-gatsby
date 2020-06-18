@@ -1,0 +1,251 @@
+{
+  "name": "2017",
+  "link": "x",
+  "albums": [
+    {
+      "place": "1",
+      "artistName": "Big Thief",
+      "albumName": "Capacity",
+      "albumImage": "https://coverartarchive.org/release-group/3fd9b616-15ec-4a3d-81df-866bd9942202/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "2",
+      "artistName": "Protomartyr",
+      "albumName": "Relatives in Descent",
+      "albumImage": "https://coverartarchive.org/release/4734f1c1-6529-41ac-9c88-5ff82cb6e13c/18324922657.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "3",
+      "artistName": "Idles",
+      "albumName": "Brutalism",
+      "albumImage": "https://coverartarchive.org/release/6d4e53b2-82d1-4154-907d-00f243284f2b/16733187540.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "4",
+      "artistName": "Gang of Youths",
+      "albumName": "Go Farther in Lightness",
+      "albumImage": "https://ia800809.us.archive.org/8/items/mbid-05a13538-a9c8-45cc-87b1-6fe51bce08f7/mbid-05a13538-a9c8-45cc-87b1-6fe51bce08f7-20244359129_thumb500.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "5",
+      "artistName": "Priests",
+      "albumName": "Nothing Feels Natural",
+      "albumImage": "https://coverartarchive.org/release/003c411f-e563-461b-963b-f3ec51498975/15687611371.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "6",
+      "artistName": "Manchester Orchestra",
+      "albumName": "A Black Mile to the Surface",
+      "albumImage": "https://coverartarchive.org/release-group/0e044656-b567-473e-ad96-bec356ce2aba/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "7",
+      "artistName": "Jesca Hoop",
+      "albumName": "Memories are Now",
+      "albumImage": "https://coverartarchive.org/release-group/0f843344-01b0-4b18-a7f6-568f2f0b0d57/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "8",
+      "artistName": "Slowdive",
+      "albumName": "Slowdive",
+      "albumImage": "https://coverartarchive.org/release-group/9318347d-b4bc-4b50-bd5e-c9a9fcb9aa98/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "9",
+      "artistName": "Fleet Foxes",
+      "albumName": "Crack-Up",
+      "albumImage": "https://coverartarchive.org/release-group/0a35f45c-c89c-418a-93e5-e29ed1d34caf/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "10",
+      "artistName": "Elder",
+      "albumName": "Reflections of a Floating World",
+      "albumImage": "https://coverartarchive.org/release-group/474f819f-def3-49c8-b764-381649d9e8c3/front.png",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "11",
+      "artistName": "Broken Social Scene",
+      "albumName": "Hug of Thunder",
+      "albumImage": "https://coverartarchive.org/release-group/02c033c9-f660-48cb-9927-531a02a6bd9a/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "12",
+      "artistName": "Pile",
+      "albumName": "A Hairshirt of Purpose",
+      "albumImage": "https://coverartarchive.org/release/5b32481d-d434-4841-97bf-84802472135d/16362889103.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "13",
+      "artistName": "The National",
+      "albumName": "Sleep Well Beast",
+      "albumImage": "https://coverartarchive.org/release/60a2da10-a7bc-43a1-8e36-eeffc624034d/16694939757.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "14",
+      "artistName": "Kendrick Lamar",
+      "albumName": "DAMN.",
+      "albumImage": "https://coverartarchive.org/release-group/b88655ba-7469-48b8-a296-b9011ab73ef3/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "15",
+      "artistName": "Julien Baker",
+      "albumName": "Turn Out the Lights",
+      "albumImage": "https://coverartarchive.org/release-group/5768576a-679d-4ae4-a04d-e41da4998aa1/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "16",
+      "artistName": "All Them Witches",
+      "albumName": "Sleeping Through the War",
+      "albumImage": "https://coverartarchive.org/release-group/d83178d3-82da-460d-a7b7-481212c50407/front.png",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "17",
+      "artistName": "Converge",
+      "albumName": "The Dusk in Us",
+      "albumImage": "https://coverartarchive.org/release-group/fe96f1f4-5c9f-4a39-a9d1-181dd3f4c54b/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "18",
+      "artistName": "Rolling Blackouts Coastal Fever",
+      "albumName": "The French Press",
+      "albumImage": "https://coverartarchive.org/release-group/aa1eb1e1-4f46-43c2-83d6-94ca9e20a9de/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "19",
+      "artistName": "Blanck Mass",
+      "albumName": "World Eater",
+      "albumImage": "https://coverartarchive.org/release-group/4b0b8787-57c2-4374-9d5d-63a9e4440dff/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "20",
+      "artistName": "Wolf Alice",
+      "albumName": "Visions of a Life",
+      "albumImage": "https://coverartarchive.org/release-group/7f231c61-20b2-49d6-ac66-1cacc4cc775f/front.png",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "21",
+      "artistName": "Waxahatchee",
+      "albumName": "Out in the Storm",
+      "albumImage": "https://coverartarchive.org/release-group/b3808167-f635-4e88-b0c4-a7873e86237e/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "22",
+      "artistName": "Caddywhompus",
+      "albumName": "Odd Hours",
+      "albumImage": "https://coverartarchive.org/release-group/779b0f7e-c925-4240-9fd6-d2aa20b8c051/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "23",
+      "artistName": "Julie Byrne",
+      "albumName": "Not Even Happiness",
+      "albumImage": "https://coverartarchive.org/release-group/5bb8e065-25f9-4427-85a6-56979cb99b19/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "24",
+      "artistName": "Charlotte Gainsbourg",
+      "albumName": "Rest",
+      "albumImage": "https://coverartarchive.org/release-group/78ccbb45-a0d2-47f0-b43e-0716831c7864/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "25",
+      "artistName": "Sorority Noise",
+      "albumName": "You're not as ____ as you Think",
+      "albumImage": "https://coverartarchive.org/release-group/625ae1df-cb44-40fa-bc56-46eda0c9ce8b/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "26",
+      "artistName": "Do Make Say Think",
+      "albumName": "Stubborn Persistent Illusions",
+      "albumImage": "https://coverartarchive.org/release-group/d17b9d5a-3a89-4650-94a3-81ca88375828/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "27",
+      "artistName": "Grandbrothers",
+      "albumName": "Open",
+      "albumImage": "https://coverartarchive.org/release-group/66610789-fd17-404b-b894-2272012ca046/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "28",
+      "artistName": "Billy Woods",
+      "albumName": "Known Unknowns",
+      "albumImage": "https://coverartarchive.org/release-group/7f3f840b-8ca2-4d7b-a52b-daf45708eb62/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "29",
+      "artistName": "Quicksand",
+      "albumName": "Interiors",
+      "albumImage": "https://coverartarchive.org/release-group/985de8de-1a8b-4ee5-91ce-a1e6aefad108/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "30",
+      "artistName": "Alvvays",
+      "albumName": "Antisocialites",
+      "albumImage": "https://coverartarchive.org/release-group/1f0a3090-ae8c-4fbd-9b70-b4371961ef11/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Alex Cameron",
+      "albumName": "Forced Witness",
+      "albumImage": "https://coverartarchive.org/release-group/43f7ce86-9448-4914-a867-5220b4a7555d/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Ibeyi",
+      "albumName": "Ash",
+      "albumImage": "https://coverartarchive.org/release-group/19f89c3e-3802-423e-b155-7e39104abff7/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Photay",
+      "albumName": "Onism",
+      "albumImage": "https://coverartarchive.org/release-group/8063670b-1bd7-4ef8-a239-b5c80548462d/front.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Thunder Dreamer",
+      "albumName": "Capture",
+      "albumImage": "https://f4.bcbits.com/img/a1250759136_10.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Young Jesus",
+      "albumName": "S/T",
+      "albumImage": "http://giganticnoise.com/wp-content/uploads/2017/07/Young-Jesus-Front-Cover.jpg",
+      "albumSpotifyLink": ""
+    }
+  ]
+}

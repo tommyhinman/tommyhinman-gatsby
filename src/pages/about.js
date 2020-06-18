@@ -22,7 +22,7 @@ export default function About() {
         </p>
       </div>
 
-      
+
     </Layout>
     </div>
   )
