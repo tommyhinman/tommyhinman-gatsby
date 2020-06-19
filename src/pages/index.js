@@ -17,7 +17,7 @@ export default function Home() {
       </Helmet>
       <Layout>
         <div className="content">
-          <h1 class="title">tommy hinman</h1>
+          <h1 class="title is-size-2-desktop is-size-3-mobile has-text-centered-mobile">tommy hinman</h1>
           <hr />
           <div class="tile is-ancestor">
             <div class="tile is-parent">

@@ -9,7 +9,11 @@ export default function Layout({ children }) {
     <div className={styles.parentContainer} >
       <Navbar />
       <div className={styles.layoutBody}>
-        {children}
+        <div className="columns is-centered">
+          <div className="column is-three-fifths-desktop is-full-mobile">
+            {children}
+          </div>
+        </div>
       </div>
       <div className={styles.spaceFiller} /> {/*Flexible Invisible Space Filler!*/}
       <Footer />

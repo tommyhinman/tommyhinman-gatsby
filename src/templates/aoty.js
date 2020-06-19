@@ -12,8 +12,6 @@ export default function Aoty({ data }) {
       <title>AOTY - {data.aotyJson.name} | tommyhinman</title>
     </Helmet>
     <Layout>
-      <div class="section">
-
       <h1 className="title is-size-1-desktop is-size-3-mobile">
         Best Albums of {data.aotyJson.name}
       </h1>
@@ -29,12 +27,9 @@ export default function Aoty({ data }) {
           ))}
         </div>
       </div>
-      </div>
-
     </Layout>
     </div>
   )
-
 }
 
 export const query = graphql`

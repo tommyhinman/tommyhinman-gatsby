@@ -4,7 +4,7 @@ import "../mystyles.scss"
 export default function Album({ album }) {
   return (
 
-    <div>
+    <div className="container">
       {/*Desktop View*/}
       <div className="is-hidden-mobile">
         <h1 className="title is-size-1 has-text-info">
