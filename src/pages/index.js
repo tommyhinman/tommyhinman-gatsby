@@ -55,7 +55,7 @@ export default function Home() {
             </div>
             <div class="tile is-parent">
               <a
-                href="https://last.fm/user/smnighthawk"
+                href="https://last.fm/user/tommyhinman"
                 class="button is-medium is-fullwidth"
               >
                 <span class="icon">
