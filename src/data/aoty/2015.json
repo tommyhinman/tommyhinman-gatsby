@@ -1,0 +1,20 @@
+{
+  "name": "2015",
+  "link": "x",
+  "albums": [
+    {
+      "place": "1",
+      "artistName": "Art1",
+      "albumName": "Alb1",
+      "albumImage": "album1.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "2",
+      "artistName": "Art2",
+      "albumName": "Alb2",
+      "albumImage": "album2.jpg",
+      "albumSpotifyLink": ""
+    }
+  ]
+}

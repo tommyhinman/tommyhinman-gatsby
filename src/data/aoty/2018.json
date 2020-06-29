@@ -7,6 +7,7 @@
       "artistName": "Idles",
       "albumName": "Joy as an Act of Resistance",
       "albumImage": "https://ia802900.us.archive.org/31/items/mbid-882917bf-09f9-42c2-8c3e-41bb741d126e/mbid-882917bf-09f9-42c2-8c3e-41bb741d126e-21045674015_thumb500.jpg",
+      "albumImageFilename": "idles-joy-as-an-act-of-resistance.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/7BbRSUBwTB37ut0Ht3yAqt?si=gBMI7wTASSSTrPsUf0FNOg"
     },
     {
@@ -14,6 +15,7 @@
       "artistName": "Daughters",
       "albumName": "You Won't Get What You Want",
       "albumImage": "https://ia800701.us.archive.org/20/items/mbid-8d3cddb8-3cd5-4e03-8c2d-cfe1aa8447d7/mbid-8d3cddb8-3cd5-4e03-8c2d-cfe1aa8447d7-21381925212_thumb500.jpg",
+      "albumImageFilename": "daughters-you-wont-get-what-you-want.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/7w7ZTlk8YLc0OxviTp97qA?si=xDfnG9YoSRqntMmlFKDb4g"
     },
     {
@@ -21,6 +23,7 @@
       "artistName": "Parquet Courts",
       "albumName": "Wide Awake!",
       "albumImage": "https://ia802801.us.archive.org/9/items/mbid-b429fde4-8676-4af6-9478-0b3bb172ac8a/mbid-b429fde4-8676-4af6-9478-0b3bb172ac8a-19913288269_thumb500.jpg",
+      "albumImageFilename": "parquet-courts-wide-awake.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/5uTI2HcpAywDP8Vo1DpJta?si=wEse6IFITsGVwL1INp50yQ"
     },
     {
@@ -28,6 +31,7 @@
       "artistName": "A.A.L. (Against All Logic)",
       "albumName": "2012-2017",
       "albumImage": "https://ia802804.us.archive.org/19/items/mbid-395900a3-318d-46d2-8358-947a6f2ea910/mbid-395900a3-318d-46d2-8358-947a6f2ea910-19463819571_thumb500.jpg",
+      "albumImageFilename": "against-all-logic-2012-2017.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/1uzfGk9vxMXfaZ2avqwxod?si=ReyQbPRxSXmI531QCKTILw"
     },
     {
@@ -35,6 +39,7 @@
       "artistName": "Shame",
       "albumName": "Songs of Praise",
       "albumImage": "https://ia902803.us.archive.org/7/items/mbid-f2b0e0b1-ae55-461d-aa8e-db893f3047f1/mbid-f2b0e0b1-ae55-461d-aa8e-db893f3047f1-20576668677_thumb500.jpg",
+      "albumImageFilename": "shame-songs-of-praise.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/3A1kutvBmC6czSsSv7aR5E?si=Z1mD27UtSvOSU4_YFEy3Xw"
     },
     {
@@ -42,6 +47,7 @@
       "artistName": "Deafheaven",
       "albumName": "Ordinary Corrupt Human Love",
       "albumImage": "https://ia802903.us.archive.org/20/items/mbid-d1aa5869-a1f8-4646-afc2-abfe3fdd4368/mbid-d1aa5869-a1f8-4646-afc2-abfe3fdd4368-20532633765_thumb500.jpg",
+      "albumImageFilename": "deafheaven-ordinary-corrupt-human-love.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/2iA7rzpQsOfAPkfH4Ekp7f?si=QuQgRCsGQLyZPubeORyUhA"
     },
     {
@@ -49,6 +55,7 @@
       "artistName": "Snail Mail",
       "albumName": "Lush",
       "albumImage": "https://coverartarchive.org/release/05ea6699-1c57-49b7-a6f7-bb361982f4d7/19420888579_thumb500.jpg",
+      "albumImageFilename": "snail-mail-lush.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/2e48GqjEwCi87gQJanb1bf?si=yNd_Kz9rSQ6Cx8QaAdrgIA"
     },
     {
@@ -56,6 +63,7 @@
       "artistName": "The Beths",
       "albumName": "Future Me Hates Me",
       "albumImage": "https://ia802900.us.archive.org/23/items/mbid-018c2a22-52d6-4cda-a489-9b19ead0dd85/mbid-018c2a22-52d6-4cda-a489-9b19ead0dd85-20631718109_thumb500.jpg",
+      "albumImageFilename": "the-beths-future-me-hates-me.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/4xG41eVnTuDK6uMmcksQ9B?si=e9vF2wtoTsWa1AwDSA9nlg"
     },
     {
@@ -63,6 +71,7 @@
       "artistName": "Beach House",
       "albumName": "7",
       "albumImage": "https://ia802804.us.archive.org/28/items/mbid-2ed28366-d982-4671-aec0-632cda8ca9bb/mbid-2ed28366-d982-4671-aec0-632cda8ca9bb-19290765672_thumb500.jpg",
+      "albumImageFilename": "beach-house-7.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/4qftBBO7pnYlek3mRENIvM?si=Bwjs00hnRwmmSXoVxgHLNA"
     },
     {
@@ -70,6 +79,7 @@
       "artistName": "Nils Frahm",
       "albumName": "All Melody",
       "albumImage": "https://ia800107.us.archive.org/12/items/mbid-7ebabd10-6943-494b-bbb9-8c38d164f342/mbid-7ebabd10-6943-494b-bbb9-8c38d164f342-18822492433_thumb500.jpg",
+      "albumImageFilename": "nils-frahm-all-melody.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/3MH77JVM17CEdDLz374t1e?si=6SX3MIAJQkW8rdzNYaHh6Q"
     },
     {
@@ -77,6 +87,7 @@
       "artistName": "Jon Hopkins",
       "albumName": "Singularity",
       "albumImage": "https://ia802800.us.archive.org/26/items/mbid-30161b32-5bf3-4ea5-8a13-4dbddfb40699/mbid-30161b32-5bf3-4ea5-8a13-4dbddfb40699-19771732225_thumb500.jpg",
+      "albumImageFilename": "john-hopkins-singularity.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/1nvzBC1M3dlCMIxfUCBhlO?si=MzjC1r6URY25AjI4hOWYhA"
     },
     {
@@ -84,6 +95,7 @@
       "artistName": "Earl Sweatshirt",
       "albumName": "Some Rap Songs",
       "albumImage": "https://ia601503.us.archive.org/8/items/mbid-bb12aa9f-824c-4c3d-8e6c-5cb1f40b3ca3/mbid-bb12aa9f-824c-4c3d-8e6c-5cb1f40b3ca3-21597302452_thumb500.jpg",
+      "albumImageFilename": "earl-sweatshirt-some-rap-songs.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/66at85wgO2pu5CccvqUF6i?si=qOyq22WiRkmcDuRYmmM25g"
     },
     {
@@ -91,6 +103,7 @@
       "artistName": "Caroline Rose",
       "albumName": "Loner",
       "albumImage": "https://ia802806.us.archive.org/6/items/mbid-ed177cdd-f5d5-481f-b0fe-b76d353f4fcb/mbid-ed177cdd-f5d5-481f-b0fe-b76d353f4fcb-19293291137_thumb500.jpg",
+      "albumImageFilename": "caroline-rose-loner.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/2ztVsnlMAsHqVe1BjoICnr?si=lFyAc4OwSimADS559eYyaQ"
     },
     {
@@ -98,6 +111,7 @@
       "artistName": "Flasher",
       "albumName": "Constant Image",
       "albumImage": "https://ia802804.us.archive.org/25/items/mbid-ad6b9da1-7ae8-4fde-b4f2-5ef912817f68/mbid-ad6b9da1-7ae8-4fde-b4f2-5ef912817f68-19938930527_thumb500.jpg",
+      "albumImageFilename": "flasher-constant-image.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/6fvUDhvz6hDVck9epHLnf6?si=CpkvGoIlSxuraOXMG9qPmw"
     },
     {
@@ -105,6 +119,7 @@
       "artistName": "Tim Hecker",
       "albumName": "Konoyo",
       "albumImage": "https://ia802901.us.archive.org/3/items/mbid-359c37a9-bd1e-48db-b892-6f96846403e4/mbid-359c37a9-bd1e-48db-b892-6f96846403e4-21105151709_thumb500.jpg",
+      "albumImageFilename": "tim-hecker-konoyo.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/4TU8d9DGafZZiyN7peC4sl?si=MABbS-UDR_SDCWecG4DsvQ"
     },
     {
@@ -112,6 +127,7 @@
       "artistName": "Holy Fawn",
       "albumName": "Death Spells",
       "albumImage": "https://ia800700.us.archive.org/10/items/mbid-2fecd74f-e921-4ed1-b5bb-23dccb6e9203/mbid-2fecd74f-e921-4ed1-b5bb-23dccb6e9203-20973015984_thumb500.jpg",
+      "albumImageFilename": "holy-fawn-death-spells.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/7FftBO1RPryPqS91iua3ne?si=JgbnaT_jQfuZ16C8VLYY7w"
     },
     {
@@ -119,6 +135,7 @@
       "artistName": "Young Fathers",
       "albumName": "Cocoa Sugar",
       "albumImage": "https://ia902802.us.archive.org/0/items/mbid-11ce37ca-3894-4269-a609-5bb916bfcedf/mbid-11ce37ca-3894-4269-a609-5bb916bfcedf-19763834370_thumb500.jpg",
+      "albumImageFilename": "young-fathers-cocoa-sugar.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/03Dp6OJS4wd7dI1rRszPwj?si=AuAr0U7uTTCYJIOSWqc0UQ"
     },
     {
@@ -126,6 +143,7 @@
       "artistName": "Let's Eat Grandma",
       "albumName": "I'm All Ears",
       "albumImage": "https://ia902809.us.archive.org/2/items/mbid-139863bd-b500-4a08-84c5-d05c10e08575/mbid-139863bd-b500-4a08-84c5-d05c10e08575-20311150673_thumb500.jpg",
+      "albumImageFilename": "lets-eat-grandma-im-all-ears.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/5Bnhkya5cGltQFTrnC0grx?si=CKk8lqiqRnGnrGbIUjU0zQ"
     },
     {
@@ -133,6 +151,7 @@
       "artistName": "Neko Case",
       "albumName": "Hell-On",
       "albumImage": "https://ia802803.us.archive.org/17/items/mbid-e7a7a58c-2dbc-485c-9a75-54ba41defda6/mbid-e7a7a58c-2dbc-485c-9a75-54ba41defda6-20060472950_thumb500.jpg",
+      "albumImageFilename": "neko-case-hell-on.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/7I141P48NQw206up7jBezG?si=pevqfJSsQpumFpK6VEeoKw"
     },
     {
@@ -140,6 +159,7 @@
       "artistName": "Iceage",
       "albumName": "Beyondless",
       "albumImage": "https://ia902808.us.archive.org/1/items/mbid-d1b776d6-d7c7-4505-b6df-0e7bfba0c2db/mbid-d1b776d6-d7c7-4505-b6df-0e7bfba0c2db-20357897053_thumb500.jpg",
+      "albumImageFilename": "iceage-beyondless.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/5H8wFFblf7YvGc7LbBzuR9?si=9S52EbEwQMiPavMQYIk0aQ"
     },
     {
@@ -147,6 +167,7 @@
       "artistName": "Car Seat Headrest",
       "albumName": "Twin Fantasy",
       "albumImage": "https://ia802804.us.archive.org/10/items/mbid-66d6168d-14f2-48bf-8c5f-a125401ebaa7/mbid-66d6168d-14f2-48bf-8c5f-a125401ebaa7-19013827522_thumb500.jpg",
+      "albumImageFilename": "car-seat-headrest-twin-fantasy.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/20U1UWeGcGq7JVW0tf8yfH?si=BCk-UUV-R3qVo71wYmWNJA"
     },
     {
@@ -154,6 +175,7 @@
       "artistName": "Chastity",
       "albumName": "Death Lust",
       "albumImage": "https://f4.bcbits.com/img/a2897047827_10.jpg",
+      "albumImageFilename": "chastity-death-lust.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/57j0H5oZv58jTE1kR4kjIg?si=LSqRpaTNSzmFL_JGNyWt4g"
     },
     {
@@ -161,12 +183,14 @@
       "artistName": "Adrianne Lenker",
       "albumName": "abysskiss",
       "albumImage": "https://f4.bcbits.com/img/a2245808128_10.jpg",
+      "albumImageFilename": "adrianne-lenker-abysskiss.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/5W6TxvIqACEfnxm0VgPhv7?si=R5L8iaXgQhKd5pDe9fpV9A"
     },
     {
       "place": "24",
       "artistName": "Tropical Fuck Storm",
       "albumName": "A Laughing Death in Meatspace",
+      "albumImageFilename": "tropical-fuck-storm-a-laughing-death-in-meatspace.jpg",
       "albumImage": "https://ia802806.us.archive.org/6/items/mbid-5ad30adb-4ed8-4ead-a404-e780de1cc45d/mbid-5ad30adb-4ed8-4ead-a404-e780de1cc45d-19863197935_thumb500.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/1Q351pwqlWprsmF8fIudo6?si=CUQctXbzTmKQuAzRvPxOPg"
     },
@@ -175,6 +199,7 @@
       "artistName": "Hop Along",
       "albumName": "Bark Your Head Off, Dog",
       "albumImage": "https://ia800108.us.archive.org/25/items/mbid-e5b2ec24-8d2c-4641-8058-815cb35e67a7/mbid-e5b2ec24-8d2c-4641-8058-815cb35e67a7-18918680426_thumb500.jpg",
+      "albumImageFilename": "hop-along-bark-your-head-off-dog.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/7taAuoHvZ4LJzEaB0OzuP3?si=eEwiy_XBRp-AOr6u8w1u-g"
     },
     {
@@ -182,6 +207,7 @@
       "artistName": "boygenius",
       "albumName": "boygenius",
       "albumImage": "https://ia802907.us.archive.org/26/items/mbid-3fa9804c-3721-406c-b176-83f768389c30/mbid-3fa9804c-3721-406c-b176-83f768389c30-21304666857_thumb500.jpg",
+      "albumImageFilename": "boygenius-boygenius.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/5BRORKnC2HD5xhgUyR31SH?si=yOx2v8XlTD6LxfsS2YRKWQ"
     },
     {
@@ -189,6 +215,7 @@
       "artistName": "Mikaela Davis",
       "albumName": "Delivery",
       "albumImage": "https://ia601508.us.archive.org/14/items/mbid-c356329a-7052-4292-b0a0-66f467ef072c/mbid-c356329a-7052-4292-b0a0-66f467ef072c-21696383895_thumb500.jpg",
+      "albumImageFilename": "mikaela-davis-delivery.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/4FUgK5s0hDVf5yKIOwq7ex?si=3VK5BiLnRW-s26xC3oCpGQ"
     },
     {
@@ -196,6 +223,7 @@
       "artistName": "Sons of Kemet",
       "albumName": "Your Queen is a Reptile",
       "albumImage": "https://ia902803.us.archive.org/10/items/mbid-7ac02e18-decf-4003-8b79-c035ae1a8fb8/mbid-7ac02e18-decf-4003-8b79-c035ae1a8fb8-19544207848_thumb500.jpg",
+      "albumImageFilename": "sons-of-kemet-your-queen-is-a-reptile.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/4pxnDGBdoGu88h8ZInX5f5?si=WCnsV3NlQgOrEFElEb5Djw"
     },
     {
@@ -203,6 +231,7 @@
       "artistName": "HOLY",
       "albumName": "All These Worlds are Yours",
       "albumImage": "https://ia600108.us.archive.org/2/items/mbid-8a7f2759-e1ec-4e23-bf91-42e501065dae/mbid-8a7f2759-e1ec-4e23-bf91-42e501065dae-18971228148_thumb500.jpg",
+      "albumImageFilename": "holy-all-these-worlds-are-yours.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/2xD41zvm7Mn7mB64IWtUHs?si=1y6OO7P_Rjmqb3ZNdH4xBA"
     },
     {
@@ -210,6 +239,7 @@
       "artistName": "Sloucher",
       "albumName": "Be True",
       "albumImage": "https://f4.bcbits.com/img/a3625052353_10.jpg",
+      "albumImageFilename": "sloucher-be-true.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/0ozxvtCkDsMFNvvSPeZAWm?si=E9S7frHSR_a2pddDqlO-rw"
     },
     {
@@ -217,6 +247,7 @@
       "artistName": "Bodega",
       "albumName": "Endless Scroll",
       "albumImage": "https://f4.bcbits.com/img/a1596674546_10.jpg",
+      "albumImageFilename": "bodega-endless-scroll.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/2L8xdzyyH71fza7w3OILzl?si=qwV4hbp4TOyxo4NkCA6lXA"
     },
     {
@@ -224,6 +255,7 @@
       "artistName": "Jean Grae x Quelle Chris",
       "albumName": "Everything's Fine",
       "albumImage": "https://ia800107.us.archive.org/33/items/mbid-ea68a4bc-23fa-4098-bdc4-b2f945ae1b61/mbid-ea68a4bc-23fa-4098-bdc4-b2f945ae1b61-18919779443_thumb500.jpg",
+      "albumImageFilename": "jean-grae-quelle-chris-everythings-fine.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/22oHrB4SLwayyuLE02t5BD?si=kusCSwHpSpKrURNmyNOlww"
     },
     {
@@ -231,6 +263,7 @@
       "artistName": "Kathryn Joseph",
       "albumName": "From When I Wake the Want Is",
       "albumImage": "https://ia601508.us.archive.org/5/items/mbid-f8664fed-1eba-4a2e-ab66-5df4fe45cf39/mbid-f8664fed-1eba-4a2e-ab66-5df4fe45cf39-21798623072_thumb500.jpg",
+      "albumImageFilename": "kathryn-joseph-from-when-i-wake-the-want-is.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/7faUUBGOjjw16j2GGgSsS3?si=-jFNETjKROCyo3q915XP3A"
     },
     {
@@ -238,6 +271,7 @@
       "artistName": "Moses Sumney",
       "albumName": "Black in Deep Red, 2014",
       "albumImage": "https://f4.bcbits.com/img/a1292895729_10.jpg",
+      "albumImageFilename": "moses-sumney-black-in-deep-red-2014.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/7q1a6OEw4MtYUIzG5SFOi3?si=zJmHUmX-Q5afH-bfz-X-zw"
     },
     {
@@ -245,6 +279,7 @@
       "artistName": "Jeff Tweedy",
       "albumName": "WARM",
       "albumImage": "https://ia902901.us.archive.org/34/items/mbid-b9fe982a-3ddb-490f-b702-18b26e66b929/mbid-b9fe982a-3ddb-490f-b702-18b26e66b929-21759024089_thumb500.jpg",
+      "albumImageFilename": "jeff-tweedy-warm.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/2XTPulCL6EUx1thyJPnlmj?si=LCEjgRyjRfudlhEfjAfqCw"
     }
   ]

@@ -41,6 +41,7 @@ export const query = graphql`
         artistName
         place
         albumImage
+        albumImageFilename
       }
     }
   }

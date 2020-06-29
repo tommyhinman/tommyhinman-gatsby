@@ -18,7 +18,7 @@ export default function Album({ album }) {
           </div>
           <div className="column is-5 is-offset-1" align="right">
             <figure className="image is-256x256">
-                <img src={album.albumImage} />
+                <img src={'https://tommyhinman-albums.s3-us-west-2.amazonaws.com/512/' + album.albumImageFilename} />
             </figure>
           </div>
         </div>
@@ -37,7 +37,7 @@ export default function Album({ album }) {
           </div>
           <div className="column is-4 is-offset-1" align="right">
             <figure className="image is-96x96">
-                <img src={album.albumImage} />
+                <img src={'https://tommyhinman-albums.s3-us-west-2.amazonaws.com/256/' + album.albumImageFilename} />
             </figure>
           </div>
         </div>
