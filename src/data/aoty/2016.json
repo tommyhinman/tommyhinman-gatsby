@@ -1,0 +1,286 @@
+{
+  "name": "2016",
+  "link": "x",
+  "albums": [
+    {
+      "place": "1",
+      "artistName": "Pinegrove",
+      "albumName": "Cardinal",
+      "albumImage": "",
+      "albumImageFilename": "pinegrove-cardinal.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2SmrUzUMMOYQqoPuOhlhjw"
+    },
+    {
+      "place": "2",
+      "artistName": "Car Seat Headrest",
+      "albumName": "Teens of Denial",
+      "albumImage": "",
+      "albumImageFilename": "car-seat-head-rest-teens-of-denial.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/26DseQO366JfXwIP7dIgQj"
+    },
+    {
+      "place": "3",
+      "artistName": "Radiohead",
+      "albumName": "A Moon Shaped Pool",
+      "albumImage": "",
+      "albumImageFilename": "radiohead-a-moon-shaped-pool.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6vuykQgDLUCiZ7YggIpLM9"
+    },
+    {
+      "place": "4",
+      "artistName": "Angel Olsen",
+      "albumName": "My Woman",
+      "albumImage": "",
+      "albumImageFilename": "angel-olsen-my-woman.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5M8xQaQZuW2LZGVXZ3mlKN"
+    },
+    {
+      "place": "5",
+      "artistName": "Michael Kiwanuka",
+      "albumName": "Love & Hate",
+      "albumImage": "",
+      "albumImageFilename": "michael-kiwanuka-love-and-hate.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0qxsfpy2VU0i4eDR9RTaAU"
+    },
+    {
+      "place": "6",
+      "artistName": "Anderson .Paak",
+      "albumName": "Malibu",
+      "albumImage": "",
+      "albumImageFilename": "anderson-paak-malibu.jpeg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4VFG1DOuTeDMBjBLZT7hCK"
+    },
+    {
+      "place": "7",
+      "artistName": "Nicolas Jaar",
+      "albumName": "Sirens",
+      "albumImage": "",
+      "albumImageFilename": "nicolas-jaar-sirens.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2EvZiOMBlC9b5hbjbZCjZv"
+    },
+    {
+      "place": "8",
+      "artistName": "Whitney",
+      "albumName": "Light Upon the Lake",
+      "albumImage": "",
+      "albumImageFilename": "whitney-light-upon-the-lake.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5yMCA6HdFAeL1aqUjxO3MO"
+    },
+    {
+      "place": "9",
+      "artistName": "A Tribe Called Quest",
+      "albumName": "We Got it from Here... Thank You 4 Your Service",
+      "albumImage": "",
+      "albumImageFilename": "a-tribe-called-quest-we-got-it.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3WvQpufOsPzkZvcSuynCf3"
+    },
+    {
+      "place": "10",
+      "artistName": "MONEY",
+      "albumName": "Suicide Songs",
+      "albumImage": "",
+      "albumImageFilename": "money-suicide-songs.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4Yrey9xf8CYNrKaeSgTGAs"
+    },
+    {
+      "place": "11",
+      "artistName": "Slow Dakota",
+      "albumName": "The Ascension of Slow Dakota",
+      "albumImage": "",
+      "albumImageFilename": "slow-dakota-the-ascension.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4h7NRdxlDtkLPlQssE6O10"
+    },
+    {
+      "place": "12",
+      "artistName": "Explosions in the Sky",
+      "albumName": "The Wilderness",
+      "albumImage": "",
+      "albumImageFilename": "explosions-in-the-sky-the-wilderness.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/79X3DX8IqI3jZXQvsrFiDV"
+    },
+    {
+      "place": "13",
+      "artistName": "Bon Iver",
+      "albumName": "22, A Million",
+      "albumImage": "",
+      "albumImageFilename": "bon-iver-22-a-million.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/1PgfRdl3lPyACfUGH4pquG"
+    },
+    {
+      "place": "14",
+      "artistName": "Parquet Courts",
+      "albumName": "Human Performance",
+      "albumImage": "",
+      "albumImageFilename": "parquet-courts-human-performance.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4RNew41ZeRuoRNg3YAhvpe"
+    },
+    {
+      "place": "15",
+      "artistName": "Yak",
+      "albumName": "Alas Salvation",
+      "albumImage": "",
+      "albumImageFilename": "yak-alas-salvation.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/79eEK4Zv0dqVXrarAmqozS"
+    },
+    {
+      "place": "16",
+      "artistName": "Greys",
+      "albumName": "Outer Heaven",
+      "albumImage": "",
+      "albumImageFilename": "greys-outer-heaven.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0wB19rOCyof5vPv6pYnCDH"
+    },
+    {
+      "place": "17",
+      "artistName": "The Drones",
+      "albumName": "Feelin Kinda Free",
+      "albumImage": "",
+      "albumImageFilename": "drones-feelin-kinda-free.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4qv5FxVbJgGyHJZKt2u0qv"
+    },
+    {
+      "place": "18",
+      "artistName": "Swans",
+      "albumName": "The Glowing Man",
+      "albumImage": "",
+      "albumImageFilename": "swans-the-glowing-man.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6kYSd8r3ef5bssfOO58PX4"
+    },
+    {
+      "place": "19",
+      "artistName": "The Avalanches",
+      "albumName": "Wildflower",
+      "albumImage": "",
+      "albumImageFilename": "the avalanches-wildflower.jpeg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0j0djiGxLnBiW7meVc2PER"
+    },
+    {
+      "place": "20",
+      "artistName": "Hamilton Leithauser + Rostam",
+      "albumName": "I Had a Dream that You Were Mine",
+      "albumImage": "",
+      "albumImageFilename": "hamilton-leithauser-rostam-i-had-a-dream.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2TDuXjtpO4tdvm86KVNMk0"
+    },
+    {
+      "place": "21",
+      "artistName": "Big Thief",
+      "albumName": "Masterpiece",
+      "albumImage": "",
+      "albumImageFilename": "big-thief-masterpiece.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4onPyHor2yOlVxCsIaGyHH"
+    },
+    {
+      "place": "22",
+      "artistName": "Japanese Breakfast",
+      "albumName": "Psychopomp",
+      "albumImage": "",
+      "albumImageFilename": "japanese-breakfast-psychopomp.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3i7EHinpu9J5MXKMzjpjZ0"
+    },
+    {
+      "place": "23",
+      "artistName": "John K. Samson",
+      "albumName": "Winter Wheat",
+      "albumImage": "",
+      "albumImageFilename": "john-k-samson-winter-wheat.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/28vCM0a4MYPwcTervwP7Ia"
+    },
+    {
+      "place": "24",
+      "artistName": "Preoccupations",
+      "albumName": "Preoccupations",
+      "albumImage": "",
+      "albumImageFilename": "preoccupations-preoccupations.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/1BedrXdH4el7fWWIYMC99N"
+    },
+    {
+      "place": "25",
+      "artistName": "The Hotelier",
+      "albumName": "Goodness",
+      "albumImage": "",
+      "albumImageFilename": "the-hotelier-goodness.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5SYW9HBk4WxetFTcbcK3nk"
+    },
+    {
+      "place": "26",
+      "artistName": "Chris Staples",
+      "albumName": "Golden Age",
+      "albumImage": "",
+      "albumImageFilename": "chris-staples-golden-age.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3kcttgC0Cwuc1ZXqYaIGmM"
+    },
+    {
+      "place": "27",
+      "artistName": "PUP",
+      "albumName": "The Dream is Over",
+      "albumImage": "",
+      "albumImageFilename": "pup-the-dream-is-over.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/7lelUe4aaCQmOMJKsQvirf"
+    },
+    {
+      "place": "28",
+      "artistName": "Weaves",
+      "albumName": "Weaves",
+      "albumImage": "",
+      "albumImageFilename": "weaves-weaves.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3KyE0xdGrp9Sl9xErn7Zcd"
+    },
+    {
+      "place": "29",
+      "artistName": "Danny Brown",
+      "albumName": "Atrocity Exhibition",
+      "albumImage": "",
+      "albumImageFilename": "danny-brown-atrocity-exhibition.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3e7vtKJ3m1zVh38VGq2g3H"
+    },
+    {
+      "place": "30",
+      "artistName": "Nick Cave & the Bad Seeds",
+      "albumName": "Skeleton Tree",
+      "albumImage": "",
+      "albumImageFilename": "nick-cave-and-the-bad-seeds-skeleton-tree.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/34xaLN7rDecGEK5UGIVbeJ"
+    },
+    {
+      "place": "",
+      "artistName": "Holy Esque",
+      "albumName": "At Hope's Ravine",
+      "albumImage": "",
+      "albumImageFilename": "holy-esque-at-hopes-ravine.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3zBzH0JnOdII8wGZU0SjDR"
+    },
+    {
+      "place": "",
+      "artistName": "Mothers",
+      "albumName": "When you Walk a Long Distance you are Tired",
+      "albumImage": "",
+      "albumImageFilename": "mothers-when-you-walk-a-long-distance.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6T0QEKUvqfDxyVJIUZTkYe"
+    },
+    {
+      "place": "",
+      "artistName": "Oathbreaker",
+      "albumName": "Rheia",
+      "albumImage": "",
+      "albumImageFilename": "oathbreaker-rheia.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2eo8OwibPK06ZoHmIAfClG"
+    },
+    {
+      "place": "",
+      "artistName": "Odd Nosdam",
+      "albumName": "Sisters",
+      "albumImage": "",
+      "albumImageFilename": "odd-nosdam-sisters.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6eI4AV8L9K6bF7099n192W"
+    },
+    {
+      "place": "",
+      "artistName": "William Tyler",
+      "albumName": "Modern Country",
+      "albumImage": "",
+      "albumImageFilename": "william-tyler-modern-country.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0AlKGJjZriUhapXB3hyW6h"
+    }
+  ]
+}
