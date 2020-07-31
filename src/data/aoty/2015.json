@@ -4,16 +4,282 @@
   "albums": [
     {
       "place": "1",
-      "artistName": "Art1",
-      "albumName": "Alb1",
-      "albumImage": "album1.jpg",
+      "artistName": "Sufjan Stevens",
+      "albumName": "Carrie & Lowell",
+      "albumImage": "",
+      "albumImageFilename": "sufjan-stevens-carrie-lowell.jpg",
       "albumSpotifyLink": ""
     },
     {
       "place": "2",
-      "artistName": "Art2",
-      "albumName": "Alb2",
-      "albumImage": "album2.jpg",
+      "artistName": "Pile",
+      "albumName": "You're Better than This",
+      "albumImage": "",
+      "albumImageFilename": "pile-youre-better-than-this.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "3",
+      "artistName": "Courtney Barnett",
+      "albumName": "Sometimes I Sit and Think, and Sometimes I Just Sit",
+      "albumImage": "",
+      "albumImageFilename": "courtney-barnett-sometimes-i-sit.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "4",
+      "artistName": "Hop Along",
+      "albumName": "Painted Shut",
+      "albumImage": "",
+      "albumImageFilename": "hop-along-painted-shut.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "5",
+      "artistName": "Titus Andronicus",
+      "albumName": "The Most Lamentable Strategy",
+      "albumImage": "",
+      "albumImageFilename": "titus-andronicus-the-most-lamentable-tragedy.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "6",
+      "artistName": "Elder",
+      "albumName": "Lore",
+      "albumImage": "",
+      "albumImageFilename": "elder-lore.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "7",
+      "artistName": "Viet Cong",
+      "albumName": "Viet Cong",
+      "albumImage": "",
+      "albumImageFilename": "viet-cong-viet-cong.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "8",
+      "artistName": "Car Seat Headrest",
+      "albumName": "Teens of Style",
+      "albumImage": "",
+      "albumImageFilename": "car-seat-headrest-teens-of-style.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "9",
+      "artistName": "Sleater-Kinney",
+      "albumName": "No Cities to Love",
+      "albumImage": "",
+      "albumImageFilename": "sleater-kinney-no-cities-to-love.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "10",
+      "artistName": "Loma Prieta",
+      "albumName": "Self Portrait",
+      "albumImage": "",
+      "albumImageFilename": "loma-prieta-self-portrait.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "11",
+      "artistName": "Punch Brothers",
+      "albumName": "The Phosphorescent Blues",
+      "albumImage": "",
+      "albumImageFilename": "punch-brothers-the-phosphorescent-blues.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "12",
+      "artistName": "Bosse-de-Nage",
+      "albumName": "All Fours",
+      "albumImage": "",
+      "albumImageFilename": "bosse-de-nage-all-fours.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "13",
+      "artistName": "Deerhunter",
+      "albumName": "Fading Frontier",
+      "albumImage": "",
+      "albumImageFilename": "deerhunter-fading-frontier.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "14",
+      "artistName": "Ensemble Signal & Steve Reich",
+      "albumName": "Music for 18 Musicians",
+      "albumImage": "",
+      "albumImageFilename": "ensemble-signal-steve-reich-music-for-18-musicians.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "15",
+      "artistName": "Godspeed You! Black Emperor",
+      "albumName": "Asunder, Sweet and Other Distress",
+      "albumImage": "",
+      "albumImageFilename": "godspeed-you-black-emperor-asunder-sweet.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "16",
+      "artistName": "Nicolas Jaar",
+      "albumName": "Nymphs II/III/IV",
+      "albumImage": "",
+      "albumImageFilename": "nicolas-jaar-nymphs.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "17",
+      "artistName": "Ought",
+      "albumName": "Sun Coming Down",
+      "albumImage": "",
+      "albumImageFilename": "ought-sun-coming-down.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "18",
+      "artistName": "Julien Baker",
+      "albumName": "Sprained Ankle",
+      "albumImage": "",
+      "albumImageFilename": "julien-baker-sprained-ankle.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "19",
+      "artistName": "The Staves",
+      "albumName": "If I Was",
+      "albumImage": "",
+      "albumImageFilename": "the-staves-if-i-was.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "20",
+      "artistName": "Jamie xx",
+      "albumName": "In Colour",
+      "albumImage": "",
+      "albumImageFilename": "jamie-xx-in-colour.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "21",
+      "artistName": "Girl Band",
+      "albumName": "Holding Hands with Jamie",
+      "albumImage": "",
+      "albumImageFilename": "girl-band-holding-hands-with-jamie.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "22",
+      "artistName": "Julia Holter",
+      "albumName": "Have You in my Wilderness",
+      "albumImage": "",
+      "albumImageFilename": "julia-holter-have-you-in-my-wilderness.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "23",
+      "artistName": "Patrick Watson",
+      "albumName": "Love Songs for Robots",
+      "albumImage": "",
+      "albumImageFilename": "patrick-watson-love-songs-for-robots.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "24",
+      "artistName": "Birds in Row",
+      "albumName": "Personal War",
+      "albumImage": "",
+      "albumImageFilename": "birds-in-row-personal-war.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "25",
+      "artistName": "Christopher Paul Stelling",
+      "albumName": "Labor Against Waste",
+      "albumImage": "",
+      "albumImageFilename": "christopher-paul-stelling-labor-against-waste.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "26",
+      "artistName": "American Wrestlers",
+      "albumName": "American Wrestlers",
+      "albumImage": "",
+      "albumImageFilename": "american-wrestlers-american-wrestlers.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "27",
+      "artistName": "Jeff Rosenstock",
+      "albumName": "We Cool?",
+      "albumImage": "",
+      "albumImageFilename": "jeff-rosenstock-we-cool.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "28",
+      "artistName": "Jason Isbell",
+      "albumName": "Something More than Free",
+      "albumImage": "",
+      "albumImageFilename": "jason-isbell-something-more-than-free.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "29",
+      "artistName": "Bop English",
+      "albumName": "Constant Bop",
+      "albumImage": "",
+      "albumImageFilename": "bop-english-constant-bop.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "30",
+      "artistName": "Colin Stetson / Sarah Neufeld",
+      "albumName": "Never Were the Way She Was",
+      "albumImage": "",
+      "albumImageFilename": "colin-stetson-sarah-neufeld-never-were-the-way-she-was.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Baroness",
+      "albumName": "Purple",
+      "albumImage": "",
+      "albumImageFilename": "baroness-purple.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Have you ever seen the Jane Fonda Aerobic VHS?",
+      "albumName": "Teenage Sweetheart",
+      "albumImage": "",
+      "albumImageFilename": "have-you-ever-seen-the-jane-fonda-teenage-sweetheart.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Oneohtrix Point Never",
+      "albumName": "Garden of Delete",
+      "albumImage": "",
+      "albumImageFilename": "oneohtrix-point-never-garden-of-delete.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Royal Headache",
+      "albumName": "High",
+      "albumImage": "",
+      "albumImageFilename": "royal-headache-high.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Remember Sports",
+      "albumName": "All of Something",
+      "albumImage": "",
+      "albumImageFilename": "remember-sports-all-of-something.jpg",
       "albumSpotifyLink": ""
     }
   ]
