@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet"
 import { IoIosGitBranch } from "react-icons/io"
 import { FaLastfm } from "react-icons/fa"
 import { MdMailOutline } from "react-icons/md"
-import { RiGamepadLine, RiTwitterLine } from "react-icons/ri"
+import { RiGamepadLine, RiTwitterLine, RiBook3Line } from "react-icons/ri"
 
 export default function Home() {
   return (
@@ -66,13 +66,13 @@ export default function Home() {
             </div>
             <div class="tile is-parent">
               <a
-                href="http://steamcommunity.com/id/tommyh"
+                href="https://www.goodreads.com/user/show/39909302-tommy"
                 class="button is-medium is-fullwidth"
               >
                 <span class="icon">
-                  <RiGamepadLine />
+                  <RiBook3Line />
                 </span>
-                <span>steam</span>
+                <span>goodreads</span>
               </a>
             </div>
           </div>

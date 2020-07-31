@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
-import { RiMacbookLine } from "react-icons/ri"
+import { AiOutlineRobot } from "react-icons/ai"
+import { IconContext } from "react-icons";
 import "../mystyles.scss"
 import "./navbar.scss"
 const util = require('util')
@@ -59,14 +60,18 @@ class Navbar extends Component {
     return (
       <div>
         <nav
-          className="navbar is-transparent is-success"
+          className="navbar  is-success"
           role="navigation"
           aria-label="dropdown navigation"
         >
           <div className="navbar-brand">
             <div className="navbar-item">
               <Link to="/">
-                <RiMacbookLine class="has-text-black" size={32} />
+                <IconContext.Provider
+                  value={{ className: "has-text-white is-size-3 is-vertical-center", }}
+                >
+                  <div><AiOutlineRobot /></div>
+                </IconContext.Provider>
               </Link>
               {/*}<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />*/}
             </div>
@@ -95,19 +100,27 @@ class Navbar extends Component {
                 onMouseLeave={this.navbarDropdownHide}
               >
                 <a className="navbar-link">Music</a>
+                {/* Loop thru all AOTY years, add a link for each */}
                 <div className="navbar-dropdown">
                   {this.props.years.map( (year) => (
                     <Link to={year.context.slug} className="navbar-item">
                       Best Albums {year.context.aotyYear}
                     </Link>
                   ))}
-                  <hr className="navbar-divider"/>
+                  <hr className="navbar-divider" />
                   <a href="https://docs.google.com/spreadsheets/d/1sMt1AlNPOb1MYUlfPD6Gv65Y75rodJeF8nDOQPq_R-s" className="navbar-item">
-                    Meta Album List
+                    Meta Music List
+                  </a>
+                  <hr className="navbar-divider" />
+                  <a href="https://docs.google.com/spreadsheets/d/1vsL6SOjCLcXaYqM1gLUD3fnSS_1YKGzgh3pk27EDZo8" className="navbar-item">
+                    Book List
                   </a>
                 </div>{" "}
                 {/* navbar-dropdown  */}
               </div>{" "}
+              <Link to="projects" className="navbar-item">
+                Projects
+              </Link>
               <Link to="about" className="navbar-item">
                 About
               </Link>
