@@ -17,9 +17,11 @@ export default function Album({ album }) {
             <p className="is-size-4">{album.albumName}</p>
           </div>
           <div className="column is-5 is-offset-1" align="right">
-            <figure className="image is-256x256">
-                <img src={'https://tommyhinman-albums.s3-us-west-2.amazonaws.com/512/' + album.albumImageFilename} />
-            </figure>
+            <a href={album.albumSpotifyLink} target="_blank">
+              <figure className="image is-256x256">
+                  <img src={'https://tommyhinman-albums.s3-us-west-2.amazonaws.com/512/' + album.albumImageFilename} />
+              </figure>
+            </a>
           </div>
         </div>
       </div>
