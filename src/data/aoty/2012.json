@@ -1,0 +1,406 @@
+{
+  "name": "2012",
+  "link": "https://docs.google.com/spreadsheets/d/1HVcKqtqWto57-81y_5WlLINayV0dOp8MY_B7Uo3VK0Q",
+  "albums": [
+    {
+      "place": "1",
+      "artistName": "Swans",
+      "albumName": "The Seer",
+      "albumImage": "",
+      "albumImageFilename": "swans-the-seer.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5hXTuGzaOREp5WHYGQXXB1?si=9bckUe18Sb-6-cp6rYYV0w"
+    },
+    {
+      "place": "2",
+      "artistName": "Godspeed You! Black Emperor",
+      "albumName": "Allelujah! Don't Bend! Ascend!",
+      "albumImage": "",
+      "albumImageFilename": "godspeed-you-black-emperor-allelujah.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/30bTXMxsMsYn7QbwmDW3rj?si=vBLFWzVBQJOO7ueKFSUzwQ"
+    },
+    {
+      "place": "3",
+      "artistName": "Fiona Apple",
+      "albumName": "The Idler Wheel...",
+      "albumImage": "",
+      "albumImageFilename": "fiona-apple-the-idler-wheel.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6B5favhKTShFTjRLsKIUfa?si=fIpMzg8ES6it_hwcMAJqRA"
+    },
+    {
+      "place": "4",
+      "artistName": "Torche",
+      "albumName": "Harmonicraft",
+      "albumImage": "",
+      "albumImageFilename": "torche-harmonicraft.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4m2nF2XI6ZF6qhUXoYwmJu?si=fQ1u5pSQSLymb9bpRchAcA"
+    },
+    {
+      "place": "5",
+      "artistName": "Bosse-de-Nage",
+      "albumName": "iii",
+      "albumImage": "",
+      "albumImageFilename": "bosse-de-nage-iii.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0lqoL9t6PGVQBTRaT7OTat?si=5IuOPwA7R-2Z07iRQ9xsXA"
+    },
+    {
+      "place": "6",
+      "artistName": "Tame Impala",
+      "albumName": "Lonerism",
+      "albumImage": "",
+      "albumImageFilename": "tame-impala-lonerism.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3C2MFZ2iHotUQOSBzdSvM7?si=pi-k1r-pSn6_W3UQdZQPOQ"
+    },
+    {
+      "place": "7",
+      "artistName": "Cloud Nothings",
+      "albumName": "Attack on Memory",
+      "albumImage": "",
+      "albumImageFilename": "cloud-nothings-attack-on-memory.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/1JgpvdsSfE94eZzYBk6ph9?si=lWvzlzaRT-G3qhNga98ibQ"
+    },
+    {
+      "place": "8",
+      "artistName": "Grizzly Bear",
+      "albumName": "Shields",
+      "albumImage": "",
+      "albumImageFilename": "grizzly-bear-shields.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/57LAEzKL94ZHwbIkUWYCDY?si=N_jwgvvBRReyP0pVLN5wog"
+    },
+    {
+      "place": "9",
+      "artistName": "Spiritualized",
+      "albumName": "Sweet Heart Sweet Light",
+      "albumImage": "",
+      "albumImageFilename": "spiritualized-sweet-heart-sweet-light.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4hrpqNai22Fpg51cmHmUCm?si=rDLBIHOwQU64RUlPSdAyQQ"
+    },
+    {
+      "place": "10",
+      "artistName": "Converge",
+      "albumName": "All We Love We Leave Behind",
+      "albumImage": "",
+      "albumImageFilename": "converge-all-we-love-we-leave-behind.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/28DI3wfImTqTrHkPiOa0PI?si=lEHdoss1S9Gxi-UNmEU9lg"
+    },
+    {
+      "place": "11",
+      "artistName": "Action Bronson / Party Supplies",
+      "albumName": "Blue Chips",
+      "albumImage": "",
+      "albumImageFilename": "action-bronson-party-supplies.jpg",
+      "albumSpotifyLink": "https://www.youtube.com/playlist?list=PLQS0nJ6nDSoID4zxxXypCemv7Z7F1K_EL"
+    },
+    {
+      "place": "12",
+      "artistName": "The Men",
+      "albumName": "Open Your Heart",
+      "albumImage": "",
+      "albumImageFilename": "the-men-open-your-heart.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0nVaPLv4z2SG4k7ebKLRJ0?si=ZgnX6Up3RhCVl3K1Vj45TQ"
+    },
+    {
+      "place": "13",
+      "artistName": "Royal Thunder",
+      "albumName": "CVI",
+      "albumImage": "",
+      "albumImageFilename": "royal-thunder-cvi.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/7m68iZmhsTYgIVFrVs6Dnp?si=3jhjgIXvRGOqdVNeo8eIKA"
+    },
+    {
+      "place": "14",
+      "artistName": "Wodensthrone",
+      "albumName": "Curse",
+      "albumImage": "",
+      "albumImageFilename": "wodensthrone-curse.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3p4xJNOFQ2QU5lu2XnWDB3?si=G_TqgK1iRlWCSIUvZnog7Q"
+    },
+    {
+      "place": "15",
+      "artistName": "Ash Borer",
+      "albumName": "Cold of Ages",
+      "albumImage": "",
+      "albumImageFilename": "ash-borer-cold-of-ages.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6u9e1GDH22vtdwJjEjydE0?si=S10pfgb8QDC8BKeaTiVW5w"
+    },
+    {
+      "place": "16",
+      "artistName": "Alt-j",
+      "albumName": "An Awesome Wave",
+      "albumImage": "",
+      "albumImageFilename": "alt-j-an-awesome-wave.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6k3vC8nep1BfqAIJ81L6OL?si=Ja3-7LcFT0WQBS7YK1JcdQ"
+    },
+    {
+      "place": "17",
+      "artistName": "Burial",
+      "albumName": "Kindred EP",
+      "albumImage": "",
+      "albumImageFilename": "burial-kindred.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3BpTqGx3AaQ0q4fHPgKRMd?si=wwYKjmLJSnyU0UybJWFbCw"
+    },
+    {
+      "place": "18",
+      "artistName": "...And You Will Know Us by the Trail of Dead",
+      "albumName": "Lost Songs",
+      "albumImage": "",
+      "albumImageFilename": "trail-of-dead-lost-songs.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "19",
+      "artistName": "iamamiwhoami",
+      "albumName": "Kin",
+      "albumImage": "",
+      "albumImageFilename": "iamamiwhoami-kin.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2ipWMlClqklNqdjvPJbMYB?si=XILKR3-mRR-xRWouvJALOA"
+    },
+    {
+      "place": "20",
+      "artistName": "The Evens",
+      "albumName": "The Odds",
+      "albumImage": "",
+      "albumImageFilename": "the-evens-the-odds.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3iqK0TuZ8YTknYc4Cf0YwK?si=8O8url1QSyOccs6EeB4KcA"
+    },
+    {
+      "place": "21",
+      "artistName": "Circle Takes the Square",
+      "albumName": "Decompositions: Volume Number One",
+      "albumImage": "",
+      "albumImageFilename": "circle-takes-the-square-decompositions-vol-one.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2i6pPPwaPMKZ3ZlohpAYsi?si=fHgxLWKjTvavhhPj3NE_pA"
+    },
+    {
+      "place": "22",
+      "artistName": "Jack White",
+      "albumName": "Blunderbuss",
+      "albumImage": "",
+      "albumImageFilename": "jack-white-blunderbuss.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6eSJ0lu0uwtiqXkP7Qrrno?si=1D_ZDxH7TL6vmiQ7eZ-V-w"
+    },
+    {
+      "place": "23",
+      "artistName": "Japandroids",
+      "albumName": "Celebration Rock",
+      "albumImage": "",
+      "albumImageFilename": "japandroids-celebration-rock.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2sY9WYVH022ulyAYaqvXLW?si=NihUvy9yRcK3osH7AdVovA"
+    },
+    {
+      "place": "24",
+      "artistName": "Pig Destroyer",
+      "albumName": "Book Burner",
+      "albumImage": "",
+      "albumImageFilename": "pig-destroyer-book-burner.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/604JFtgeDXfwIRVqZtaCZg?si=Uz3YUM6zRVmYGjBvmqyziQ"
+    },
+    {
+      "place": "25",
+      "artistName": "High on Fire",
+      "albumName": "De Vermis Mysteriis",
+      "albumImage": "",
+      "albumImageFilename": "high-on-fire-de-vermis-mysteriis.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2p2JekOEQ4llSWDWLZRhkQ?si=2FM1KLpfQduSqSTYsZsJEg"
+    },
+    {
+      "place": "26",
+      "artistName": "Susanne Sundfør",
+      "albumName": "The Silicone Veil",
+      "albumImage": "",
+      "albumImageFilename": "susanne-sundfor-the-silicone-veil.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3Eza1LDXhFkeZ3tOL6r9HW?si=Ch1PHVAkTfehHJRAetSVOA"
+    },
+    {
+      "place": "27",
+      "artistName": "The Sword",
+      "albumName": "Apocryphon",
+      "albumImage": "",
+      "albumImageFilename": "the-sword-apocryphon.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6mB86vacgOwqJQSkyEMOcR?si=5ILqXIF-QmGE-PukMCrzFQ"
+    },
+    {
+      "place": "28",
+      "artistName": "The Walkmen",
+      "albumName": "Heaven",
+      "albumImage": "",
+      "albumImageFilename": "the-walkmen-heaven.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/121DLZnltkkTOMHzoLrmqB?si=PhHtSpdVSiOB5me9ocsRMg"
+    },
+    {
+      "place": "29",
+      "artistName": "Loma Prieta",
+      "albumName": "I.V.",
+      "albumImage": "",
+      "albumImageFilename": "loma-prieta-iv.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6jLJmPV4WLq9zEHM0dGYCy?si=JAUPXQoYTkq_JlXzlFOfRQ"
+    },
+    {
+      "place": "30",
+      "artistName": "Anaïs Mitchell",
+      "albumName": "Young Man in America",
+      "albumImage": "",
+      "albumImageFilename": "anais-mitchell-young-man-in-america.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4RNXc0opm9igpGD1Ga9FsY?si=CMJj9zfzTsCk2VzzF3TeCw"
+    },
+    {
+      "place": "31",
+      "artistName": "Aesop Rock",
+      "albumName": "Skelethon",
+      "albumImage": "",
+      "albumImageFilename": "aesop-rock-skelethon.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2gS7wygwj17GjTSeLGvJdo?si=3gFrstrjSu-FC3vhomR3Sg"
+    },
+    {
+      "place": "32",
+      "artistName": "Leech",
+      "albumName": "If We Get There One Day, Would You Please Open The Gates?",
+      "albumImage": "",
+      "albumImageFilename": "leech-if-we-get-there-one-day.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6i79TEHqyvxRtSvXWu3Zr2?si=g8faqIS_SbqzXmUy8rv3rA"
+    },
+    {
+      "place": "33",
+      "artistName": "Pigs",
+      "albumName": "You Ruin Everything",
+      "albumImage": "",
+      "albumImageFilename": "pigs-you-ruin-everything.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3woeiFnbrsQOpw4lhYMOWm?si=i_DON1B2SVyb8yGeXNaSdw"
+    },
+    {
+      "place": "34",
+      "artistName": "White Rabbits",
+      "albumName": "Milk Famous",
+      "albumImage": "",
+      "albumImageFilename": "white-rabbits-milk-famous.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5vYNeh8veFnxyk1MO7CeTU?si=oM8b-YqQTsOo5ZK6Jqrzbg"
+    },
+    {
+      "place": "35",
+      "artistName": "Cate Le Bon",
+      "albumName": "CYRK",
+      "albumImage": "",
+      "albumImageFilename": "cate-le-bon-cyrk.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6QQ8tKWrniRNEE2xbIPZng?si=gOHPCHEyQXaEbin0zpW9ow"
+    },
+    {
+      "place": "36",
+      "artistName": "Kowloon Walled City",
+      "albumName": "Container Ships",
+      "albumImage": "",
+      "albumImageFilename": "kowloon-walled-city-container-ships.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0EOjjXZ4y45WH4vuEczBjG?si=SV4lD9Q6TA6Q4bXIf2u8rw"
+    },
+    {
+      "place": "37",
+      "artistName": "Wizard Rifle",
+      "albumName": "Speak Loud Say Nothing",
+      "albumImage": "",
+      "albumImageFilename": "wizard-rifle-speak-loud-say-nothing.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/38SzN4VslJSb7iov7Jfatv?si=yEshrGzMSCam4Uuh2t2_iQ"
+    },
+    {
+      "place": "38",
+      "artistName": "Bats",
+      "albumName": "The Sleep of Reason",
+      "albumImage": "",
+      "albumImageFilename": "bats-the-sleep-of-reason.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5o9ux9q2UcmI5rImyt2u4z?si=HyFdyrrKQmKGhT9xGTbw_A"
+    },
+    {
+      "place": "39",
+      "artistName": "Andrew Bird",
+      "albumName": "Break it Yourself",
+      "albumImage": "",
+      "albumImageFilename": "andrew-bird-break-it-yourself.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5kUSMNOHu33TTDtV8RGHLg?si=3b9kMA_6QB6UP7fSbcu37A"
+    },
+    {
+      "place": "40",
+      "artistName": "Alexandre Desplat",
+      "albumName": "Moonrise Kingdom",
+      "albumImage": "",
+      "albumImageFilename": "alexandre-desplat-moonrise-kingdom.jpg",
+      "albumSpotifyLink": ""
+    },
+    {
+      "place": "",
+      "artistName": "Colour Haze",
+      "albumName": "She Said",
+      "albumImage": "",
+      "albumImageFilename": "colour-haze-she-said.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5GPkJFN7mq1kggxtC3pUNB?si=vnBwU0EQRRyJt9e7yWQ52g"
+    },
+    {
+      "place": "",
+      "artistName": "Clams Casino",
+      "albumName": "Instrumental Tape 2",
+      "albumImage": "",
+      "albumImageFilename": "clams-casino-instrumental-tape-2.jpg",
+      "albumSpotifyLink": "https://soundcloud.com/clammyclams/sets/instrumental-mixtape-2"
+    },
+    {
+      "place": "",
+      "artistName": "Dinosaur Jr.",
+      "albumName": "I Bet on Sky",
+      "albumImage": "",
+      "albumImageFilename": "dinosaur-jr-i-bet-on-sky.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/68sloliGYuMhzxciy0XSSo?si=n7DZOiyQQlyRYOcZOozTZw"
+    },
+    {
+      "place": "",
+      "artistName": "Grave",
+      "albumName": "Endless Procession of Souls",
+      "albumImage": "",
+      "albumImageFilename": "grave-endless-procession-of-souls.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/7y1osyR0vYgoXaqOBBo378?si=QbDrHLmMSbSsTuCHsehOnA"
+    },
+    {
+      "place": "",
+      "artistName": "John Talabot",
+      "albumName": "ƒin",
+      "albumImage": "",
+      "albumImageFilename": "john-talabot-fin.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4esRg2sry34w2G0HT7jcLI?si=pxkEvLSVQdGb3CUbpOtqEA"
+    },
+    {
+      "place": "",
+      "artistName": "Max Richter",
+      "albumName": "Recomposed by Max Richter. Vivaldi - The Four Seasons",
+      "albumImage": "",
+      "albumImageFilename": "max-richter-vivaldi-four-seasons.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0JBT8Sw5eGWC86DCrobOfY?si=5sz61fpwQFy8A1wO3SMiQw"
+    },
+    {
+      "place": "",
+      "artistName": "Screaming Females",
+      "albumName": "Ugly",
+      "albumImage": "",
+      "albumImageFilename": "screaming-females-ugly.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/63mOF4rcNutr1Aaj9QPgJK?si=Nr34GsdcR-WmUanLyeKJ9g"
+    },
+    {
+      "place": "",
+      "artistName": "Sharon Van Etten",
+      "albumName": "Tramp",
+      "albumImage": "",
+      "albumImageFilename": "sharon-van-etten-tramp.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/7bYAuBOpWMA1F61cbXrKfM?si=t7nfVjThRUaaueXJJF4-oQ"
+    },
+    {
+      "place": "",
+      "artistName": "Suis La Lune",
+      "albumName": "Riala",
+      "albumImage": "",
+      "albumImageFilename": "suis-la-lune-riala.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0UFMlDuCrpskloMnMfu5C6?si=JspED-w2SeG_yV8piyDxjA"
+    },
+    {
+      "place": "",
+      "artistName": "Ty Segall / White Fence",
+      "albumName": "Hair",
+      "albumImage": "",
+      "albumImageFilename": "ty-segall-white-fence-hair.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0m42WBTtUKsrpasciolybQ?si=KR4iDVBOTjmqd_cRUpw7Sw"
+    }
+  ]
+}
