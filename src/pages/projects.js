@@ -15,7 +15,7 @@ export default function Projects() {
       <div class="content">
         <h1>Projects</h1>
         <p>
-          TODO!
+          Environment variable test: {`${process.env.TEST_VAR_TOMMY}`}
         </p>
       </div>
 
