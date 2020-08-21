@@ -3,19 +3,24 @@ import { Router, navigate } from "@reach/router"
 import { Link } from "gatsby"
 import { withAuthenticator, Authenticator, Greetings } from 'aws-amplify-react';
 import { AmplifySignOut } from '@aws-amplify/ui-react';
-import { Auth } from 'aws-amplify'
+import { Auth, API } from 'aws-amplify'
+import Pinboard from '../components/pinboard'
 
 const MyTheme = {
     signInButtonIcon: { 'display': 'none' },
     googleSignInButton: { 'backgroundColor': 'red', 'borderColor': 'red' }
 }
 
-
 const Home = () => <p>Home</p>
+
 const Settings = () => (
   <div>
     <p>Settings</p>
     <Authenticator />
+
+    <hr />
+    <Pinboard />
+
   </div>
 )
 const Billing = () => <p>Billing</p>
