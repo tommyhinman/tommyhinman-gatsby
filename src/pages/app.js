@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react"
+import { Helmet } from "react-helmet"
 import { Router, navigate } from "@reach/router"
+import Layout from "../components/layout"
 import { Link } from "gatsby"
 import { withAuthenticator, Authenticator, Greetings } from 'aws-amplify-react';
 import { AmplifySignOut } from '@aws-amplify/ui-react';
@@ -11,7 +13,6 @@ const MyTheme = {
     signInButtonIcon: { 'display': 'none' },
     googleSignInButton: { 'backgroundColor': 'red', 'borderColor': 'red' }
 }
-
 
 const Home = () => <p>Home</p>
 
@@ -31,18 +32,24 @@ const Billing = () => <p>Billing</p>
 const ToolsWithAuth = withAuthenticator(Tools)
 
 const App = () => (
-  <>
-    <nav>
-      <Link to="/app">Home</Link> |&nbsp;
-      <Link to="/app/tools">Tools</Link> |&nbsp;
-      <Link to="/app/billing">Billing</Link>
-    </nav>
-    <Router>
-      <Home path="/app" path="/app">Home</Home>
-      <ToolsWithAuth path="/app/tools">Tools</ToolsWithAuth>
-      <Billing path="/app/billing">Billing</Billing>
-    </Router>
-  </>
+  <div className="content">
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>app | tommyhinman.com</title>
+    </Helmet>
+    <Layout>
+      <nav>
+        <Link to="/app">Home</Link> |&nbsp;
+        <Link to="/app/tools">Tools</Link> |&nbsp;
+        <Link to="/app/billing">Billing</Link>
+      </nav>
+      <Router>
+        <Home path="/app" path="/app">Home</Home>
+        <ToolsWithAuth path="/app/tools">Tools</ToolsWithAuth>
+        <Billing path="/app/billing">Billing</Billing>
+      </Router>
+    </Layout>
+  </div>
 )
 
 export default App
