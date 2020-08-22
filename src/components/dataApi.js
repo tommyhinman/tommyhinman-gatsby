@@ -42,17 +42,20 @@ const useDataApi = (initialUrl, initialData) => {
     const fetchData = async () => {
       dispatch({type: 'FETCH_INIT'});
 
-      try {
-        console.log("Making http request to " + url);
-        const result = await axios(url);
-        if (!didCancel) {
-          dispatch({ type: 'FETCH_SUCCESS', payload: result.data});
-        }
-      } catch (error) {
-        console.log("Error getting URL!");
-        console.log(error);
-        if (!didCancel) {
-          dispatch({ type: "FETCH_FAILURE"});
+      // In cases where the URL is set to blank, no need to load.
+      if(url != "") {
+        try {
+          console.log("Making http request to " + url);
+          const result = await axios(url);
+          if (!didCancel) {
+            dispatch({ type: 'FETCH_SUCCESS', payload: result.data});
+          }
+        } catch (error) {
+          console.log("Error getting URL!");
+          console.log(error);
+          if (!didCancel) {
+            dispatch({ type: "FETCH_FAILURE"});
+          }
         }
       }
 
