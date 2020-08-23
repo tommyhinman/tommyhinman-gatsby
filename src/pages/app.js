@@ -20,14 +20,12 @@ const Tools = () => {
 
   return (
     <div>
-      <p>Tools</p>
       <Authenticator />
       <hr />
       <Pinboard />
     </div>
   );
 }
-const Billing = () => <p>Billing</p>
 
 const ToolsWithAuth = withAuthenticator(Tools)
 
@@ -40,13 +38,11 @@ const App = () => (
     <Layout>
       <nav>
         <Link to="/app">Home</Link> |&nbsp;
-        <Link to="/app/tools">Tools</Link> |&nbsp;
-        <Link to="/app/billing">Billing</Link>
+        <Link to="/app/tools">Tools</Link>
       </nav>
       <Router>
         <Home path="/app" path="/app">Home</Home>
         <ToolsWithAuth path="/app/tools">Tools</ToolsWithAuth>
-        <Billing path="/app/billing">Billing</Billing>
       </Router>
     </Layout>
   </div>

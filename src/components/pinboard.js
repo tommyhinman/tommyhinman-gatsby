@@ -1,8 +1,11 @@
 import React, { Fragment, useState, useEffect } from "react"
 import useDataApi from './dataApi.js'
 import useUserUtil from './userUtil'
+import PinboardPost from './pinboardPost'
 
 export default function Pinboard() {
+
+
 
   // For now, this will display the 15 most-recent pinboard posts marked to-read.
 
@@ -12,9 +15,13 @@ export default function Pinboard() {
   );
 
   // Using a heroku-hosted mirror to get past pinboard's disabled CORS.
-  const pinboardUrlTemplate = "https://sleepy-mesa-54715.herokuapp.com/" +
+  const pinboardRecentPostsTemplate = "https://sleepy-mesa-54715.herokuapp.com/" +
     "https://api.pinboard.in/v1/posts/recent" +
-    "?auth_token=pinboardKey&format=json&tag=to-read";
+    "?auth_token=PINBOARDKEY&format=json&tag=to-read&count=20";
+  const pinboardUpdatePostTemplate = "https://sleepy-mesa-54715.herokuapp.com/" +
+    "https://api.pinboard.in/v1/posts/add" +
+    "?auth_token=PINBOARDKEY&url=URL&description=DESCRIPTION&extended=EXTENDED" +
+    "&tags=TAGS&dt=DT&replace=yes&shared=no&toread=no";
   const [username, pinboardKey] = useUserUtil();
 
   // Asynchronously grab the pinboard API key from Cognito user attributes and
@@ -24,7 +31,7 @@ export default function Pinboard() {
 
     const setUrl = async () => {
       if(pinboardKey != "") {
-        const newUrl = pinboardUrlTemplate.replace("pinboardKey", pinboardKey);
+        const newUrl = pinboardRecentPostsTemplate.replace("PINBOARDKEY", pinboardKey);
         doFetch(newUrl);
       }
     }
@@ -43,14 +50,12 @@ export default function Pinboard() {
       {isLoading ? (
         <div>Loading...</div>
       ) : (
-        <ul>
+        <div>
           {/* For each pin, display the link & description. */}
-          {data.posts.map(item => (
-            <li key={item.hash}>
-              <a href={item.href}>{item.description}</a>
-            </li>
+          {data.posts.map(post => (
+            <PinboardPost post={post} pinboardKey={pinboardKey} key={post.hash}/>
           ))}
-        </ul>
+        </div>
       )}
     </div>
   )
