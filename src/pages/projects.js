@@ -8,8 +8,9 @@ import moment from "moment-timezone";
 export default function Projects() {
 
   const [{data, isLoading, isError}, searchUrl, doFetch] = useDataApi(
-    // "https://7j2apoxwhf.execute-api.us-west-2.amazonaws.com/Prod/latestRequest?format=json",
-    "http://localhost:3000/latestRequest?format=json",
+    // TODO: Find a way to put this in a config so you don't accidentally check-in calling localhost!
+    "https://7j2apoxwhf.execute-api.us-west-2.amazonaws.com/Prod/latestRequest?format=json",
+    // "http://localhost:3000/latestRequest?format=json",
     {
       "albums": [],
       "request": {"requestId": ""}
