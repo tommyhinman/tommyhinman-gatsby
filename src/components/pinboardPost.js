@@ -29,27 +29,20 @@ export default function PinboardPost({post, pinboardKey}) {
 
   return (
     <div className="box" key={post.hash}>
-      <div>
-        <h4><a href={post.href}>{post.description}</a></h4>
-        <span><b>Date: </b>{formattedDate} | <b>Tags: </b>{post.tags}</span>
 
-      </div>
-      <hr />
+      <h4><a href={post.href}>{post.description}</a></h4>
 
-      <div className="columns is-mobile">
+      <level><span><b>Date: </b>{formattedDate} | <b>Tags: </b>{post.tags}</span></level>
 
-          <div className="column is-one-quarter-desktop">
+
+
+
+      <div className="buttons mt-4">
             <MarkAsReadButton />
-          </div>
-          <div className="column">
-            <a href={viewPostUrl}>
-              <button className="button">
+            <a className="button" href={viewPostUrl}>
                 <span className="icon"><AiOutlinePushpin /></span>
                 <span>Pinboard</span>
-              </button>
             </a>
-          </div>
-
       </div>
     </div>
   )
