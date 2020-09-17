@@ -12,19 +12,78 @@ export default function Projects() {
     "https://7j2apoxwhf.execute-api.us-west-2.amazonaws.com/Prod/latestRequest?format=json",
     // "http://localhost:3000/latestRequest?format=json",
     {
-      "albums": [],
+      "albums": {
+        "highPriorityAlbums": [],
+        "lowPriorityAlbums": [],
+      },
       "request": {"requestId": ""}
     }
   );
 
-  const Artist = ({artistData}) => {
+  function areAnyMainArtistsInPrimaryArtists(albumArtists, primaryArtistIds) {
+    var primaryArtistsInMainArtists = 0;
+
+    albumArtists.forEach( (mainArtist) => {
+      if(primaryArtistIds.includes(mainArtist.id)) {
+        primaryArtistsInMainArtists++;
+      }
+    })
+
+    return primaryArtistsInMainArtists > 0;
+  }
+
+  const Artist = ({artistData, primaryArtists}) => {
+    const isPrimaryArtist = primaryArtists.includes(artistData.id);
+    return (
+      <>
+      { isPrimaryArtist ?
+        <b>{artistData.name}</b> : <>{artistData.name}</>
+      }
+      </>
+    )
+  }
+
+  const ArtistsList = ( {albumArtists, primaryArtists} ) => {
+    return (
+      <>
+      {albumArtists.map( (artist, index) => (
+        <span>
+          { (index ? ' & ' : '') }<Artist artistData={artist} primaryArtists={primaryArtists} />
+        </span>
+      ))}
+      </>
+    )
+  }
+
+  const FeaturingArtistsList = ( {primaryArtists} ) => {
+    const primaryArtistsStr = primaryArtists.map( (artist) => { return artist.name; }).join(" & ");
+    return (
+      <>
+      {'Features: '}
+      {primaryArtistsStr}
+      </>
+    )
+  }
+
+  const Album = ({albumData}) => {
+
+    const primaryArtistIds = albumData.primaryArtists.map( (primaryArtist) => { return primaryArtist.id; });
+    const mainArtists = albumData.albumArtists.map( (artist) => {return artist.id})
+    const mainArtistsNotPrimaryArtists = !areAnyMainArtistsInPrimaryArtists(albumData.albumArtists, primaryArtistIds);
+
     return (
         <li>
-          {artistData.albums.map(album => (
-            <div>
-              {artistData.artistName} - <a href={album.albumUri}>{album.albumName} ({album.albumType})</a>
-            </div>
-          ))}
+            <span>
+              <ArtistsList albumArtists={albumData.albumArtists} primaryArtists={primaryArtistIds} />
+              {' - '}
+              <a href={albumData.albumUri}>{albumData.albumName} ({albumData.albumType})</a>
+              {mainArtistsNotPrimaryArtists &&
+                <>
+                  {' '}
+                  <FeaturingArtistsList primaryArtists={albumData.primaryArtists} />
+                </>
+              }
+            </span>
         </li>
     )
   }
@@ -35,8 +94,6 @@ export default function Projects() {
       <div>Latest Scan Request, on {formattedDate}, with ID {request.requestId}</div>
     )
   }
-
-
 
   return (
     <div>
@@ -56,15 +113,13 @@ export default function Projects() {
             <div>
               <RequestInfo request={data.request}/>
               <ul>
-                {data.albums.map(artist => (
-                  <Artist artistData={artist} />
+                {data.albums.highPriorityAlbums.map(album => (
+                  <Album albumData={album} />
                 ))}
               </ul>
             </div>
           )
         }
-
-
       </div>
 
     </Layout>
