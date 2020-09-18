@@ -7,9 +7,32 @@ import moment from "moment-timezone";
 
 export default function Projects() {
 
-  const [{data, isLoading, isError}, searchUrl, doFetch] = useDataApi(
+  // Currently just a local constant. Will pass this in as a var at some point to the query.
+  const numberOfRequests = 10;
+  const requestDataUrlTemplate = "https://7j2apoxwhf.execute-api.us-west-2.amazonaws.com/Prod/request?format=json&requestId=REQUEST_ID";
+
+  const [currentRequestId, setCurrentRequestId] = useState("");
+  const [currentRequestIndex, setCurrentRequestIndex] = useState(0);
+
+  const [recentRequestsQuery, recentRequestsUrl, recentRequestsFetch] = useDataApi(
+    "https://7j2apoxwhf.execute-api.us-west-2.amazonaws.com/Prod/recentRequests",
+    [
+      {
+        requestId: "",
+        requestTime: ""
+      }
+    ]
+  );
+
+  useEffect( () => {
+    const currentRequestUrl = requestDataUrlTemplate.replace("REQUEST_ID", recentRequestsQuery.data[currentRequestIndex].requestId);
+    requestFetch(currentRequestUrl);
+  }, [recentRequestsQuery.data[currentRequestIndex]]);
+
+  // const [{datax, requestIsLoading, requestIsError}, requestSearchUrl, requestFetch] = useDataApi(
+  const [scanRequestQuery, requestSearchUrl, requestFetch] = useDataApi(
     // TODO: Find a way to put this in a config so you don't accidentally check-in calling localhost!
-    "https://7j2apoxwhf.execute-api.us-west-2.amazonaws.com/Prod/latestRequest?format=json",
+    "https://7j2apoxwhf.execute-api.us-west-2.amazonaws.com/Prod/request?format=json&requestId=23f61801-b88c-4f3a-bca9-46440bb7d807",
     // "http://localhost:3000/latestRequest?format=json",
     {
       "albums": {
@@ -19,6 +42,18 @@ export default function Projects() {
       "request": {"requestId": ""}
     }
   );
+
+  function previousRequestId() {
+    if (currentRequestIndex < (numberOfRequests - 1)) {
+      setCurrentRequestIndex(currentRequestIndex + 1);
+    }
+  }
+
+  function nextRequestId() {
+    if (currentRequestIndex > 0) {
+      setCurrentRequestIndex(currentRequestIndex - 1);
+    }
+  }
 
   function areAnyMainArtistsInPrimaryArtists(albumArtists, primaryArtistIds) {
     var primaryArtistsInMainArtists = 0;
@@ -106,14 +141,29 @@ export default function Projects() {
 
       <div class="content">
         <h1>Newly Released Albums</h1>
-        {isLoading ?
+        {recentRequestsQuery.isLoading ?
           (
             <div>Loading!</div>
           ) : (
             <div>
-              <RequestInfo request={data.request}/>
+              <div>
+                <div>Current request index: {currentRequestIndex}</div>
+                <div>Request: {recentRequestsQuery.data[currentRequestIndex].requestId}</div>
+                <button type="button" onClick={() => previousRequestId()}>Previous</button>
+                <button type="button" onClick={() => nextRequestId()}>Next</button>
+              </div>
+            </div>
+          )
+        }
+        <hr />
+        {scanRequestQuery.isLoading ?
+          (
+            <div>Loading!</div>
+          ) : (
+            <div>
+              <RequestInfo request={scanRequestQuery.data.request}/>
               <ul>
-                {data.albums.highPriorityAlbums.map(album => (
+                {scanRequestQuery.data.albums.highPriorityAlbums.map(album => (
                   <Album albumData={album} />
                 ))}
               </ul>
@@ -121,6 +171,7 @@ export default function Projects() {
           )
         }
       </div>
+
 
     </Layout>
     </div>
