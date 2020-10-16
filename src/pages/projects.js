@@ -6,10 +6,12 @@ import useDataApi from '../components/dataApi.js'
 import moment from "moment-timezone";
 import { IconContext } from "react-icons";
 import { HiArrowLeft, HiArrowRight, HiExternalLink } from "react-icons/hi"
-import { FaSpotify } from "react-icons/fa"
+import { FaSpotify, FaSpinner } from "react-icons/fa"
 import { SiAFrame } from "react-icons/si"
 import { MdAlbum, MdMusicNote } from "react-icons/md"
 import { BiCoinStack } from "react-icons/bi"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee, faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 export default function Projects() {
 
@@ -198,7 +200,6 @@ export default function Projects() {
                   </a>
                   </p>
                 </div>
-
               </div>
             </p>
           </div>
@@ -245,7 +246,15 @@ export default function Projects() {
 
             {scanRequestQuery.isLoading ?
               (
-                <div class="panel-block">Loading!</div>
+                <div class="panel-block">
+                  <div class="control columns is-centered">
+                    <div class="column is-1">
+                      <span class="icon is-medium">
+                        <FontAwesomeIcon icon={faSpinner} size="lg" pulse />
+                      </span>
+                    </div>
+                  </div>
+                </div>
               ) : (
                 <div>
                 {scanRequestQuery.data.albums.highPriorityAlbums.map(album => (
