@@ -10,7 +10,7 @@ export default function Layout({ children }) {
       <Navbar />
       <div className={styles.layoutBody}>
         <div className="columns is-centered">
-          <div className="column is-three-fifths-desktop is-full-mobile">
+          <div className="column is-8-desktop is-full-mobile">
             {children}
           </div>
         </div>

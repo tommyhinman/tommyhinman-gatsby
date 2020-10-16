@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
+import styles from "./projects.module.css"
 import { Helmet } from "react-helmet"
 import useDataApi from '../components/dataApi.js'
-import axios from "axios";
 import moment from "moment-timezone";
+import { IconContext } from "react-icons";
 import { HiArrowLeft, HiArrowRight, HiExternalLink } from "react-icons/hi"
 import { FaSpotify } from "react-icons/fa"
+import { SiAFrame } from "react-icons/si"
+import { MdAlbum, MdMusicNote } from "react-icons/md"
+import { BiCoinStack } from "react-icons/bi"
 
 export default function Projects() {
 
@@ -102,21 +106,61 @@ export default function Projects() {
     )
   }
 
+  const AlbumIcon = ({albumType}) => {
+    if (albumType == "album") {
+      return (
+        <span class="icon is-medium">
+          <IconContext.Provider
+            value={{ className: "is-size-4", }}
+          >
+            <MdAlbum />
+          </IconContext.Provider>
+        </span>
+      )
+    } else if (albumType == "single") {
+      return (
+        <span class="icon is-medium">
+          <IconContext.Provider
+            value={{ className: "is-size-4", }}
+          >
+            <MdMusicNote />
+          </IconContext.Provider>
+        </span>
+      )
+    } else if (albumType == "compilation") {
+      return (
+        <span class="icon is-medium">
+          <IconContext.Provider
+            value={{ className: "is-size-4", }}
+          >
+            <BiCoinStack />
+          </IconContext.Provider>
+        </span>
+      )
+    }
+  };
+
   const Album = ({albumData}) => {
 
     const primaryArtistIds = albumData.primaryArtists.map( (primaryArtist) => { return primaryArtist.id; });
     const mainArtists = albumData.albumArtists.map( (artist) => {return artist.id})
     const mainArtistsNotPrimaryArtists = !areAnyMainArtistsInPrimaryArtists(albumData.albumArtists, primaryArtistIds);
     const openSpotifyLink = albumData.albumUri.replace("https://open.spotify.com/", "spotify://");
+    const aotyLink = "https://www.albumoftheyear.org/search/albums/?q=" + albumData.albumName;
 
     return (
 
           <div class="panel-block">
             <p class="control columns is-vcentered">
-              <div class="column is-four-fifths">
+              <div class="column is-1 ">
+                <div class={styles.albumTypeIcon}>
+                  <AlbumIcon albumType={albumData.albumType} />
+                </div>
+              </div>
+              <div class="column is-9">
                 <ArtistsList albumArtists={albumData.albumArtists} primaryArtists={primaryArtistIds} />
                 {' - '}
-                {albumData.albumName} ({albumData.albumType})
+                {albumData.albumName}
                 {mainArtistsNotPrimaryArtists &&
                   <>
                     {' '}
@@ -124,15 +168,27 @@ export default function Projects() {
                   </>
                 }
               </div>
-              <div class="column">
-                <div class="buttons has-addons is-right">
+              <div class="column is-2">
+                <div class="field has-addons is-pulled-right">
+                  <p class="control">
+                  <a href={aotyLink} target="_blank">
+                    <button class="button">
+                      <span class="icon">
+                        <SiAFrame />
+                      </span>
+                    </button>
+                  </a>
+                  </p>
+                  <p class="control">
                   <a href={albumData.albumUri} target="_blank">
-                    <button class="button" >
+                    <button class="button">
                       <span class="icon">
                         <HiExternalLink />
                       </span>
                     </button>
                   </a>
+                  </p>
+                  <p class="control">
                   <a href={openSpotifyLink}>
                     <button class="button">
                       <span class="icon">
@@ -140,6 +196,7 @@ export default function Projects() {
                       </span>
                     </button>
                   </a>
+                  </p>
                 </div>
 
               </div>
@@ -170,7 +227,7 @@ export default function Projects() {
           <nav class="panel">
             <p class="panel-heading">
               <div class="level">
-                <button class="button" onClick={() => previousRequestId()}>
+                <button class="button" onClick={() => previousRequestId()} disabled={currentRequestIndex == (numberOfRequests - 1)}>
                   <span class="icon">
                     <HiArrowLeft />
                   </span>
@@ -178,7 +235,7 @@ export default function Projects() {
 
                 <RequestInfo request={scanRequestQuery.data.request}/>
 
-                <button class="button" onClick={() => nextRequestId()}>
+                <button class="button" onClick={() => nextRequestId()} disabled={currentRequestIndex == 0}>
                   <span class="icon">
                     <HiArrowRight />
                   </span>
