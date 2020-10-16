@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet"
 import useDataApi from '../components/dataApi.js'
 import axios from "axios";
 import moment from "moment-timezone";
+import { HiArrowLeft, HiArrowRight, HiExternalLink } from "react-icons/hi"
+import { FaSpotify } from "react-icons/fa"
 
 export default function Projects() {
 
@@ -105,75 +107,99 @@ export default function Projects() {
     const primaryArtistIds = albumData.primaryArtists.map( (primaryArtist) => { return primaryArtist.id; });
     const mainArtists = albumData.albumArtists.map( (artist) => {return artist.id})
     const mainArtistsNotPrimaryArtists = !areAnyMainArtistsInPrimaryArtists(albumData.albumArtists, primaryArtistIds);
+    const openSpotifyLink = albumData.albumUri.replace("https://open.spotify.com/", "spotify://");
 
     return (
-        <li>
-            <span>
-              <ArtistsList albumArtists={albumData.albumArtists} primaryArtists={primaryArtistIds} />
-              {' - '}
-              <a href={albumData.albumUri}>{albumData.albumName} ({albumData.albumType})</a>
-              {mainArtistsNotPrimaryArtists &&
-                <>
-                  {' '}
-                  <FeaturingArtistsList primaryArtists={albumData.primaryArtists} />
-                </>
-              }
-            </span>
-        </li>
+
+          <div class="panel-block">
+            <p class="control columns is-vcentered">
+              <div class="column is-four-fifths">
+                <ArtistsList albumArtists={albumData.albumArtists} primaryArtists={primaryArtistIds} />
+                {' - '}
+                {albumData.albumName} ({albumData.albumType})
+                {mainArtistsNotPrimaryArtists &&
+                  <>
+                    {' '}
+                    <FeaturingArtistsList primaryArtists={albumData.primaryArtists} />
+                  </>
+                }
+              </div>
+              <div class="column">
+                <div class="buttons has-addons is-right">
+                  <a href={albumData.albumUri} target="_blank">
+                    <button class="button" >
+                      <span class="icon">
+                        <HiExternalLink />
+                      </span>
+                    </button>
+                  </a>
+                  <a href={openSpotifyLink}>
+                    <button class="button">
+                      <span class="icon">
+                        <FaSpotify />
+                      </span>
+                    </button>
+                  </a>
+                </div>
+
+              </div>
+            </p>
+          </div>
     )
   }
 
   const RequestInfo = ({request}) => {
-    const formattedDate = moment(request.requestTime).tz('America/Los_Angeles').format("LLL");
-    return (
-      <div>Latest Scan Request, on {formattedDate}, with ID {request.requestId}</div>
-    )
+    if (recentRequestsQuery.isLoading) {
+      return (<div>Loading</div>);
+    } else {
+      const formattedDate = moment(request.requestTime).tz('America/Los_Angeles').format("llll");
+      return (
+        <div>{formattedDate}<span hidden> ID {request.requestId}</span></div>
+      )
+    }
   }
 
   return (
     <div>
-    <Helmet>
-      <meta charSet="utf-8" />
-      <title>Projects | tommyhinman</title>
-    </Helmet>
-    <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Projects | tommyhinman</title>
+      </Helmet>
+      <Layout>
+        <div>
+          <nav class="panel">
+            <p class="panel-heading">
+              <div class="level">
+                <button class="button" onClick={() => previousRequestId()}>
+                  <span class="icon">
+                    <HiArrowLeft />
+                  </span>
+                </button>
 
+                <RequestInfo request={scanRequestQuery.data.request}/>
 
-      <div class="content">
-        <h1>Newly Released Albums</h1>
-        {recentRequestsQuery.isLoading ?
-          (
-            <div>Loading!</div>
-          ) : (
-            <div>
-              <div>
-                <div>Current request index: {currentRequestIndex}</div>
-                <div>Request: {recentRequestsQuery.data[currentRequestIndex].requestId}</div>
-                <button type="button" onClick={() => previousRequestId()}>Previous</button>
-                <button type="button" onClick={() => nextRequestId()}>Next</button>
+                <button class="button" onClick={() => nextRequestId()}>
+                  <span class="icon">
+                    <HiArrowRight />
+                  </span>
+                </button>
               </div>
-            </div>
-          )
-        }
-        <hr />
-        {scanRequestQuery.isLoading ?
-          (
-            <div>Loading!</div>
-          ) : (
-            <div>
-              <RequestInfo request={scanRequestQuery.data.request}/>
-              <ul>
+            </p>
+
+            {scanRequestQuery.isLoading ?
+              (
+                <div class="panel-block">Loading!</div>
+              ) : (
+                <div>
                 {scanRequestQuery.data.albums.highPriorityAlbums.map(album => (
                   <Album albumData={album} />
                 ))}
-              </ul>
-            </div>
-          )
-        }
-      </div>
-
-
-    </Layout>
+                </div>
+              )
+            }
+          </nav>
+        </div>
+      </Layout>
     </div>
   )
 }
