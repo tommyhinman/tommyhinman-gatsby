@@ -6,12 +6,12 @@ import useDataApi from '../components/dataApi.js'
 import moment from "moment-timezone";
 import { IconContext } from "react-icons";
 import { HiArrowLeft, HiArrowRight, HiExternalLink } from "react-icons/hi"
-import { FaSpotify, FaSpinner } from "react-icons/fa"
+import { FaSpotify } from "react-icons/fa"
 import { SiAFrame } from "react-icons/si"
 import { MdAlbum, MdMusicNote } from "react-icons/md"
 import { BiCoinStack } from "react-icons/bi"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
 export default function Projects() {
 
@@ -217,14 +217,13 @@ export default function Projects() {
   }
 
   const RequestInfo = ({request}) => {
-    if (recentRequestsQuery.isLoading) {
-      return (<div>Loading</div>);
-    } else {
-      const formattedDate = moment(request.requestTime).tz('America/Los_Angeles').format("llll");
-      return (
-        <div>{formattedDate}<span hidden> ID {request.requestId}</span></div>
-      )
+    var formattedDate = "";
+    if (request.requestTime != null) {
+      formattedDate = moment(request.requestTime).tz('America/Los_Angeles').format("llll");
     }
+    return (
+      <div>{formattedDate}<span hidden> ID {request.requestId}</span></div>
+    )
   }
 
   return (
@@ -234,45 +233,47 @@ export default function Projects() {
         <title>Projects | tommyhinman</title>
       </Helmet>
       <Layout>
-          <nav class="panel">
-            <p class="panel-heading">
-              <div class="level is-mobile">
-                <button class="button" onClick={() => previousRequestId()} disabled={currentRequestIndex == (numberOfRequests - 1)}>
-                  <span class="icon">
-                    <HiArrowLeft />
-                  </span>
-                </button>
+        { (recentRequestsQuery.data.length > 1 && !recentRequestsQuery.isLoading) &&
+            <nav class="panel">
+              <p class="panel-heading">
+                <div class="level is-mobile">
+                  <button class="button" onClick={() => previousRequestId()} disabled={currentRequestIndex == (numberOfRequests - 1)}>
+                    <span class="icon">
+                      <HiArrowLeft />
+                    </span>
+                  </button>
 
-                <RequestInfo request={scanRequestQuery.data.request}/>
+                  <RequestInfo request={scanRequestQuery.data.request}/>
 
-                <button class="button" onClick={() => nextRequestId()} disabled={currentRequestIndex == 0}>
-                  <span class="icon">
-                    <HiArrowRight />
-                  </span>
-                </button>
-              </div>
-            </p>
+                  <button class="button" onClick={() => nextRequestId()} disabled={currentRequestIndex == 0}>
+                    <span class="icon">
+                      <HiArrowRight />
+                    </span>
+                  </button>
+                </div>
+              </p>
 
-            {scanRequestQuery.isLoading ?
-              (
-                <div class="panel-block">
-                  <div class="control columns is-centered">
-                    <div class="column is-1">
-                      <span class="icon is-medium">
-                        <FontAwesomeIcon icon={faSpinner} size="lg" pulse />
-                      </span>
+              {scanRequestQuery.isLoading ?
+                (
+                  <div class="panel-block">
+                    <div class="control columns is-centered">
+                      <div class="column is-1">
+                        <span class="icon is-medium">
+                          <FontAwesomeIcon icon={faSpinner} size="lg" pulse />
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ) : (
-                <div>
-                {scanRequestQuery.data.albums.highPriorityAlbums.map(album => (
-                  <Album albumData={album} />
-                ))}
-                </div>
-              )
-            }
-          </nav>
+                ) : (
+                  <div>
+                  {scanRequestQuery.data.albums.highPriorityAlbums.map(album => (
+                    <Album albumData={album} />
+                  ))}
+                  </div>
+                )
+              }
+            </nav>
+        }
       </Layout>
     </div>
   )
