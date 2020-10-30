@@ -142,63 +142,73 @@ export default function Projects() {
     }
   };
 
+  const AlbumControls = ({albumData}) => {
+    const openSpotifyLink = albumData.albumUri.replace("https://open.spotify.com/", "spotify://");
+    const aotyLink = "https://www.albumoftheyear.org/search/albums/?q=" + albumData.albumName;
+
+    return (
+      <div class="field has-addons">
+        <p class="control">
+        <a href={aotyLink} target="_blank">
+          <button class="button">
+            <span class="icon">
+              <SiAFrame />
+            </span>
+          </button>
+        </a>
+        </p>
+        <p class="control">
+        <a href={albumData.albumUri} target="_blank">
+          <button class="button">
+            <span class="icon">
+              <HiExternalLink />
+            </span>
+          </button>
+        </a>
+        </p>
+        <p class="control">
+        <a href={openSpotifyLink}>
+          <button class="button">
+            <span class="icon">
+              <FaSpotify />
+            </span>
+          </button>
+        </a>
+        </p>
+      </div>
+    )
+  }
+
   const Album = ({albumData}) => {
 
     const primaryArtistIds = albumData.primaryArtists.map( (primaryArtist) => { return primaryArtist.id; });
     const mainArtists = albumData.albumArtists.map( (artist) => {return artist.id})
     const mainArtistsNotPrimaryArtists = !areAnyMainArtistsInPrimaryArtists(albumData.albumArtists, primaryArtistIds);
-    const openSpotifyLink = albumData.albumUri.replace("https://open.spotify.com/", "spotify://");
-    const aotyLink = "https://www.albumoftheyear.org/search/albums/?q=" + albumData.albumName;
+
 
     return (
 
           <div class="panel-block">
-            <p class="control columns is-vcentered">
-              <div class="column is-1 ">
+            <p class="control columns is-vcentered is-mobile">
+              <div class="column is-1 is-hidden-mobile">
                 <div class={styles.albumTypeIcon}>
                   <AlbumIcon albumType={albumData.albumType} />
                 </div>
               </div>
-              <div class="column is-9">
-                <ArtistsList albumArtists={albumData.albumArtists} primaryArtists={primaryArtistIds} />
-                {' - '}
-                {albumData.albumName}
-                {mainArtistsNotPrimaryArtists &&
-                  <>
-                    {' '}
-                    <FeaturingArtistsList primaryArtists={albumData.primaryArtists} />
-                  </>
-                }
+              <div class="column is-three-quarters-tablet is-two-thirds-mobile">
+                  <ArtistsList albumArtists={albumData.albumArtists} primaryArtists={primaryArtistIds} />
+                  {' - '}
+                  {albumData.albumName}
+                  {mainArtistsNotPrimaryArtists &&
+                    <>
+                      {' '}
+                      <FeaturingArtistsList primaryArtists={albumData.primaryArtists} />
+                    </>
+                  }
               </div>
-              <div class="column is-2">
-                <div class="field has-addons is-pulled-right">
-                  <p class="control">
-                  <a href={aotyLink} target="_blank">
-                    <button class="button">
-                      <span class="icon">
-                        <SiAFrame />
-                      </span>
-                    </button>
-                  </a>
-                  </p>
-                  <p class="control">
-                  <a href={albumData.albumUri} target="_blank">
-                    <button class="button">
-                      <span class="icon">
-                        <HiExternalLink />
-                      </span>
-                    </button>
-                  </a>
-                  </p>
-                  <p class="control">
-                  <a href={openSpotifyLink}>
-                    <button class="button">
-                      <span class="icon">
-                        <FaSpotify />
-                      </span>
-                    </button>
-                  </a>
-                  </p>
+              <div class="column is-2 is-3-mobile">
+                <div class="">
+                  <AlbumControls albumData={albumData} />
                 </div>
               </div>
             </p>
@@ -224,10 +234,9 @@ export default function Projects() {
         <title>Projects | tommyhinman</title>
       </Helmet>
       <Layout>
-        <div>
           <nav class="panel">
             <p class="panel-heading">
-              <div class="level">
+              <div class="level is-mobile">
                 <button class="button" onClick={() => previousRequestId()} disabled={currentRequestIndex == (numberOfRequests - 1)}>
                   <span class="icon">
                     <HiArrowLeft />
@@ -264,7 +273,6 @@ export default function Projects() {
               )
             }
           </nav>
-        </div>
       </Layout>
     </div>
   )
