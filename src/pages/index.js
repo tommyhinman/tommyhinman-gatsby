@@ -7,8 +7,11 @@ import { IoIosGitBranch } from "react-icons/io"
 import { FaLastfm } from "react-icons/fa"
 import { MdMailOutline } from "react-icons/md"
 import { RiGamepadLine, RiTwitterLine, RiBook3Line } from "react-icons/ri"
+import classNames from 'classnames';
 
 export default function Home() {
+  const buttonTileClasses = classNames('tile', 'is-parent', styles.buttonTile);
+
   return (
     <div>
       <Helmet>
@@ -20,7 +23,7 @@ export default function Home() {
           <h1 class="title is-size-2-desktop is-size-3-mobile has-text-centered-mobile">tommy hinman</h1>
           <hr />
           <div class="tile is-ancestor">
-            <div class="tile is-parent">
+            <div className={buttonTileClasses}>
               <a
                 href="mailto:tommyhinman@gmail.com"
                 class="button is-medium is-fullwidth"
@@ -31,7 +34,7 @@ export default function Home() {
                 <span>mail</span>
               </a>
             </div>
-            <div class="tile is-parent">
+            <div className={buttonTileClasses}>
               <a
                 href="http://twitter.com/tommyhinman"
                 class="button is-medium is-fullwidth"
@@ -42,7 +45,7 @@ export default function Home() {
                 <span>twitter</span>
               </a>
             </div>
-            <div class="tile is-parent">
+            <div className={buttonTileClasses}>
               <a
                 href="https://github.com/tommyhinman"
                 class="button is-medium is-fullwidth"
@@ -53,7 +56,7 @@ export default function Home() {
                 <span>github</span>
               </a>
             </div>
-            <div class="tile is-parent">
+            <div className={buttonTileClasses}>
               <a
                 href="https://last.fm/user/tommyhinman"
                 class="button is-medium is-fullwidth"
@@ -64,7 +67,7 @@ export default function Home() {
                 <span>last.fm</span>
               </a>
             </div>
-            <div class="tile is-parent">
+            <div className={buttonTileClasses}>
               <a
                 href="https://www.goodreads.com/user/show/39909302-tommy"
                 class="button is-medium is-fullwidth"

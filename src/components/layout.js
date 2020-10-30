@@ -8,7 +8,14 @@ export default function Layout({ children }) {
   return (
     <div className={styles.parentContainer} >
       <Navbar />
-      <div className="mt-6 mx-3">
+      <div className="mt-6 mx-1 is-hidden-tablet">
+        <div className="columns is-centered">
+          <div className="column is-8-desktop is-full-mobile">
+            {children}
+          </div>
+        </div>
+      </div>
+      <div className="mt-6 mx-6 is-hidden-mobile">
         <div className="columns is-centered">
           <div className="column is-8-desktop is-full-mobile">
             {children}
