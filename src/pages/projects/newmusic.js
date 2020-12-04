@@ -225,7 +225,7 @@ export default function Newmusic() {
       formattedDate = moment(request.requestTime).tz('America/Los_Angeles').format("llll");
     }
     return (
-      <div>{formattedDate}<span hidden> ID {request.requestId}</span></div>
+      <div className="is-size-6-mobile">{formattedDate}<span hidden> ID {request.requestId}</span></div>
     )
   }
 
