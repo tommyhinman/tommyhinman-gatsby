@@ -1,0 +1,9 @@
+.albumTypeIcon {
+   border-right: 1px solid;
+   border-color: hsl(0, 0%, 85%);
+}
+
+.projectPanelContainer {
+  padding-left: 0px;
+  padding-right: 0px;
+}
