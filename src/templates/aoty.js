@@ -50,7 +50,7 @@ export default function Aoty({ data }) {
       <div className="tile is-ancestor">
         <div className="tile is-vertical is-parent">
           {data.aotyJson.albums.map((album, index) => (
-            <div className="tile is-child box">
+            <div className="tile is-child ">
               <Album album={album}/>
             </div>
           ))}
