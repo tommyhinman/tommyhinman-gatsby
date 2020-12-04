@@ -44,9 +44,6 @@ export default function Aoty({ data }) {
         </div>
       </div>
 
-
-      <hr className="is-hidden-tablet" />
-
       <div className="tile is-ancestor">
         <div className="tile is-vertical is-parent">
           {data.aotyJson.albums.map((album, index) => (
