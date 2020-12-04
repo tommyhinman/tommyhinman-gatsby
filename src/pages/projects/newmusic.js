@@ -195,16 +195,19 @@ export default function Newmusic() {
                   <AlbumIcon albumType={albumData.albumType} />
                 </div>
               </div>
-              <div className="column is-three-quarters-tablet is-two-thirds-mobile">
+              <div className="column is-three-quarters-tablet is-three-fifths-mobile">
                   <ArtistsList albumArtists={albumData.albumArtists} primaryArtists={primaryArtistIds} />
-                  {' - '}
-                  {albumData.albumName}
-                  {mainArtistsNotPrimaryArtists &&
-                    <>
-                      {' '}
-                      <FeaturingArtistsList primaryArtists={albumData.primaryArtists} />
-                    </>
-                  }
+                  <span className="is-hidden-tablet"><br /></span>
+                  <span className="is-hidden-mobile">{' - '}</span>
+                  <span className="is-size-7-mobile">
+                    {albumData.albumName}
+                    {mainArtistsNotPrimaryArtists &&
+                      <>
+                        {' '}
+                        <FeaturingArtistsList primaryArtists={albumData.primaryArtists} />
+                      </>
+                    }
+                  </span>
               </div>
               <div className="column is-2 is-3-mobile">
                 <div className="">
@@ -235,7 +238,7 @@ export default function Newmusic() {
       <Layout>
         <h1 className="title">New Music Scanner</h1>
         { (recentRequestsQuery.data.length > 1 && !recentRequestsQuery.isLoading) &&
-            <nav className="panel mb-5">
+            <nav className="panel mb-5 mx-0">
               <p className="panel-heading">
                 <div className="level is-mobile">
                   <button className="button" onClick={() => previousRequestId()} disabled={currentRequestIndex == (numberOfRequests - 1)}>
