@@ -3,7 +3,7 @@ import Layout from "../../components/layout"
 import { Helmet } from "react-helmet"
 import { ToastContainer } from "react-toastr";
 import ToastMessagejQuery from "react-toastr/lib/components/ToastMessage/ToastMessagejQuery";
-import { getCategories } from "./scattergoriesCategories"
+import { getCategories } from "../../data/scattergoriesCategories"
 import { navigate } from '@reach/router';
 
 import "toastr/build/toastr.css";
@@ -19,10 +19,15 @@ const numberOfCategories = 12;
 const allCategories = getCategories();
 
 export default function Scattergories() {
-  if (window.location.search.length <= 1) {
-    navigate('?' + getUnseededRandomWordString());
+
+  var randomSeed = "";
+  if (typeof window !== `undefined`) {
+    if (window.location.search.length <= 1) {
+      navigate('?' + getUnseededRandomWordString());
+    } else {
+      randomSeed = window.location.search.substring(1);
+    }
   }
-  const randomSeed = window.location.search.substring(1);
   const rng = new seedrandom(randomSeed);
   const startingLetterIndex = getRandom(rng, 0, 19);
   const startingLetter = letters[startingLetterIndex];
