@@ -15,7 +15,7 @@ export default function Projects() {
     </Helmet>
     <Layout>
 
-      <div class="content">
+      <div className="content">
         <h1>Projects</h1>
         This page is a collection of personal projects.
 
@@ -24,7 +24,7 @@ export default function Projects() {
           <div className="container">
             <div className="block">
               <h1 className="title is-4">
-                <Link to="projects/newmusic">
+                <Link to="/projects/newmusic">
                   New Music Scanner
                 </Link>
               </h1>
@@ -51,7 +51,16 @@ export default function Projects() {
             <hr />
             <div className="block">
               <h1 className="title is-4">
-                <Link to="app">
+                <Link to="/projects/scattergories">
+                  Scattergories
+                </Link>
+              </h1>
+              Random scattergories cards seeded by the URL, for friends!
+            </div>
+            <hr />
+            <div className="block">
+              <h1 className="title is-4">
+                <Link to="/app">
                   Pinboard Experiments
                 </Link>
               </h1>
@@ -59,9 +68,6 @@ export default function Projects() {
               Not available publicly for now!
             </div>
             <hr />
-
-
-
           </div>
       </div>
 

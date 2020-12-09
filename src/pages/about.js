@@ -12,7 +12,7 @@ export default function About() {
     <Layout>
 
 
-      <div class="content">
+      <div className="content">
         <h1>About</h1>
         <p>
           This website is a work in progress!

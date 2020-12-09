@@ -56,7 +56,6 @@ class Navbar extends Component {
   }
 
   render() {
-    console.log(util.inspect(this.props, false, null, true /* enable colors */));
     return (
       <div>
         <nav
@@ -102,8 +101,8 @@ class Navbar extends Component {
                 <a className="navbar-link">Music</a>
                 {/* Loop thru all AOTY years, add a link for each */}
                 <div className="navbar-dropdown">
-                  {this.props.years.map( (year) => (
-                    <Link to={year.context.slug} className="navbar-item">
+                  {this.props.years.map( (year, index) => (
+                    <Link to={year.context.slug} className="navbar-item" key={index}>
                       Best Albums {year.context.aotyYear}
                     </Link>
                   ))}
@@ -118,10 +117,10 @@ class Navbar extends Component {
                 </div>{" "}
                 {/* navbar-dropdown  */}
               </div>{" "}
-              <Link to="projects" className="navbar-item">
+              <Link to="/projects" className="navbar-item">
                 Projects
               </Link>
-              <Link to="about" className="navbar-item">
+              <Link to="/about" className="navbar-item">
                 About
               </Link>
               {/* navbar-item  */}
