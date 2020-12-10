@@ -12,8 +12,11 @@ import { MdAlbum, MdMusicNote } from "react-icons/md"
 import { BiCoinStack } from "react-icons/bi"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+import Amplify, { Analytics } from 'aws-amplify';
 
 export default function Newmusic() {
+  // Record page analytics
+  useEffect( () => { Analytics.record({ name: 'pagevisit-newmusic' }); }, []);
 
   // Currently just a local constant. Will pass this in as a var at some point to the query.
   const numberOfRequests = 10;

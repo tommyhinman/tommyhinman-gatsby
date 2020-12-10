@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "../mystyles.scss"
 import styles from "./index.module.css"
 import Layout from "../components/layout"
@@ -7,9 +7,13 @@ import { IoIosGitBranch } from "react-icons/io"
 import { FaLastfm } from "react-icons/fa"
 import { MdMailOutline } from "react-icons/md"
 import { RiGamepadLine, RiTwitterLine, RiBook3Line } from "react-icons/ri"
+import Amplify, { Analytics } from 'aws-amplify';
 import classNames from 'classnames';
 
 export default function Home() {
+  // Record page analytics
+  useEffect( () => { Analytics.record({ name: 'pagevisit-index' }); }, []);
+  
   const buttonTileClasses = classNames('tile', 'is-parent', styles.buttonTile);
 
   return (

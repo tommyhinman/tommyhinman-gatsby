@@ -1,8 +1,12 @@
-import React from "react"
+import React, {useEffect} from "react"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
+import Amplify, { Analytics } from 'aws-amplify';
 
 export default function About() {
+  // Record page analytics
+  useEffect( () => { Analytics.record({ name: 'pagevisit-index' }); }, []);
+
   return (
     <div>
     <Helmet>

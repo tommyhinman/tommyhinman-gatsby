@@ -6,6 +6,7 @@ import ToastMessagejQuery from "react-toastr/lib/components/ToastMessage/ToastMe
 import { getCategories } from "../../data/scattergoriesCategories"
 import { navigate } from '@reach/router';
 import Countdown from 'react-countdown';
+import Amplify, { Analytics } from 'aws-amplify';
 
 import "toastr/build/toastr.css";
 import "animate.css/animate.css";
@@ -23,6 +24,8 @@ const allCategories = getCategories();
 
 
 export default function Scattergories() {
+  // Record page analytics
+  useEffect( () => { Analytics.record({ name: 'pagevisit-scattergories' }); }, []);
 
   /*
     Figure out the starting seed based on the URL search param.

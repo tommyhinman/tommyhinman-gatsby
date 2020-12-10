@@ -1,0 +1,21 @@
+{
+    "appName": "tommyhinmangatsby",
+    "roleName": "pinpointLambdaRolebfda3207",
+    "cloudformationPolicyName": "cloudformationPolicybfda3207",
+    "cloudWatchPolicyName": "cloudWatchPolicybfda3207",
+    "pinpointPolicyName": "pinpointPolicybfda3207",
+    "authPolicyName": "pinpoint_amplify_bfda3207",
+    "unauthPolicyName": "pinpoint_amplify_bfda3207",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}

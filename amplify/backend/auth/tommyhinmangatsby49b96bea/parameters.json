@@ -1,6 +1,6 @@
 {
     "identityPoolName": "tommyhinmangatsby49b96bea_identitypool_49b96bea",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "tommyh49b96bea",
     "userPoolName": "tommyhinmangatsby49b96bea_userpool_49b96bea",
     "autoVerifiedAttributes": [

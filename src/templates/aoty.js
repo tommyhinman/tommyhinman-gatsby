@@ -1,11 +1,16 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 import Album from "../components/album"
 import { RiPlayListLine, RiDatabaseLine } from "react-icons/ri"
+import Amplify, { Analytics } from 'aws-amplify';
 
 export default function Aoty({ data }) {
+  // Record page analytics
+  const analyticsEventName = 'pagevisit-aoty-' + data.aotyJson.name;
+  useEffect( () => { Analytics.record({ name: analyticsEventName }); }, []);
+
   return (
     <div>
     <Helmet>
