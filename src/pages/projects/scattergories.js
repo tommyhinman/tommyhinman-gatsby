@@ -20,13 +20,14 @@ const allCategories = getCategories();
 
 export default function Scattergories() {
 
+  var haveGeneratedSeed = false;
   var randomSeed = "";
   if (typeof window !== `undefined`) {
     if (window.location.search.length <= 1) {
       navigate('?' + getUnseededRandomWordString());
-    } else {
-      randomSeed = window.location.search.substring(1);
     }
+    randomSeed = window.location.search.substring(1);
+    haveGeneratedSeed = true;
   }
   const rng = new seedrandom(randomSeed);
   const startingLetterIndex = getRandom(rng, 0, 19);
@@ -41,38 +42,40 @@ export default function Scattergories() {
       <title>scattergories | tommyhinman</title>
     </Helmet>
     <Layout>
-      <div className="content mt-0 mb-5">
-        <div className="columns is-centered">
-          <div className="column is-5">
-            <div className="box">
-              <h1 className="title has-text-centered is-size-2 mb-2">
-                {startingLetter}
-              </h1>
-              <hr className="mt-2 mb-1"/>
-              <ol type="1">
-                {pickedCategories.map((category, index) => (
-                  <li key={index}>{category}</li>
-                ))}
-              </ol>
-              <div className="is-size-7 has-text-centered">
-                Seed: {randomSeed}
+        <div className="content mt-0 mb-5">
+          <div className="columns is-centered">
+            <div className="column is-5">
+              <div className="box">
+                {haveGeneratedSeed && (<>
+                  <h1 className="title has-text-centered is-size-2 mb-2">
+                    {startingLetter}
+                  </h1>
+                  <hr className="mt-2 mb-1"/>
+                  <ol type="1">
+                    {pickedCategories.map((category, index) => (
+                      <li key={index}>{category}</li>
+                    ))}
+                  </ol>
+                  <div className="is-size-7 has-text-centered">
+                    Seed: {randomSeed}
+                  </div>
+                </>)}
               </div>
-            </div>
-            <div className="columns is-variable is-1 is-mobile">
-              <div className="column is-half">
-                <button className="button is-fullwidth is-info" onClick={copyCurrentUrlToClipboard}>
-                  Copy Link
-                </button>
-              </div>
-              <div className="column is-half">
-                <button className="button is-fullwidth is-success" onClick={newGame}>
-                  New Game
-                </button>
+              <div className="columns is-variable is-1 is-mobile">
+                <div className="column is-half">
+                  <button className="button is-fullwidth is-info" onClick={copyCurrentUrlToClipboard}>
+                    Copy Link
+                  </button>
+                </div>
+                <div className="column is-half">
+                  <button className="button is-fullwidth is-success" onClick={newGame}>
+                    New Game
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </Layout>
   </>)
 }
