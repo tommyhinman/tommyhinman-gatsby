@@ -10,7 +10,7 @@ import Countdown from 'react-countdown';
 import "toastr/build/toastr.css";
 import "animate.css/animate.css";
 
-const seedrandom = require('seedrandom');
+const seedrandom = require('seed-random');
 const randomWords = require('random-words');
 const toastr = require('toastr');
 
@@ -19,14 +19,17 @@ const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 const numberOfCategories = 12;
 // Two minutes in milliseconds
 const gameLength = 120000;
-// const gameLength = 5000;
 const allCategories = getCategories();
 
 
 export default function Scattergories() {
 
-  const [hasGameStarted, setHasGameStarted] = useState(false);
-
+  /*
+    Figure out the starting seed based on the URL search param.
+    If there's none set, generate random words and use that.
+    NOTE: These words are generated BEFORE setting the RNG seed, so they're different every time the page loads!
+    This is intentional, so that whenever the game is newly loaded you get a fresh sequence of games.
+  */
   var haveGeneratedSeed = false;
   var randomSeed = "";
   if (typeof window !== `undefined`) {
@@ -36,12 +39,15 @@ export default function Scattergories() {
     randomSeed = window.location.search.substring(1);
     haveGeneratedSeed = true;
   }
-  const rng = new seedrandom(randomSeed);
-  const startingLetterIndex = getRandom(rng, 0, 19);
+
+  // Seed Math.random() with the inputted (or generated) seed.
+  seedrandom(randomSeed, {global:true});
+
+  const [hasGameStarted, setHasGameStarted] = useState(false);
+
+  const startingLetterIndex = getRandom(0, 19);
   const startingLetter = letters[startingLetterIndex];
-
-
-  const pickedCategories = pickCategories(rng, allCategories, numberOfCategories);
+  const pickedCategories = pickCategories(allCategories, numberOfCategories);
 
   /*
     Copy the browser's current URL to the clipboard.
@@ -68,7 +74,7 @@ export default function Scattergories() {
   }
 
   /*
-
+    Set the game state to started, which starts the timer's countdown!
   */
   function startGame() {
     setHasGameStarted(true);
@@ -150,12 +156,12 @@ export default function Scattergories() {
   Pick categories from the full list of categories.
   Pass in the random generator, to preserve seed.
 */
-function pickCategories(rng, categoryList, count) {
+function pickCategories(categoryList, count) {
   const workingList = Array.from(categoryList);
   const pickedList = [];
 
   for (var i = 0; i < count; i++) {
-    const randomIndex = getRandom(rng, 0, workingList.length);
+    const randomIndex = getRandom(0, workingList.length);
     pickedList.push(workingList[randomIndex]);
     workingList.splice(randomIndex, 1);
   }
@@ -167,13 +173,12 @@ function pickCategories(rng, categoryList, count) {
   Random number between min and max.
   Pass in the random generator, to preserve seed.
 */
-function getRandom(rng, min, max) {
-  return Math.floor(rng() * (max - min) + min);
+function getRandom(min, max) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 /*
   Get a random word string, to use for seeding.
-  Doesn't use the seeded RNG that the rest of this code uses!
 */
 function getUnseededRandomWordString() {
   const randomWordsList = randomWords(3);
