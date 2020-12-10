@@ -1,10 +1,11 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import Layout from "../../components/layout"
 import { Helmet } from "react-helmet"
 import { ToastContainer } from "react-toastr";
 import ToastMessagejQuery from "react-toastr/lib/components/ToastMessage/ToastMessagejQuery";
 import { getCategories } from "../../data/scattergoriesCategories"
 import { navigate } from '@reach/router';
+import Countdown from 'react-countdown';
 
 import "toastr/build/toastr.css";
 import "animate.css/animate.css";
@@ -16,9 +17,15 @@ const toastr = require('toastr');
 const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
                  'K', 'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'W' ];
 const numberOfCategories = 12;
+// Two minutes in milliseconds
+const gameLength = 120000;
+// const gameLength = 5000;
 const allCategories = getCategories();
 
+
 export default function Scattergories() {
+
+  const [hasGameStarted, setHasGameStarted] = useState(false);
 
   var haveGeneratedSeed = false;
   var randomSeed = "";
@@ -36,6 +43,49 @@ export default function Scattergories() {
 
   const pickedCategories = pickCategories(rng, allCategories, numberOfCategories);
 
+  /*
+    Copy the browser's current URL to the clipboard.
+  */
+  function copyCurrentUrlToClipboard() {
+    const urlToShare = window.location;
+    const dummyTextArea = document.createElement("textarea");
+    document.body.appendChild(dummyTextArea);
+    dummyTextArea.value = window.location;
+    dummyTextArea.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummyTextArea);
+
+    toastr.info('Seed: ' + window.location.search.substring(1), 'Copied link!');
+  }
+
+  /*
+    Start a new game, by generating a new seed and navigating to it.
+  */
+  function newGame() {
+    const newGameSeed = getUnseededRandomWordString();
+    navigate('?' + newGameSeed);
+    setHasGameStarted(false);
+  }
+
+  /*
+
+  */
+  function startGame() {
+    setHasGameStarted(true);
+  }
+
+  const countdownRenderer = ({minutes, seconds, completed}) => {
+    if (completed) {
+      return (<span>Time's up!</span>);
+    } else {
+      var paddedSeconds = seconds;
+      if (seconds < 10) {
+        paddedSeconds = "0" + seconds;
+      }
+      return (<span>{minutes}:{paddedSeconds}</span>);
+    }
+  }
+
   return (<>
     <Helmet>
       <meta charSet="utf-8" />
@@ -45,30 +95,44 @@ export default function Scattergories() {
         <div className="content mt-0 mb-5">
           <div className="columns is-centered">
             <div className="column is-5">
-              <div className="box">
-                {haveGeneratedSeed && (<>
-                  <h1 className="title has-text-centered is-size-2 mb-2">
-                    {startingLetter}
-                  </h1>
-                  <hr className="mt-2 mb-1"/>
-                  <ol type="1">
-                    {pickedCategories.map((category, index) => (
-                      <li key={index}>{category}</li>
-                    ))}
-                  </ol>
-                  <div className="is-size-7 has-text-centered">
-                    Seed: {randomSeed}
-                  </div>
-                </>)}
-              </div>
+              {hasGameStarted && (
+                <div className="is-size-2 has-text-centered">
+                  <Countdown date={Date.now() + gameLength} renderer={countdownRenderer} />
+                </div>
+              )}
+
+                <div className="box">
+                  {haveGeneratedSeed && (<>
+                    <h1 className="title has-text-centered is-size-2 mb-2">
+                      {startingLetter}
+                    </h1>
+                    <hr className="mt-2 mb-1"/>
+                    {hasGameStarted ? (
+                    <ol type="1">
+                      {pickedCategories.map((category, index) => (
+                        <li key={index}>{category}</li>
+                      ))}
+                    </ol>
+                  ) : (
+                    <div className="has-text-centered">
+                    <button className="button is-success my-3" onClick={startGame}>
+                      Start Game
+                    </button>
+                    </div>
+                  )}
+                    <div className="is-size-7 has-text-centered">
+                      Seed: {randomSeed}
+                    </div>
+                  </>)}
+                </div>
               <div className="columns is-variable is-1 is-mobile">
                 <div className="column is-half">
-                  <button className="button is-fullwidth is-info" onClick={copyCurrentUrlToClipboard}>
+                  <button className="button is-fullwidth is-light is-info" onClick={copyCurrentUrlToClipboard}>
                     Copy Link
                   </button>
                 </div>
                 <div className="column is-half">
-                  <button className="button is-fullwidth is-success" onClick={newGame}>
+                  <button className="button is-fullwidth is-light is-success" onClick={newGame}>
                     New Game
                   </button>
                 </div>
@@ -80,28 +144,7 @@ export default function Scattergories() {
   </>)
 }
 
-/*
-  Copy the browser's current URL to the clipboard.
-*/
-function copyCurrentUrlToClipboard() {
-  const urlToShare = window.location;
-  const dummyTextArea = document.createElement("textarea");
-  document.body.appendChild(dummyTextArea);
-  dummyTextArea.value = window.location;
-  dummyTextArea.select();
-  document.execCommand("copy");
-  document.body.removeChild(dummyTextArea);
 
-  toastr.info('Seed: ' + window.location.search.substring(1), 'Copied link!');
-}
-
-/*
-  Start a new game, by generating a new seed and navigating to it.
-*/
-function newGame() {
-  const newGameSeed = getUnseededRandomWordString();
-  navigate('?' + newGameSeed);
-}
 
 /*
   Pick categories from the full list of categories.
