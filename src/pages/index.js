@@ -31,7 +31,7 @@ export default function Home() {
                 <span class="icon">
                   <MdMailOutline />
                 </span>
-                <span>mail</span>
+                <span>contact</span>
               </a>
             </div>
             <div className={buttonTileClasses}>

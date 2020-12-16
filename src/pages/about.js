@@ -7,7 +7,7 @@ export default function About() {
     <div>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>About | tommyhinman</title>
+      <title>about | tommyhinman</title>
     </Helmet>
     <Layout>
 
@@ -15,10 +15,10 @@ export default function About() {
       <div className="content">
         <h1>About</h1>
         <p>
-          This website is a work in progress!
+          A little home for my projects and preoccupations.
         </p>
         <p>
-          <a href="mailto:me@example.com">me@example.com</a>
+          Résumé available on request at <a href="mailto:tommyhinman@gmail.com">tommyhinman@gmail.com</a>.
         </p>
       </div>
 
