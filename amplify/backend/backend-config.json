@@ -25,11 +25,5 @@
 	},
 	"storage": {},
 	"function": {},
-	"api": {},
-	"analytics": {
-		"tommyhinmangatsby": {
-			"service": "Pinpoint",
-			"providerPlugin": "awscloudformation"
-		}
-	}
+	"api": {}
 }

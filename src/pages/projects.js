@@ -3,12 +3,8 @@ import Layout from "../components/layout"
 import styles from "./projects.module.css"
 import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
-import Amplify, { Analytics } from 'aws-amplify';
 
 export default function Projects() {
-
-  // Record page analytics
-  useEffect( () => { Analytics.record({ name: 'pagevisit-projects' }); }, []);
 
   return (
 
