@@ -37,7 +37,7 @@ export default function Aoty({ data }) {
       <title>AOTY - {data.aotyJson.name} | tommyhinman</title>
     </Helmet>
     <Layout>
-      <h1 className="title is-size-1-desktop is-size-3-mobile">
+      <h1 className="title is-size-2-desktop is-size-3-mobile">
         Best Albums of {data.aotyJson.name}
       </h1>
 

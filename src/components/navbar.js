@@ -112,7 +112,7 @@ class Navbar extends Component {
                   </a>
                   <hr className="navbar-divider" />
                   <a href="https://docs.google.com/spreadsheets/d/1vsL6SOjCLcXaYqM1gLUD3fnSS_1YKGzgh3pk27EDZo8" className="navbar-item">
-                    Book List
+                    Reading List
                   </a>
                 </div>{" "}
                 {/* navbar-dropdown  */}

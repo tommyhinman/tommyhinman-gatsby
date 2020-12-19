@@ -10,19 +10,15 @@ export default function About() {
       <title>about | tommyhinman</title>
     </Helmet>
     <Layout>
-
-
       <div className="content">
-        <h1>About</h1>
+        <h1 className="title is-size-2-desktop is-size-3-mobile">About</h1>
         <p>
-          A little home for my projects and preoccupations.
+          A little home for projects and preoccupations.
         </p>
         <p>
           Résumé available on request at <a href="mailto:tommyhinman@gmail.com">tommyhinman@gmail.com</a>.
         </p>
       </div>
-
-
     </Layout>
     </div>
   )

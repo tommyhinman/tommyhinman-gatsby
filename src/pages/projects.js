@@ -3,6 +3,8 @@ import Layout from "../components/layout"
 import styles from "./projects.module.css"
 import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
+import Project from "../components/project"
+
 
 export default function Projects() {
 
@@ -15,59 +17,57 @@ export default function Projects() {
     </Helmet>
     <Layout>
 
-      <div className="content">
-        <h1>Projects</h1>
-        This page is a collection of personal projects.
-
-        <hr />
-
+      <div className="content mb-6">
+        <h1 className="title is-size-2-desktop is-size-3-mobile">Projects</h1>
+          <hr />
           <div className="container">
-            <div className="block">
-              <h1 className="title is-4">
-                <Link to="/projects/newmusic">
-                  New Music Scanner
-                </Link>
-              </h1>
-              <div className="content">
-                <p>
-                  Scans and stores albums from Spotify daily, and produces a list of
-                  new albums from artists I'm tracking.
-                </p>
+            <Project
+              internalLink="/projects/newmusic"
+              projectName="New Music Scanner"
+            >
+              <p>
+                Scans and stores albums from Spotify daily, and produces a list of
+                new albums from artists I'm tracking.
+              </p>
+              <p className="content">
+                Source:&nbsp;
+                <a href="https://github.com/tommyhinman/tommyhinman-gatsby/blob/master/src/pages/projects/newmusic.js"
+                   target="_blank">
+                   front-end
+                </a>
+                &nbsp;/&nbsp;
+                <a href="https://github.com/tommyhinman/newmusicscanner"
+                   target="_blank">
+                   back-end
+                </a>
+              </p>
+            </Project>
+            <hr />
+            <Project
+              internalLink="/projects/scattergories"
+              projectName="Scattergories"
+            >
+              <p>Random scattergories cards seeded by URL, to play online with friends!</p>
 
-                <p>
-                  Source:
-                  <a href="https://github.com/tommyhinman/tommyhinman-gatsby/blob/master/src/pages/projects/newmusic.js"
-                     target="_blank">
-                     front-end
-                  </a>
-                  /
-                  <a href="https://github.com/tommyhinman/newmusicscanner"
-                     target="_blank">
-                     back-end
-                  </a>
-                </p>
-              </div>
-            </div>
+              <p><a href="https://github.com/tommyhinman/tommyhinman-gatsby/blob/master/src/pages/projects/scattergories.js"
+                 target="_blank">
+              Source
+              </a></p>
+            </Project>
             <hr />
-            <div className="block">
-              <h1 className="title is-4">
-                <Link to="/projects/scattergories">
-                  Scattergories
-                </Link>
-              </h1>
-              Random scattergories cards seeded by the URL, for friends!
-            </div>
+            <Project
+              externalLink="https://longwave.tommyhinman.com"
+              projectName="Wavelength/Longwave"
+            >
+              A hosted fork of Longwave - an open/online version of Wavelength. No contributions (yet), just self-hosting!
+            </Project>
             <hr />
-            <div className="block">
-              <h1 className="title is-4">
-                <Link to="/app">
-                  Pinboard Experiments
-                </Link>
-              </h1>
-              Some experiments with the API from <a href="http://pinboard.in" target="_blank">pinboard.in</a>.
-              Not available publicly for now!
-            </div>
-            <hr />
+            <Project
+              internalLink="/app"
+              projectName="Pinboard Experiments"
+            >
+              Some experiments with the API from pinboard.in . Not available publicly for now!
+            </Project>
           </div>
       </div>
 
