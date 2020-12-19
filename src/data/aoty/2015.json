@@ -1,12 +1,11 @@
 {
   "name": "2015",
-  "link": "x",
+  "link": "https://docs.google.com/spreadsheets/d/1d-jxvDuYvmbqPeSled3RfJIzcZMeKXekiLe02JTR4hM",
   "albums": [
     {
       "place": "1",
       "artistName": "Sufjan Stevens",
       "albumName": "Carrie & Lowell",
-      "albumImage": "",
       "albumImageFilename": "sufjan-stevens-carrie-lowell.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/0U8DeqqKDgIhIiWOdqiQXE"
     },
@@ -14,7 +13,6 @@
       "place": "2",
       "artistName": "Pile",
       "albumName": "You're Better than This",
-      "albumImage": "",
       "albumImageFilename": "pile-youre-better-than-this.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/1rhRbObNIBv3go6twKKfb5"
     },
@@ -22,7 +20,6 @@
       "place": "3",
       "artistName": "Courtney Barnett",
       "albumName": "Sometimes I Sit and Think, and Sometimes I Just Sit",
-      "albumImage": "",
       "albumImageFilename": "courtney-barnett-sometimes-i-sit.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/6PosCDToF5fOdEjTI5PsDX"
     },
@@ -30,7 +27,6 @@
       "place": "4",
       "artistName": "Hop Along",
       "albumName": "Painted Shut",
-      "albumImage": "",
       "albumImageFilename": "hop-along-painted-shut.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/16fimHkQtXptYBytXfHfUs"
     },
@@ -38,7 +34,6 @@
       "place": "5",
       "artistName": "Titus Andronicus",
       "albumName": "The Most Lamentable Strategy",
-      "albumImage": "",
       "albumImageFilename": "titus-andronicus-the-most-lamentable-tragedy.jpg",
       "albumSpotifyLink": "https://open.spotify.com/artist/5lJ4XQ2hlPlxACN7q3xKL1"
     },
@@ -46,7 +41,6 @@
       "place": "6",
       "artistName": "Elder",
       "albumName": "Lore",
-      "albumImage": "",
       "albumImageFilename": "elder-lore.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/5uQpiLCZCdR0xsauQWvFXO"
     },
@@ -54,7 +48,6 @@
       "place": "7",
       "artistName": "Viet Cong",
       "albumName": "Viet Cong",
-      "albumImage": "",
       "albumImageFilename": "viet-cong-viet-cong.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/63GwqLuSzZnAQpd1JBQKLT"
     },
@@ -62,7 +55,6 @@
       "place": "8",
       "artistName": "Car Seat Headrest",
       "albumName": "Teens of Style",
-      "albumImage": "",
       "albumImageFilename": "car-seat-headrest-teens-of-style.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/7s2vwXfI8Ki49zYIfTTkRT"
     },
@@ -70,7 +62,6 @@
       "place": "9",
       "artistName": "Sleater-Kinney",
       "albumName": "No Cities to Love",
-      "albumImage": "",
       "albumImageFilename": "sleater-kinney-no-cities-to-love.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/7HDcY3h70X3zLjceUO874A"
     },
@@ -78,7 +69,6 @@
       "place": "10",
       "artistName": "Loma Prieta",
       "albumName": "Self Portrait",
-      "albumImage": "",
       "albumImageFilename": "loma-prieta-self-portrait.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/2hnzJX6vqpBdWWSUfNrgDG"
     },
@@ -86,7 +76,6 @@
       "place": "11",
       "artistName": "Punch Brothers",
       "albumName": "The Phosphorescent Blues",
-      "albumImage": "",
       "albumImageFilename": "punch-brothers-the-phosphorescent-blues.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/3cdqpjwuTvDeLe3RYIGb0j"
     },
@@ -94,7 +83,6 @@
       "place": "12",
       "artistName": "Bosse-de-Nage",
       "albumName": "All Fours",
-      "albumImage": "",
       "albumImageFilename": "bosse-de-nage-all-fours.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/0AlsoaG8HPUlUzyyIskjcx"
     },
@@ -102,7 +90,6 @@
       "place": "13",
       "artistName": "Deerhunter",
       "albumName": "Fading Frontier",
-      "albumImage": "",
       "albumImageFilename": "deerhunter-fading-frontier.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/7tok2dhbMVrWGgnAaC08QE"
     },
@@ -110,7 +97,6 @@
       "place": "14",
       "artistName": "Ensemble Signal & Steve Reich",
       "albumName": "Music for 18 Musicians",
-      "albumImage": "",
       "albumImageFilename": "ensemble-signal-steve-reich-music-for-18-musicians.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/3lNs2UnRog90lU3dusjkWK"
     },
@@ -118,7 +104,6 @@
       "place": "15",
       "artistName": "Godspeed You! Black Emperor",
       "albumName": "Asunder, Sweet and Other Distress",
-      "albumImage": "",
       "albumImageFilename": "godspeed-you-black-emperor-asunder-sweet.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/3ld6n4RnKT8mYYOhAOg2Kf"
     },
@@ -126,7 +111,6 @@
       "place": "16",
       "artistName": "Nicolas Jaar",
       "albumName": "Nymphs II/III/IV",
-      "albumImage": "",
       "albumImageFilename": "nicolas-jaar-nymphs.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/1DNF76bYKUyCG69DjSKZAM"
     },
@@ -134,7 +118,6 @@
       "place": "17",
       "artistName": "Ought",
       "albumName": "Sun Coming Down",
-      "albumImage": "",
       "albumImageFilename": "ought-sun-coming-down.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/6Il9jwREmViqtjAXbkprVA"
     },
@@ -142,7 +125,6 @@
       "place": "18",
       "artistName": "Julien Baker",
       "albumName": "Sprained Ankle",
-      "albumImage": "",
       "albumImageFilename": "julien-baker-sprained-ankle.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/5rfzi2DFB4gH5XhXjsuGQN"
     },
@@ -150,7 +132,6 @@
       "place": "19",
       "artistName": "The Staves",
       "albumName": "If I Was",
-      "albumImage": "",
       "albumImageFilename": "the-staves-if-i-was.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/2VxNr0ZeGhWJ8rQNe4d8vS"
     },
@@ -158,7 +139,6 @@
       "place": "20",
       "artistName": "Jamie xx",
       "albumName": "In Colour",
-      "albumImage": "",
       "albumImageFilename": "jamie-xx-in-colour.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/04Duapg2mNlVykd895xcfZ"
     },
@@ -166,7 +146,6 @@
       "place": "21",
       "artistName": "Girl Band",
       "albumName": "Holding Hands with Jamie",
-      "albumImage": "",
       "albumImageFilename": "girl-band-holding-hands-with-jamie.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/0DDiLP8SYopzwGArJ3GUi9"
     },
@@ -174,7 +153,6 @@
       "place": "22",
       "artistName": "Julia Holter",
       "albumName": "Have You in my Wilderness",
-      "albumImage": "",
       "albumImageFilename": "julia-holter-have-you-in-my-wilderness.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/0EiGGBzF9wzJn2X8F0Yvjh"
     },
@@ -182,7 +160,6 @@
       "place": "23",
       "artistName": "Patrick Watson",
       "albumName": "Love Songs for Robots",
-      "albumImage": "",
       "albumImageFilename": "patrick-watson-love-songs-for-robots.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/4MdPpRGC3wjAI23bXGClnZ"
     },
@@ -190,7 +167,6 @@
       "place": "24",
       "artistName": "Birds in Row",
       "albumName": "Personal War",
-      "albumImage": "",
       "albumImageFilename": "birds-in-row-personal-war.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/5n4JZU1BUNU8nJ7s96UxEH"
     },
@@ -198,7 +174,6 @@
       "place": "25",
       "artistName": "Christopher Paul Stelling",
       "albumName": "Labor Against Waste",
-      "albumImage": "",
       "albumImageFilename": "christopher-paul-stelling-labor-against-waste.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/3lqyBlFTWPs2tYqW6oarIf"
     },
@@ -206,7 +181,6 @@
       "place": "26",
       "artistName": "American Wrestlers",
       "albumName": "American Wrestlers",
-      "albumImage": "",
       "albumImageFilename": "american-wrestlers-american-wrestlers.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/4VyBluq2ZdZmBWahIH7TDQ"
     },
@@ -214,7 +188,6 @@
       "place": "27",
       "artistName": "Jeff Rosenstock",
       "albumName": "We Cool?",
-      "albumImage": "",
       "albumImageFilename": "jeff-rosenstock-we-cool.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/4tsMFFM75X0MumksfgBEl2"
     },
@@ -222,7 +195,6 @@
       "place": "28",
       "artistName": "Jason Isbell",
       "albumName": "Something More than Free",
-      "albumImage": "",
       "albumImageFilename": "jason-isbell-something-more-than-free.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/1foB2t5YmfC6PxIC31g5Cp"
     },
@@ -230,7 +202,6 @@
       "place": "29",
       "artistName": "Bop English",
       "albumName": "Constant Bop",
-      "albumImage": "",
       "albumImageFilename": "bop-english-constant-bop.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/62VRyjXxaUoLaZj61TXFH8"
     },
@@ -238,7 +209,6 @@
       "place": "30",
       "artistName": "Colin Stetson / Sarah Neufeld",
       "albumName": "Never Were the Way She Was",
-      "albumImage": "",
       "albumImageFilename": "colin-stetson-sarah-neufeld-never-were-the-way-she-was.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/5XWTi7aJnVcihhmN3vGqwD"
     },
@@ -246,7 +216,6 @@
       "place": "",
       "artistName": "Baroness",
       "albumName": "Purple",
-      "albumImage": "",
       "albumImageFilename": "baroness-purple.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/25FRZSpdZCczTURlAcMm6r"
     },
@@ -254,7 +223,6 @@
       "place": "",
       "artistName": "Have you ever seen the Jane Fonda Aerobic VHS?",
       "albumName": "Teenage Sweetheart",
-      "albumImage": "",
       "albumImageFilename": "have-you-ever-seen-the-jane-fonda-teenage-sweetheart.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/2BhDbZvMdtncXQsaymOSNW"
     },
@@ -262,7 +230,6 @@
       "place": "",
       "artistName": "Oneohtrix Point Never",
       "albumName": "Garden of Delete",
-      "albumImage": "",
       "albumImageFilename": "oneohtrix-point-never-garden-of-delete.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/4l4tgdU69cbukMzliC4xI6"
     },
@@ -270,7 +237,6 @@
       "place": "",
       "artistName": "Royal Headache",
       "albumName": "High",
-      "albumImage": "",
       "albumImageFilename": "royal-headache-high.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/0T9tIRy1SjZTdTcMFhufu9"
     },
@@ -278,7 +244,6 @@
       "place": "",
       "artistName": "Remember Sports",
       "albumName": "All of Something",
-      "albumImage": "",
       "albumImageFilename": "remember-sports-all-of-something.jpg",
       "albumSpotifyLink": "https://open.spotify.com/album/3HPDOiIxSzM3zhRuC03OwB"
     }

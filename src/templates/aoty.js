@@ -6,6 +6,30 @@ import Album from "../components/album"
 import { RiPlayListLine, RiDatabaseLine } from "react-icons/ri"
 
 export default function Aoty({ data }) {
+
+  const AotyInfoButton = (props) => {
+    if (props.linkHref != null && props.linkHref.length > 0) {
+      return (
+        <a
+          className="button is-medium is-fullwidth"
+          href={props.linkHref}
+          target="_blank"
+        >
+          {props.children}
+        </a>
+      )
+    } else {
+      return (
+        <a
+          className="button is-medium is-fullwidth"
+          disabled
+        >
+          {props.children}
+        </a>
+      )
+    }
+  }
+
   return (
     <div>
     <Helmet>
@@ -17,30 +41,22 @@ export default function Aoty({ data }) {
         Best Albums of {data.aotyJson.name}
       </h1>
 
-      <div class="tile is-ancestor">
-        <div class="tile is-parent">
-          <a
-            href={data.aotyJson.samplerPlaylist}
-            class="button is-medium is-fullwidth"
-            target="_blank"
-          >
+      <div className="columns">
+        <div className="column is-half">
+          <AotyInfoButton linkHref={data.aotyJson.samplerPlaylist}>
             <span class="icon">
               <RiPlayListLine />
             </span>
             <span>playlist</span>
-          </a>
+          </AotyInfoButton>
         </div>
-        <div class="tile is-parent">
-          <a
-            href={data.aotyJson.link}
-            class="button is-medium is-fullwidth"
-            target="_blank"
-          >
+        <div className="column is-half">
+          <AotyInfoButton linkHref={data.aotyJson.link}>
             <span class="icon">
               <RiDatabaseLine />
             </span>
             <span>ratings</span>
-          </a>
+          </AotyInfoButton>
         </div>
       </div>
 
@@ -68,7 +84,6 @@ export const query = graphql`
         albumName
         artistName
         place
-        albumImage
         albumImageFilename
         albumSpotifyLink
       }
