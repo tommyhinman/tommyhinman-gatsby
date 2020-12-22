@@ -20,15 +20,15 @@ export default function Home() {
       </Helmet>
       <Layout>
         <div className="content">
-          <h1 class="title is-size-2-desktop is-size-3-mobile has-text-centered-mobile">tommy hinman</h1>
+          <h1 className="title is-size-2-desktop is-size-3-mobile has-text-centered-mobile">tommy hinman</h1>
           <hr />
-          <div class="tile is-ancestor">
+          <div className="tile is-ancestor">
             <div className={buttonTileClasses}>
               <a
                 href="mailto:tommyhinman@gmail.com"
-                class="button is-medium is-fullwidth"
+                className="button is-medium is-fullwidth"
               >
-                <span class="icon">
+                <span className="icon">
                   <MdMailOutline />
                 </span>
                 <span>contact</span>
@@ -37,9 +37,9 @@ export default function Home() {
             <div className={buttonTileClasses}>
               <a
                 href="http://twitter.com/tommyhinman"
-                class="button is-medium is-fullwidth"
+                className="button is-medium is-fullwidth"
               >
-                <span class="icon">
+                <span className="icon">
                   <RiTwitterLine />
                 </span>
                 <span>twitter</span>
@@ -48,9 +48,9 @@ export default function Home() {
             <div className={buttonTileClasses}>
               <a
                 href="https://github.com/tommyhinman"
-                class="button is-medium is-fullwidth"
+                className="button is-medium is-fullwidth"
               >
-                <span class="icon">
+                <span className="icon">
                   <IoIosGitBranch />
                 </span>
                 <span>github</span>
@@ -59,9 +59,9 @@ export default function Home() {
             <div className={buttonTileClasses}>
               <a
                 href="https://last.fm/user/tommyhinman"
-                class="button is-medium is-fullwidth"
+                className="button is-medium is-fullwidth"
               >
-                <span class="icon">
+                <span className="icon">
                   <FaLastfm />
                 </span>
                 <span>last.fm</span>
@@ -70,9 +70,9 @@ export default function Home() {
             <div className={buttonTileClasses}>
               <a
                 href="https://www.goodreads.com/user/show/39909302-tommy"
-                class="button is-medium is-fullwidth"
+                className="button is-medium is-fullwidth"
               >
-                <span class="icon">
+                <span className="icon">
                   <RiBook3Line />
                 </span>
                 <span>goodreads</span>
