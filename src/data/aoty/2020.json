@@ -1,0 +1,217 @@
+{
+  "name": "2020",
+  "link": "https://docs.google.com/spreadsheets/d/1cvWXixDi9olCdFbsNKTBIuB6-0c8Rm6EvZxRmV-23JY",
+  "samplerPlaylist": "https://open.spotify.com/playlist/1aYFaZx8UE2Cv4kRmrdBRT?si=RTXzNQvIRp-9fkomhDH4TQ",
+  "albums": [
+    {
+      "place": "1",
+      "artistName": "Waxahatchee",
+      "albumName": "Saint Cloud",
+      "albumImageFilename": "waxahatchee-saint-cloud.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/04HMMwLmjkftjWy7xc6Bho"
+    },
+    {
+      "place": "2",
+      "artistName": "Fiona Apple",
+      "albumName": "Fetch the Bolt Cutters",
+      "albumImageFilename": "fiona-apple-fetch-the-bolt-cutters.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0fO1KemWL2uCCQmM22iKlj"
+    },
+    {
+      "place": "3",
+      "artistName": "Protomartyr",
+      "albumName": "Ultimate Success Today",
+      "albumImageFilename": "protomartyr-ultimate-success-today.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/1prgWeOu8QaOZnMeUeTdhN"
+    },
+    {
+      "place": "4",
+      "artistName": "Phoebe Bridgers",
+      "albumName": "Punisher",
+      "albumImageFilename": "phoebe-bridgers-punisher.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2xECuqnvvmVktV7UO8Dd3s"
+    },
+    {
+      "place": "5",
+      "artistName": "Craven Faults",
+      "albumName": "Erratics & Unconformities",
+      "albumImageFilename": "craven-faults-erratics-and-unconformities.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2BsxDJWcmm9iFH1BFdXO6V"
+    },
+    {
+      "place": "6",
+      "artistName": "Perfume Genius",
+      "albumName": "Set my Heart on Fire Immediately",
+      "albumImageFilename": "perfume-genius-set-my-heart-on-fire-immediately.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5qWrp5RcqjxB8ak7dtK6Iv"
+    },
+    {
+      "place": "7",
+      "artistName": "Fluisteraars",
+      "albumName": "Bloem",
+      "albumImageFilename": "fluisteraars-bloem.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3DdVMCnYuR5MdB0uAxEvJc"
+    },
+    {
+      "place": "8",
+      "artistName": "Oranssi Pazuzu",
+      "albumName": "Mestarin Kynsi",
+      "albumImageFilename": "oranssi-pazuzu-mestarin-kynsi.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0gsk1RGjMrtEDE05s0TZMf"
+    },
+    {
+      "place": "9",
+      "artistName": "METZ",
+      "albumName": "Atlas Vending",
+      "albumImageFilename": "metz-atlas-vending.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2LisIakag43SaJ7d04l71I"
+    },
+    {
+      "place": "10",
+      "artistName": "Fleet Foxes",
+      "albumName": "Shore",
+      "albumImageFilename": "fleet-foxes-shore.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0lmjCPEcec2k6L7ysNIcd3"
+    },
+    {
+      "place": "11",
+      "artistName": "Beach Bunny",
+      "albumName": "Honeymoon",
+      "albumImageFilename": "beach-bunny-honeymoon.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6QZyKchQivUBTSMcoBmlPa"
+    },
+    {
+      "place": "12",
+      "artistName": "Kaatayra",
+      "albumName": "Toda História pela Frente",
+      "albumImageFilename": "kaatayra-toda-historia-pela-frente.jpg",
+      "albumSpotifyLink": "https://kaatayra.bandcamp.com/album/toda-hist-ria-pela-frente"
+    },
+    {
+      "place": "13",
+      "artistName": "Young Jesus",
+      "albumName": "Welcome to Conceptual Beach",
+      "albumImageFilename": "young-jesus-welcome-to-conceptual-beach.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/76nK69DufkCMk1v8kkmSA5"
+    },
+    {
+      "place": "14",
+      "artistName": "Empty Country",
+      "albumName": "Empty Country",
+      "albumImageFilename": "empty-country-empty-country.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5AQVArKM4CPlbVwb4KG6mK"
+    },
+    {
+      "place": "15",
+      "artistName": "Andy Shauf",
+      "albumName": "The Neon Skyline",
+      "albumImageFilename": "andy-shauf-the-neon-skyline.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/41M6R2mWLgqU9aKFUvZv8S"
+    },
+    {
+      "place": "16",
+      "artistName": "Spectral Lore / Mare Cognitum",
+      "albumName": "Wanderers: Astrology of the Nine",
+      "albumImageFilename": "spectral-lore-mare-cognitum-wanderers.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/3d4OqJXfEcU8xA4JuIPFKW"
+    },
+    {
+      "place": "17",
+      "artistName": "Emma Ruth Rundle & Thou",
+      "albumName": "May our Chambers be Full",
+      "albumImageFilename": "emma-ruth-rundle-thou-may-our-chambers-be-full.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6X2TkIjKz0JmifXmr0Tj79"
+    },
+    {
+      "place": "18",
+      "artistName": "Nap Eyes",
+      "albumName": "Snapshot of a Beginner",
+      "albumImageFilename": "nap-eyes-snapshot-of-a-beginner.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/1gQmwuAdKCmByeCUuiw3Wo"
+    },
+    {
+      "place": "19",
+      "artistName": "Courtney Marie Andrews",
+      "albumName": "Old Flowers",
+      "albumImageFilename": "courtney-marie-andrews-old-flowers.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/5AytgSqS1iAmarw1kQ0fmI"
+    },
+    {
+      "place": "20",
+      "artistName": "Samia",
+      "albumName": "The Baby",
+      "albumImageFilename": "samia-the-baby.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/7faAwJDTt9Y8kVAcSHy9Y6"
+    },
+    {
+      "place": "21",
+      "artistName": "Respire",
+      "albumName": "Black Line",
+      "albumImageFilename": "respire-black-line.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/1rrBxvvWGDLtJ9mx45gyk1"
+    },
+    {
+      "place": "22",
+      "artistName": "Serpent Column",
+      "albumName": "Endless Detainment",
+      "albumImageFilename": "serpent-column-endless-detainment.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/67PK2JzYrlc48K2A89RkO3"
+    },
+    {
+      "place": "23",
+      "artistName": "Dogleg",
+      "albumName": "Melee",
+      "albumImageFilename": "dogleg-melee.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6tCvAxUcCTFBEQeCKEAvT0"
+    },
+    {
+      "place": "24",
+      "artistName": "Lianne La Havas",
+      "albumName": "Lianne La Havas",
+      "albumImageFilename": "lianne-la-havas-lianne-la-havas.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6JwtB0zzNYy4qANDrJtrJy"
+    },
+    {
+      "place": "25",
+      "artistName": "Sinai Vessel",
+      "albumName": "Ground Aswim",
+      "albumImageFilename": "sinai-vessel-ground-aswim.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/13ehb1MnQ2228M4KOLj3ft"
+    },
+    {
+      "place": "26",
+      "artistName": "Run the Jewels",
+      "albumName": "RTJ4",
+      "albumImageFilename": "run-the-jewels-rtj4.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/6cx4GVNs03Pu4ZczRnWiLd"
+    },
+    {
+      "place": "27",
+      "artistName": "2nd Grade",
+      "albumName": "Hit to Hit",
+      "albumImageFilename": "2nd-grade-hit-to-hit.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/2KNLOuDICx4jUFfa9FhZ91"
+    },
+    {
+      "place": "28",
+      "artistName": "Kevin Morby",
+      "albumName": "Sundowner",
+      "albumImageFilename": "kevin-morby-sundowner.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/0laieZ0AIqtsAFTaljjmLc"
+    },
+    {
+      "place": "29",
+      "artistName": "HAIM",
+      "albumName": "Women in Music Pt. III",
+      "albumImageFilename": "haim-women-in-music-pt-iii.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4qNGDMsRNqDQZPkTWyyeRF"
+    },
+    {
+      "place": "30",
+      "artistName": "Caribou",
+      "albumName": "Suddenly",
+      "albumImageFilename": "caribou-suddenly.jpg",
+      "albumSpotifyLink": "https://open.spotify.com/album/4wSb7OhVUzw3u76lta9fJw"
+    }
+  ]
+}
