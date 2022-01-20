@@ -1,7 +1,7 @@
 {
     "name": "2021",
     "link": "https://docs.google.com/spreadsheets/d/1yA36Uxryw8XIvgjivZ57AETDKuxghbTFEEYquxWMVsU/edit",
-    "samplerPlaylist": "",
+    "samplerPlaylist": "https://open.spotify.com/playlist/3Zw2BNZYVuFhW8Xs7ONEe0?si=e10822cb65f64070",
     "albums": [
         {
             "place": "1",
@@ -59,7 +59,6 @@
             "albumImageFilename": "iceage-seek-shelter.jpg",
             "albumSpotifyLink": "https://iceage.bandcamp.com/album/seek-shelter"
         },
-
         {
             "place": "9",
             "artistName": "Fluisteraars",
@@ -67,7 +66,6 @@
             "albumImageFilename": "fluisteraars-gegrepen.jpg",
             "albumSpotifyLink": "https://fluisteraars.bandcamp.com/album/gegrepen-door-de-geest-der-zielsontluiking"
         },
-
         {
             "place": "10",
             "artistName": "Armand Hammer & The Alchemist",
@@ -75,8 +73,6 @@
             "albumImageFilename": "armand-hammer-the-alchemist-haram.jpg",
             "albumSpotifyLink": "https://armandhammer.bandcamp.com/album/haram"
         },
-
- 
         {
             "place": "11",
             "artistName": "Mare Cognitum",
@@ -182,7 +178,6 @@
             "albumImageFilename": "quicksand-distant-populations.jpg",
             "albumSpotifyLink": "https://quicksandnyc.bandcamp.com/album/distant-populations"
         },
-        
         {
             "place": "26",
             "artistName": "Floating Points, Pharaoh Sanders & The London Symphony Orchestra",
@@ -220,5 +215,3 @@
         }
     ]
 }
-
-    
