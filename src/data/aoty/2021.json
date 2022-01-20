@@ -1,0 +1,224 @@
+{
+    "name": "2021",
+    "link": "https://docs.google.com/spreadsheets/d/1yA36Uxryw8XIvgjivZ57AETDKuxghbTFEEYquxWMVsU/edit",
+    "samplerPlaylist": "",
+    "albums": [
+        {
+            "place": "1",
+            "artistName": "Squid",
+            "albumName": "Bright Green Field",
+            "albumImageFilename": "squid-bright-green-field.jpg",
+            "albumSpotifyLink": "https://squiduk.bandcamp.com/album/bright-green-field"
+        },
+        {
+            "place": "2",
+            "artistName": "Japanese Breakfast",
+            "albumName": "Jubilee",
+            "albumImageFilename": "japanese-breakfast-jubilee.jpg",
+            "albumSpotifyLink": "https://michellezauner.bandcamp.com/album/jubilee"
+        },
+        {
+            "place": "3",
+            "artistName": "Darkside",
+            "albumName": "Spiral",
+            "albumImageFilename": "darkside-spiral.jpg",
+            "albumSpotifyLink": "https://darkside.bandcamp.com/album/spiral"
+        },
+        {
+            "place": "4",
+            "artistName": "Little Simz",
+            "albumName": "Sometimes I Might Be An Introvert",
+            "albumImageFilename": "little-simz-sometimes-i-might-be-an-introvert.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/0DBoWQ52XUHtrZQdfAqOVj?si=7aF8lMTnTDaMbldG19ZfTg"
+        },
+        {
+            "place": "5",
+            "artistName": "Shame",
+            "albumName": "Drunk Tank Pink",
+            "albumImageFilename": "shame-drunk-tank-pink.jpg",
+            "albumSpotifyLink": "https://shamebanduk.bandcamp.com/album/drunk-tank-pink"
+        },
+        {
+            "place": "6",
+            "artistName": "Dödsrit",
+            "albumName": "Mortal Coil",
+            "albumImageFilename": "dodsrit-mortal-coil.jpg",
+            "albumSpotifyLink": "https://dodsrit.bandcamp.com/album/mortal-coil"
+        },
+        {
+            "place": "7",
+            "artistName": "Nation of Language",
+            "albumName": "A Way Forward",
+            "albumImageFilename": "nation-of-language-a-way-forward.jpg",
+            "albumSpotifyLink": "https://nationoflanguage.bandcamp.com/album/a-way-forward"
+        },
+        {
+            "place": "8",
+            "artistName": "Iceage",
+            "albumName": "Seek Shelter",
+            "albumImageFilename": "iceage-seek-shelter.jpg",
+            "albumSpotifyLink": "https://iceage.bandcamp.com/album/seek-shelter"
+        },
+
+        {
+            "place": "9",
+            "artistName": "Fluisteraars",
+            "albumName": "Gegrepen Door de Geest der Zielsontluiking",
+            "albumImageFilename": "fluisteraars-gegrepen.jpg",
+            "albumSpotifyLink": "https://fluisteraars.bandcamp.com/album/gegrepen-door-de-geest-der-zielsontluiking"
+        },
+
+        {
+            "place": "10",
+            "artistName": "Armand Hammer & The Alchemist",
+            "albumName": "HARAM",
+            "albumImageFilename": "armand-hammer-the-alchemist-haram.jpg",
+            "albumSpotifyLink": "https://armandhammer.bandcamp.com/album/haram"
+        },
+
+ 
+        {
+            "place": "11",
+            "artistName": "Mare Cognitum",
+            "albumName": "Solar Paroxysm",
+            "albumImageFilename": "mare-cognitum-solar-paroxysm.jpg",
+            "albumSpotifyLink": "https://marecognitum.bandcamp.com/album/solar-paroxysm"
+        },
+        {
+            "place": "12",
+            "artistName": "The Armed",
+            "albumName": "ULTRAPOP",
+            "albumImageFilename": "the-armed-ultrapop.jpg",
+            "albumSpotifyLink": "https://thearmed.bandcamp.com/album/ultrapop"
+        },
+        {
+            "place": "13",
+            "artistName": "Low",
+            "albumName": "Hey What",
+            "albumImageFilename": "low-hey-what.jpg",
+            "albumSpotifyLink": "https://lowtheband.bandcamp.com/album/hey-what"
+        },
+        {
+            "place": "14",
+            "artistName": "Slant",
+            "albumName": "1집",
+            "albumImageFilename": "slant-x.jpg",
+            "albumSpotifyLink": "https://slant.bandcamp.com/album/1"
+        },
+        {
+            "place": "15",
+            "artistName": "Subsonic Eye",
+            "albumName": "Nature Of Things",
+            "albumImageFilename": "subsonic-eye-nature-of-things.jpg",
+            "albumSpotifyLink": "https://subsoniceye.bandcamp.com/album/nature-of-things"
+        },
+        {
+            "place": "16",
+            "artistName": "Black Country, New Road",
+            "albumName": "For The First Time",
+            "albumImageFilename": "black-country-new-road-for-the-first-time.jpg",
+            "albumSpotifyLink": "https://blackcountrynewroad.bandcamp.com/album/for-the-first-time"
+        },
+        {
+            "place": "17",
+            "artistName": "Arab Strap",
+            "albumName": "As Days Get Dark",
+            "albumImageFilename": "arab-strap-as-days-get-dark.jpg",
+            "albumSpotifyLink": "https://arabstrapband.bandcamp.com/album/as-days-get-dark"
+        },
+        {
+            "place": "18",
+            "artistName": "BIG|BRAVE",
+            "albumName": "Vital",
+            "albumImageFilename": "big-brave-vital.jpg",
+            "albumSpotifyLink": "https://bigbravesl.bandcamp.com/album/vital"
+        },
+        {
+            "place": "19",
+            "artistName": "Feu! Chatterton",
+            "albumName": "Palais d'argile",
+            "albumImageFilename": "feu-chatterton-palais-dargile.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/5CeSn89NE60Az4dCtkqfWi?si=6ag7loiCQ2uJkhLnx3pHZw"
+        },
+        {
+            "place": "20",
+            "artistName": "Kiwi Jr.",
+            "albumName": "Cooler Returns",
+            "albumImageFilename": "kiwi-jr-cooler-returns.jpg",
+            "albumSpotifyLink": "https://kiwijr.bandcamp.com/album/cooler-returns"
+        },
+        {
+            "place": "21",
+            "artistName": "The War On Drugs",
+            "albumName": "I Don't Live Here Anymore",
+            "albumImageFilename": "the-war-on-drugs-i-dont-live-here-anymore.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/69jQsPvJzMvcb2fGqI2qaB?si=6tdG7nFgRKCDrHVIkc681g"
+        },
+        {
+            "place": "22",
+            "artistName": "Fiddlehead",
+            "albumName": "Between The Richness",
+            "albumImageFilename": "fiddlehead-between-the-richness.jpg",
+            "albumSpotifyLink": "https://fiddleheadma.bandcamp.com/album/between-the-richness"
+        },
+        {
+            "place": "23",
+            "artistName": "Black Midi",
+            "albumName": "Cavalcade",
+            "albumImageFilename": "black-midi-cavalcade.jpg",
+            "albumSpotifyLink": "https://bmblackmidi.bandcamp.com/album/cavalcade"
+        },
+        {
+            "place": "24",
+            "artistName": "Julien Baker",
+            "albumName": "Little Oblivions",
+            "albumImageFilename": "julien-baker-little-oblivions.jpg",
+            "albumSpotifyLink": "https://julienbaker.bandcamp.com/album/little-oblivions"
+        },
+        {
+            "place": "25",
+            "artistName": "Quicksand",
+            "albumName": "Distant Populations",
+            "albumImageFilename": "quicksand-distant-populations.jpg",
+            "albumSpotifyLink": "https://quicksandnyc.bandcamp.com/album/distant-populations"
+        },
+        
+        {
+            "place": "26",
+            "artistName": "Floating Points, Pharaoh Sanders & The London Symphony Orchestra",
+            "albumName": "Promises",
+            "albumImageFilename": "floating-points-pharaoh-sanders-promises.jpg",
+            "albumSpotifyLink": "https://floatingpoints.bandcamp.com/album/promises"
+        },
+        {
+            "place": "27",
+            "artistName": "Spirit Was",
+            "albumName": "Heaven's Just A Cloud",
+            "albumImageFilename": "spirit-was-heavens-just-a-cloud.jpg",
+            "albumSpotifyLink": "https://spiritwas.bandcamp.com/album/heavens-just-a-cloud"
+        },
+        {
+            "place": "28",
+            "artistName": "Cloud Nothings",
+            "albumName": "The Shadow I Remember",
+            "albumImageFilename": "cloud-nothings-the-shadow-i-remember.jpg",
+            "albumSpotifyLink": "https://cloudnothings.bandcamp.com/album/the-shadow-i-remember"
+        },
+        {
+            "place": "29",
+            "artistName": "Tyler, The Creator",
+            "albumName": "CALL ME IF YOU GET LOST",
+            "albumImageFilename": "tyler-the-creator-call-me-if-you-get-lost.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/45ba6QAtNrdv6Ke4MFOKk9?si=Ug3m56XWSX6sNZT7zb2v6A"
+        },
+        {
+            "place": "30",
+            "artistName": "Fucked Up",
+            "albumName": "Year Of The Horse",
+            "albumImageFilename": "fucked-up-year-of-the-horse.jpg",
+            "albumSpotifyLink": "https://fuckedup.bandcamp.com/album/year-of-the-horse"
+        }
+    ]
+}
+
+    
