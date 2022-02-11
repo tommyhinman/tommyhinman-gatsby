@@ -1,13 +1,12 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import "../mystyles.scss"
-import styles from "./layout.module.scss"
+import * as styles from "./layout.module.scss"
 import Navbar from "../components/navbar"
 import Footer from "../components/footer"
 
 
-export default function Layout({ children }) {
-  console.log();
+export const Layout = ({ children }) => {
   return (
     <>
       {/* Only add the cloudflare analytics tag in production, since it checks CORS. */}
@@ -38,3 +37,5 @@ export default function Layout({ children }) {
     </>
   )
 }
+
+export default Layout

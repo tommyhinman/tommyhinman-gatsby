@@ -1,6 +1,6 @@
 import React from "react"
 import "../mystyles.scss"
-import styles from "./index.module.css"
+import * as styles from "./index.module.css"
 import Layout from "../components/layout"
 import { Helmet } from "react-helmet"
 import { IoIosGitBranch } from "react-icons/io"

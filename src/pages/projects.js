@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../components/layout"
-import styles from "./projects.module.css"
+import * as styles from "./projects.module.css"
 import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 import Project from "../components/project"
@@ -44,7 +44,7 @@ export default function Projects() {
             </Project>
             <hr />
             <Project
-              internalLink="/projects/scattergories"
+              internalLink="/projects/scattergories/"
               projectName="Scattergories"
             >
               <p>Random scattergories cards seeded by URL, to play online with friends!</p>

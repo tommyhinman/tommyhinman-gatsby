@@ -44,7 +44,7 @@ export default function Aoty({ data }) {
       <div className="columns">
         <div className="column is-half">
           <AotyInfoButton linkHref={data.aotyJson.samplerPlaylist}>
-            <span class="icon">
+            <span className="icon">
               <RiPlayListLine />
             </span>
             <span>playlist</span>
@@ -52,7 +52,7 @@ export default function Aoty({ data }) {
         </div>
         <div className="column is-half">
           <AotyInfoButton linkHref={data.aotyJson.link}>
-            <span class="icon">
+            <span className="icon">
               <RiDatabaseLine />
             </span>
             <span>ratings</span>
@@ -63,7 +63,7 @@ export default function Aoty({ data }) {
       <div className="tile is-ancestor">
         <div className="tile is-vertical is-parent">
           {data.aotyJson.albums.map((album, index) => (
-            <div className="tile is-child ">
+            <div className="tile is-child "  key={index}>
               <Album album={album}/>
             </div>
           ))}

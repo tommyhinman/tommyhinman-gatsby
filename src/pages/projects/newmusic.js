@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../../components/layout"
-import styles from "./newmusic.module.css"
+import * as styles from "./newmusic.module.css"
 import { Helmet } from "react-helmet"
 import useDataApi from '../../components/dataApi.js'
 import moment from "moment-timezone";

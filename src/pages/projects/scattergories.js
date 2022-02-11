@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet"
 import { ToastContainer } from "react-toastr";
 import ToastMessagejQuery from "react-toastr/lib/components/ToastMessage/ToastMessagejQuery";
 import { getCategories } from "../../data/scattergoriesCategories"
-import { navigate } from '@reach/router';
+import { navigate } from 'gatsby';
 import Countdown from 'react-countdown';
 
 import "toastr/build/toastr.css";
@@ -34,6 +34,7 @@ export default function Scattergories() {
   var randomSeed = "";
   if (typeof window !== `undefined`) {
     if (window.location.search.length <= 1) {
+      console.log('Empty query params -- generating a new random game string and reloading.')
       navigate('?' + getUnseededRandomWordString());
     }
     randomSeed = window.location.search.substring(1);

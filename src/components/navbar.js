@@ -4,7 +4,6 @@ import { AiOutlineRobot } from "react-icons/ai"
 import { IconContext } from "react-icons";
 import "../mystyles.scss"
 import "./navbar.scss"
-const util = require('util')
 
 class Navbar extends Component {
   constructor(props) {
@@ -56,6 +55,7 @@ class Navbar extends Component {
   }
 
   render() {
+    const years = this.props.years.sort((a, b) => a.pageContext.aotyYear - b.pageContext.aotyYear)
     return (
       <div>
         <nav
@@ -101,9 +101,9 @@ class Navbar extends Component {
                 <a className="navbar-link">Music</a>
                 {/* Loop thru all AOTY years, add a link for each */}
                 <div className="navbar-dropdown">
-                  {this.props.years.map( (year, index) => (
-                    <Link to={year.context.slug} className="navbar-item" key={index}>
-                      Best Albums {year.context.aotyYear}
+                  {years.map( (year, index) => (
+                    <Link to={year.pageContext.slug} className="navbar-item" key={index}>
+                      Best Albums {year.pageContext.aotyYear}
                     </Link>
                   ))}
                   <hr className="navbar-divider" />
@@ -139,12 +139,9 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allSitePage(filter: {context: {aotyYear: {gt: "0"}}}, sort: {fields: context___aotyYear, order: DESC}) {
+        allSitePage(filter: {path: {regex: "/aoty/"}}) {
           nodes {
-            context {
-              slug
-              aotyYear
-            }
+            pageContext
           }
         }
       }
