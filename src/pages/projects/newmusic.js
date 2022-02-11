@@ -7,7 +7,7 @@ import moment from "moment-timezone";
 import { IconContext } from "react-icons";
 import { HiArrowLeft, HiArrowRight, HiExternalLink } from "react-icons/hi"
 import { FaSpotify } from "react-icons/fa"
-import { SiAFrame } from "react-icons/si"
+import { SiAframe } from "react-icons/si"
 import { MdAlbum, MdMusicNote } from "react-icons/md"
 import { BiCoinStack } from "react-icons/bi"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -152,7 +152,7 @@ export default function Newmusic() {
         <a href={aotyLink} target="_blank">
           <button className="button">
             <span className="icon">
-              <SiAFrame />
+              <SiAframe />
             </span>
           </button>
         </a>
