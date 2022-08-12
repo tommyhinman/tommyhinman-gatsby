@@ -25,6 +25,7 @@ export default function Gooddogs() {
         <title>good dogs | tommyhinman</title>
       </Helmet>
       <Layout>
+        <h1 className="title is-size-2-desktop is-size-3-mobile">Good Dogs</h1>
         <div className=" mt-0 mb-5">
           {dogs.map((dog, index, arr) => (
             <>
