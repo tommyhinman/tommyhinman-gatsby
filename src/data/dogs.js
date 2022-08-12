@@ -1,6 +1,11 @@
 export function getDogs() {
   return [
     {
+      title: "Barking Dogs Never Bite (2000)",
+      imageUrl:
+        "https://tommyhinman-dogs.s3.us-west-2.amazonaws.com/dogs/barking.png",
+    },
+    {
       title: "Trafic (1971)",
       imageUrl:
         "https://tommyhinman-dogs.s3.us-west-2.amazonaws.com/dogs/trafic.png",
