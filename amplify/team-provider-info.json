@@ -13,7 +13,8 @@
         },
         "categories": {
             "auth": {
-                "tommyhinmangatsby49b96bea": {}
+                "tommyhinmangatsby49b96bea": {},
+                "userPoolGroups": {}
             }
         }
     }
