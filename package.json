@@ -28,7 +28,7 @@
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-transformer-json": "^4.7.0",
     "gatsby-transformer-sharp": "^4.7.0",
-    "moment": "^2.29.1",
+    "moment": "^2.29.4",
     "moment-timezone": "^0.5.34",
     "prop-types": "^15.8.1",
     "random-words": "^1.1.2",
