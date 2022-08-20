@@ -1,8 +1,3 @@
 .scrollingLocked {
   overflow: hidden;
 }
-
-.modalImage {
-  max-height: 90%;
-  max-width: 90%
-}

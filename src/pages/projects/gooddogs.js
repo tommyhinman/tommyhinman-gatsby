@@ -79,7 +79,7 @@ export default function Gooddogs() {
       <div className={isModalEnabled ? "modal is-active" : "modal"}>
         <div className="modal-background" onClick={closeModal}></div>
         <div className="modal-content" onClick={closeModal}>
-          <p className={"image is-large " + styles.modalImage}>
+          <p className="image is-large">
             <img src={modalImageUrl} alt="" />
           </p>
         </div>
