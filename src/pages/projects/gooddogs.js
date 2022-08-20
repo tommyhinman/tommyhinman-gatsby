@@ -27,7 +27,7 @@ export default function Gooddogs() {
 
   const [isModalEnabled, setIsModalEnabled] = useState(false)
   const [modalImageUrl, setModalImageUrl] = useState("")
-  const [isMobile, setIsMobile] = useState(isMobileWidth(window.innerWidth))
+  const [isMobile, setIsMobile] = useState(false)
 
   const openModal = url => {
     if (!isMobile) {
@@ -43,6 +43,12 @@ export default function Gooddogs() {
   function handleWindowSizeChange() {
     setIsMobile(isMobileWidth(window.innerWidth))
   }
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      handleWindowSizeChange()
+    }
+  })
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange)
