@@ -1,11 +1,6 @@
 export function getDogs() {
   return [
     {
-      title: "Barking Dogs Never Bite (2000)",
-      imageUrl:
-        "https://tommyhinman-dogs.s3.us-west-2.amazonaws.com/dogs/barking.png",
-    },
-    {
       title: "Trafic (1971)",
       imageUrl:
         "https://tommyhinman-dogs.s3.us-west-2.amazonaws.com/dogs/trafic.png",
@@ -34,6 +29,26 @@ export function getDogs() {
       title: "Barry Lyndon (1975)",
       imageUrl:
         "https://tommyhinman-dogs.s3.us-west-2.amazonaws.com/dogs/barrylyndon.png",
+    },
+    {
+      title: "Barking Dogs Never Bite (2000)",
+      imageUrl:
+        "https://tommyhinman-dogs.s3.us-west-2.amazonaws.com/dogs/barking.png",
+    },
+    {
+      title: "Wonder Boys (2000)",
+      imageUrl:
+        "https://tommyhinman-dogs.s3.us-west-2.amazonaws.com/dogs/wonderboys.png",
+    },
+    {
+      title: "Pig (2021)",
+      imageUrl:
+        "https://tommyhinman-dogs.s3.us-west-2.amazonaws.com/dogs/pig.png",
+    },
+    {
+      title: "Inside Llewyn Davis (2013)",
+      imageUrl:
+        "https://tommyhinman-dogs.s3.us-west-2.amazonaws.com/dogs/llewyn.png",
     },
   ]
 }
