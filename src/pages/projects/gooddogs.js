@@ -13,8 +13,9 @@ let modalEnabled = false
 const Dog = ({ dogData, onImageClick }) => {
   return (
     <div className=" container">
-      <span className="subtitle is-4">{dogData.title}</span>
+      <span className="subtitle is-3">{dogData.title}</span>
       <img
+        className={styles.dog}
         src={dogData.imageUrl}
         onClick={() => onImageClick(dogData.imageUrl)}
       />

@@ -30,7 +30,7 @@ export function getDogs() {
     },
     {
       title: "Wonder Boys (2000)",
-      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/wonderboys.png",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/wonderboys2.png",
     },
     {
       title: "Pig (2021)",
@@ -39,6 +39,22 @@ export function getDogs() {
     {
       title: "Inside Llewyn Davis (2013)",
       imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/llewyn.png",
+    },
+    {
+      title: "eXistenZ (1999)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/existenz1.png",
+    },
+    {
+      title: "The Favourite (2018)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/favourite1.png",
+    },
+    {
+      title: "The Third Man (1949)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/thirdman1.png",
+    },
+    {
+      title: "The Third Man (1949)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/thirdman4.png",
     },
   ]
 }
