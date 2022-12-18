@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { StaticQuery, Link, graphql } from "gatsby"
 import { AiOutlineRobot } from "react-icons/ai"
-import { IconContext } from "react-icons";
+import { IconContext } from "react-icons"
 import "../mystyles.scss"
 import "./navbar.scss"
 
@@ -55,7 +55,9 @@ class Navbar extends Component {
   }
 
   render() {
-    const years = this.props.years.sort((a, b) => a.pageContext.aotyYear - b.pageContext.aotyYear)
+    const years = this.props.years.sort(
+      (a, b) => a.pageContext.aotyYear - b.pageContext.aotyYear
+    )
     return (
       <div>
         <nav
@@ -67,9 +69,13 @@ class Navbar extends Component {
             <div className="navbar-item">
               <Link to="/">
                 <IconContext.Provider
-                  value={{ className: "has-text-white is-size-3 is-vertical-center", }}
+                  value={{
+                    className: "has-text-white is-size-3 is-vertical-center",
+                  }}
                 >
-                  <div><AiOutlineRobot /></div>
+                  <div>
+                    <AiOutlineRobot />
+                  </div>
                 </IconContext.Provider>
               </Link>
               {/*}<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />*/}
@@ -101,18 +107,21 @@ class Navbar extends Component {
                 <a className="navbar-link">Music</a>
                 {/* Loop thru all AOTY years, add a link for each */}
                 <div className="navbar-dropdown">
-                  {years.map( (year, index) => (
-                    <Link to={year.pageContext.slug} className="navbar-item" key={index}>
+                  {years.map((year, index) => (
+                    <Link
+                      to={year.pageContext.slug}
+                      className="navbar-item"
+                      key={index}
+                    >
                       Best Albums {year.pageContext.aotyYear}
                     </Link>
                   ))}
                   <hr className="navbar-divider" />
-                  <a href="https://docs.google.com/spreadsheets/d/1sMt1AlNPOb1MYUlfPD6Gv65Y75rodJeF8nDOQPq_R-s" className="navbar-item">
+                  <a
+                    href="https://docs.google.com/spreadsheets/d/1sMt1AlNPOb1MYUlfPD6Gv65Y75rodJeF8nDOQPq_R-s"
+                    className="navbar-item"
+                  >
                     Meta Music List
-                  </a>
-                  <hr className="navbar-divider" />
-                  <a href="https://docs.google.com/spreadsheets/d/1vsL6SOjCLcXaYqM1gLUD3fnSS_1YKGzgh3pk27EDZo8" className="navbar-item">
-                    Reading List
                   </a>
                 </div>{" "}
                 {/* navbar-dropdown  */}
@@ -139,7 +148,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-        allSitePage(filter: {path: {regex: "/aoty/"}}) {
+        allSitePage(filter: { path: { regex: "/aoty/" } }) {
           nodes {
             pageContext
           }
