@@ -29,7 +29,7 @@
     "gatsby-transformer-json": "^4.7.0",
     "gatsby-transformer-sharp": "^4.7.0",
     "moment": "^2.29.4",
-    "moment-timezone": "^0.5.34",
+    "moment-timezone": "^0.5.35",
     "prop-types": "^15.8.1",
     "random-words": "^1.1.2",
     "react": "^17.0.2",
