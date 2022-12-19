@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../../components/layout"
 import { Helmet } from "react-helmet"
-// import { ToastContainer } from "react-toastr";
-// import ToastMessagejQuery from "react-toastr/lib/components/ToastMessage/ToastMessagejQuery";
+import toast, { Toaster } from "react-hot-toast"
 import { getCategories } from "../../data/scattergoriesCategories"
 import { navigate } from "gatsby"
 import Countdown from "react-countdown"
 
-// import "toastr/build/toastr.css"
 import "animate.css/animate.css"
 
 const seedrandom = require("seed-random")
 const randomWords = require("random-words")
-// const toastr = require("toastr")
+const notify = () => toast()
 
 const letters = [
   "A",
@@ -82,7 +80,7 @@ export default function Scattergories() {
     document.execCommand("copy")
     document.body.removeChild(dummyTextArea)
 
-    // toastr.info("Seed: " + window.location.search.substring(1), "Copied link!")
+    toast.success("Link copied to clipboard!")
   }
 
   /*
@@ -123,6 +121,7 @@ export default function Scattergories() {
         <meta charSet="utf-8" />
         <title>scattergories | tommyhinman</title>
       </Helmet>
+      <Toaster position="top-right" reverseOrder={false} />
       <Layout>
         <div className="content mt-0 mb-5">
           <div className="columns is-centered">
