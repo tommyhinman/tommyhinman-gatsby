@@ -64,48 +64,8 @@ const LibraryItem = ({ index, item }) => {
   )
 }
 
-// const dataUrl =
-//   "https://tommy-music-library.s3.us-west-2.amazonaws.com/music-library-data.json"
 const dataUrl =
   "https://mqze13mg7g.execute-api.us-west-2.amazonaws.com/Prod/libraryItems"
-
-const getItemData = () => {
-  const data = [
-    {
-      primaryText: "Craven Faults",
-      secondaryText: "Erratics & Unconformities",
-      imageLink:
-        "https://cdn2.albumoftheyear.org/750x/album/190023-erratics-unconformities.jpg",
-      externalLink:
-        "https://open.spotify.com/album/2BsxDJWcmm9iFH1BFdXO6V?si=yYI0dJvfQwOP8Ax0-bjgwA",
-      spotifyLink:
-        "spotify://album/2BsxDJWcmm9iFH1BFdXO6V?si=yYI0dJvfQwOP8Ax0-bjgwA",
-      tags: ["instrumental"],
-    },
-    {
-      primaryText: "album 2",
-      secondaryText: "subtext",
-      tags: ["party"],
-    },
-    {
-      primaryText: "album 3",
-      secondaryText: "subtext",
-    },
-    {
-      primaryText: "album 4",
-      secondaryText: "subtext",
-    },
-    {
-      primaryText: "album 500",
-      secondaryText: "subtext",
-    },
-    {
-      primaryText: "album 6",
-    },
-  ]
-
-  return data
-}
 
 const TagButton = ({ tagName, isSelected, onClick }) => {
   const buttonClasses = classNames({
@@ -121,13 +81,18 @@ const TagButton = ({ tagName, isSelected, onClick }) => {
 }
 
 export default function MusicLibrary() {
-  // const items = getItemData()
   const [libraryDataQuery, libraryDataUrl, requestFetch] = useDataApi(
     dataUrl,
     []
   )
 
-  const [tags, setTags] = useState({ instrumental: false, party: false })
+  const [tags, setTags] = useState({
+    instrumental: false,
+    party: false,
+    jazz: false,
+    rock: false,
+    metal: false,
+  })
   const [stateTest, setStateTest] = useState(1)
 
   const filterData = data => {
@@ -151,7 +116,7 @@ export default function MusicLibrary() {
     setTags({ ...tags, [tagName]: !tags[tagName] })
   }
 
-  const tagNames = ["instrumental", "party"]
+  const tagNames = ["instrumental", "party", "jazz", "rock", "metal"]
 
   return (
     <>
