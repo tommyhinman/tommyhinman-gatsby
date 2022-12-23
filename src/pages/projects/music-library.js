@@ -124,17 +124,20 @@ export default function MusicLibrary() {
 
   const filterData = data => {
     const enabledTags = Object.keys(tags).filter(currentTag => tags[currentTag])
-    const filteredData = data.filter(item => {
-      if (enabledTags.length > 0) {
-        return (
-          item.tags &&
-          item.tags != "" &&
-          item.tags.filter(tag => enabledTags.includes(tag)).length > 0
-        )
-      } else {
-        return true
-      }
-    })
+    const filteredData = data
+      .sort((a, b) => a.secondaryText.localeCompare(b.secondaryText))
+      .sort((a, b) => a.primaryText.localeCompare(b.primaryText))
+      .filter(item => {
+        if (enabledTags.length > 0) {
+          return (
+            item.tags &&
+            item.tags != "" &&
+            item.tags.filter(tag => enabledTags.includes(tag)).length > 0
+          )
+        } else {
+          return true
+        }
+      })
     return filteredData
   }
   const [items, setItems] = useState([])
