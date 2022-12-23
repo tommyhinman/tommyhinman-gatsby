@@ -6,13 +6,13 @@ import classNames from "classnames"
 import useDataApi from "../../components/dataApi"
 import { FaSpotify } from "react-icons/fa"
 import { HiExternalLink } from "react-icons/hi"
-import axios from "axios"
-const { v4: uuidv4 } = require("uuid")
+import AddItemModal from "./music-library/addItemModal"
+import EditItemModal from "./music-library/editItemModal"
 
 const DATA_API_URL =
   "https://mqze13mg7g.execute-api.us-west-2.amazonaws.com/Prod/libraryItems"
 
-const LibraryItem = ({ index, item }) => {
+const LibraryItem = ({ index, item, editAction }) => {
   const {
     primaryText,
     secondaryText,
@@ -22,10 +22,10 @@ const LibraryItem = ({ index, item }) => {
   } = item
   return (
     <>
-      <a
+      <div
         className={classNames("box", "is-clickable", styles.itemBox)}
-        href={externalLink}
-        target="_blank"
+        // href={externalLink}
+        // target="_blank"
         key={"item-" + index}
       >
         <figure className="image is-100x100">
@@ -63,136 +63,14 @@ const LibraryItem = ({ index, item }) => {
               </a>
             </p>
           </div>
-        </div>
-      </a>
-    </>
-  )
-}
-
-const AddItemModal = ({ closeAction, isActive, fetchData }) => {
-  const EMPTY_FORM_STATE = {
-    primaryText: "",
-    secondaryText: "",
-    spotifyLink: "",
-    externalLink: "",
-    imageLink: "",
-  }
-
-  const [formState, setFormState] = useState(EMPTY_FORM_STATE)
-  const [formError, setFormError] = useState()
-
-  const handleChange = event => {
-    setFormState({
-      ...formState,
-      [event.target.name]: event.target.value,
-    })
-  }
-
-  const handleSubmit = event => {
-    event.preventDefault()
-    const result = axios
-      .post(DATA_API_URL, formState)
-      .then(() => {
-        // I'm using the dataApi in a way that isn't supported yet where the URL doesn't change
-        // For now, add a random value to the end to get this working - I'll refactor this later.
-        const randomString = uuidv4()
-        fetchData(DATA_API_URL + "?" + randomString)
-        setFormState(EMPTY_FORM_STATE)
-        closeAction()
-      })
-      .catch(err => {
-        setFormError("Error creating item :(")
-      })
-  }
-
-  return (
-    <div class={classNames("modal", { "is-active": isActive })}>
-      <div class="modal-background" onClick={() => closeAction()}></div>
-      <div class="modal-content">
-        <div className="box">
-          <h2 className="title">Add New Item</h2>
-          {formError ? (
-            <div className="notification is-danger">{formError}</div>
-          ) : (
-            ""
-          )}
-          <form onSubmit={e => handleSubmit(e)}>
-            <div className="field">
-              <label className="label">Primary Text</label>
-              <div className="control">
-                <input
-                  className="input"
-                  type="text"
-                  name="primaryText"
-                  value={formState.primaryText}
-                  onChange={e => handleChange(e)}
-                />
-              </div>
-            </div>
-            <div className="field">
-              <label className="label">Secondary Text</label>
-              <div className="control">
-                <input
-                  className="input"
-                  type="text"
-                  name="secondaryText"
-                  value={formState.secondaryText}
-                  onChange={e => handleChange(e)}
-                />
-              </div>
-            </div>
-            <div className="field">
-              <label className="label">Spotify Link</label>
-              <div className="control">
-                <input
-                  className="input"
-                  type="text"
-                  name="spotifyLink"
-                  value={formState.spotifyLink}
-                  onChange={e => handleChange(e)}
-                />
-              </div>
-            </div>
-            <div className="field">
-              <label className="label">External Link</label>
-              <div className="control">
-                <input
-                  className="input"
-                  type="text"
-                  name="externalLink"
-                  value={formState.externalLink}
-                  onChange={e => handleChange(e)}
-                />
-              </div>
-            </div>
-            <div className="field">
-              <label className="label">Image Link</label>
-              <div className="control">
-                <input
-                  className="input"
-                  type="text"
-                  name="imageLink"
-                  value={formState.imageLink}
-                  onChange={e => handleChange(e)}
-                />
-              </div>
-            </div>
-            <div className="control">
-              <input
-                className="button is-primary"
-                type="submit"
-                value="Create"
-              />
-            </div>
-          </form>
+          <div>
+            <button className="button" onClick={e => editAction(item)}>
+              Edit
+            </button>
+          </div>
         </div>
       </div>
-      <button
-        class="modal-close is-large"
-        aria-label="close"
-        onClick={() => closeAction()}
-      ></button>
-    </div>
+    </>
   )
 }
 
@@ -223,9 +101,21 @@ export default function MusicLibrary() {
     metal: false,
   })
   const [isAddItemModalActive, setIsAddItemModalActive] = useState(false)
+  const [isEditItemModalActive, setIsEditItemModalActive] = useState(false)
+  const [currentlyEditingItemData, setCurrentlyEditingItemData] = useState()
 
   const toggleAddItemModal = () => {
     setIsAddItemModalActive(!isAddItemModalActive)
+  }
+
+  const openEditItemModal = itemData => {
+    console.log("opening edit for: " + JSON.stringify(itemData))
+    setIsEditItemModalActive(true)
+    setCurrentlyEditingItemData(itemData)
+  }
+
+  const closeEditItemModal = () => {
+    setIsEditItemModalActive(false)
   }
 
   const filterData = data => {
@@ -234,6 +124,7 @@ export default function MusicLibrary() {
       if (enabledTags.length > 0) {
         return (
           item.tags &&
+          item.tags != "" &&
           item.tags.filter(tag => enabledTags.includes(tag)).length > 0
         )
       } else {
@@ -242,7 +133,6 @@ export default function MusicLibrary() {
     })
     return filteredData
   }
-  // const items = filterData(libraryDataQuery.data)
   const [items, setItems] = useState([])
   useEffect(() => {
     if (libraryDataQuery.data) {
@@ -293,7 +183,11 @@ export default function MusicLibrary() {
                     styles.itemColumn
                   )}
                 >
-                  <LibraryItem index={index} item={item} />
+                  <LibraryItem
+                    index={index}
+                    item={item}
+                    editAction={openEditItemModal}
+                  />
                 </div>
               ))}
             </div>
@@ -303,6 +197,14 @@ export default function MusicLibrary() {
       <AddItemModal
         isActive={isAddItemModalActive}
         closeAction={toggleAddItemModal}
+        dataApiUrl={DATA_API_URL}
+        fetchData={libraryDataFetch}
+      />
+      <EditItemModal
+        isActive={isEditItemModalActive}
+        closeAction={closeEditItemModal}
+        dataApiUrl={DATA_API_URL}
+        initialData={currentlyEditingItemData}
         fetchData={libraryDataFetch}
       />
     </>
