@@ -78,6 +78,13 @@ export default function Projects() {
             <Project internalLink="/projects/gooddogs" projectName="Good Dogs">
               Good dogs
             </Project>
+            <hr />
+            <Project
+              internalLink="/projects/music-library"
+              projectName="Music Library"
+            >
+              Music Library
+            </Project>
           </div>
         </div>
       </Layout>
