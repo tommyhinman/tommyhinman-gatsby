@@ -4,10 +4,12 @@ import * as styles from "./music-library.module.css"
 import { Helmet } from "react-helmet"
 import classNames from "classnames"
 import useDataApi from "../../components/dataApi"
-import { FaSpotify } from "react-icons/fa"
+import { FaEdit, FaSpotify } from "react-icons/fa"
 import { HiExternalLink } from "react-icons/hi"
 import AddItemModal from "./music-library/addItemModal"
 import EditItemModal from "./music-library/editItemModal"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSpinner } from "@fortawesome/free-solid-svg-icons"
 
 const DATA_API_URL =
   "https://mqze13mg7g.execute-api.us-west-2.amazonaws.com/Prod/libraryItems"
@@ -23,7 +25,7 @@ const LibraryItem = ({ index, item, editAction }) => {
   return (
     <>
       <div
-        className={classNames("box", "is-clickable", styles.itemBox)}
+        className={classNames("box", styles.itemBox)}
         // href={externalLink}
         // target="_blank"
         key={"item-" + index}
@@ -46,7 +48,7 @@ const LibraryItem = ({ index, item, editAction }) => {
           <div className="field has-addons">
             <p className="control">
               <a href={spotifyLink}>
-                <button className="button" disabled={!spotifyLink}>
+                <button className="button  is-success" disabled={!spotifyLink}>
                   <span className="icon is-small">
                     <FaSpotify />
                   </span>
@@ -62,11 +64,13 @@ const LibraryItem = ({ index, item, editAction }) => {
                 </button>
               </a>
             </p>
-          </div>
-          <div>
-            <button className="button" onClick={e => editAction(item)}>
-              Edit
-            </button>
+            <p className="control">
+              <button className="button" onClick={e => editAction(item)}>
+                <span className="icon is-small">
+                  <FaEdit />
+                </span>
+              </button>
+            </p>
           </div>
         </div>
       </div>
@@ -171,7 +175,18 @@ export default function MusicLibrary() {
           Add Item
         </button>
         <hr />
-        {!libraryDataQuery.isLoading && items != null && (
+        {/* {!libraryDataQuery.isLoading && items != null && ( */}
+        {libraryDataQuery.isLoading ? (
+          <div className="panel-block">
+            <div className="control columns is-centered">
+              <div className="column is-1">
+                <span className="icon is-medium">
+                  <FontAwesomeIcon icon={faSpinner} size="lg" pulse />
+                </span>
+              </div>
+            </div>
+          </div>
+        ) : (
           <>
             <div className="columns is-multiline mb-5">
               {items.map((item, index) => (
