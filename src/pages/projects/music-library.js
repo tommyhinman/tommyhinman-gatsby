@@ -81,7 +81,7 @@ const LibraryItem = ({ index, item, editAction }) => {
 const TagButton = ({ tagName, isSelected, onClick }) => {
   const buttonClasses = classNames({
     button: true,
-    "is-success": isSelected,
+    "is-info": isSelected,
   })
 
   return (
@@ -97,13 +97,14 @@ export default function MusicLibrary() {
     []
   )
 
-  const [tags, setTags] = useState({
+  const initialTagState = {
     instrumental: false,
     party: false,
     jazz: false,
     rock: false,
     metal: false,
-  })
+  }
+  const [tags, setTags] = useState(initialTagState)
   const [isAddItemModalActive, setIsAddItemModalActive] = useState(false)
   const [isEditItemModalActive, setIsEditItemModalActive] = useState(false)
   const [currentlyEditingItemData, setCurrentlyEditingItemData] = useState()
@@ -149,7 +150,7 @@ export default function MusicLibrary() {
   console.log(JSON.stringify(items))
 
   const tagButtonClicked = tagName => {
-    setTags({ ...tags, [tagName]: !tags[tagName] })
+    setTags({ ...initialTagState, [tagName]: !tags[tagName] })
   }
 
   const tagNames = ["instrumental", "party", "jazz", "rock", "metal"]
