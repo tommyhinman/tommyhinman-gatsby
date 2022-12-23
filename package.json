@@ -48,7 +48,8 @@
     "typography-theme-alton": "^0.16.19",
     "typography-theme-fairy-gates": "^0.16.19",
     "typography-theme-lincoln": "^0.16.19",
-    "typography-theme-twin-peaks": "^0.16.19"
+    "typography-theme-twin-peaks": "^0.16.19",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "prettier": "^2.8.1",

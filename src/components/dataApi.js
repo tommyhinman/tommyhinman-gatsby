@@ -1,73 +1,72 @@
 import React, { useState, useEffect, useReducer } from "react"
-import axios, {CancelToken} from "axios";
+import axios, { CancelToken } from "axios"
 
 const dataFetchReducer = (state, action) => {
   switch (action.type) {
-    case 'FETCH_INIT':
+    case "FETCH_INIT":
       return {
         ...state,
         isLoading: true,
         isError: false,
-      };
-    case 'FETCH_SUCCESS':
+      }
+    case "FETCH_SUCCESS":
       return {
-         ...state,
-         isLoading: false,
-         isError: false,
-         data: action.payload,
-    };
-    case 'FETCH_FAILURE':
+        ...state,
+        isLoading: false,
+        isError: false,
+        data: action.payload,
+      }
+    case "FETCH_FAILURE":
       return {
         ...state,
         isLoading: false,
         isError: true,
-      };
+      }
     default:
-      throw new Error();
+      throw new Error()
   }
-};
+}
 
 const useDataApi = (initialUrl, initialData) => {
-  const [url, setUrl] = useState(initialUrl);
+  const [url, setUrl] = useState(initialUrl)
 
   const [state, dispatch] = useReducer(dataFetchReducer, {
     isLoading: false,
     isError: false,
-    data: initialData
-  });
+    data: initialData,
+  })
 
   useEffect(() => {
-    let didCancel = false;
+    let didCancel = false
 
     const fetchData = async () => {
-      dispatch({type: 'FETCH_INIT'});
+      dispatch({ type: "FETCH_INIT" })
 
       // In cases where the URL is set to blank, no need to load.
-      if(url != "") {
+      if (url != "") {
         try {
-          console.log("Making http request to " + url);
-          const result = await axios(url);
+          console.log("Making http request to " + url)
+          const result = await axios(url)
           if (!didCancel) {
-            dispatch({ type: 'FETCH_SUCCESS', payload: result.data});
+            dispatch({ type: "FETCH_SUCCESS", payload: result.data })
           }
         } catch (error) {
-          console.log("Error getting URL!");
-          console.log(error);
+          console.log("Error getting URL!")
+          console.log(error)
           if (!didCancel) {
-            dispatch({ type: "FETCH_FAILURE"});
+            dispatch({ type: "FETCH_FAILURE" })
           }
         }
       }
-
-    };
-    fetchData();
+    }
+    fetchData()
 
     return () => {
-      didCancel = true;
-    };
-  }, [url]);
+      didCancel = true
+    }
+  }, [url])
 
   return [state, url, setUrl]
 }
 
-export default useDataApi;
+export default useDataApi
