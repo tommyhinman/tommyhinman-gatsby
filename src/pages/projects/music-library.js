@@ -25,30 +25,21 @@ const LibraryItem = ({ index, item, editAction }) => {
   return (
     <>
       <div
-        className={classNames("box", styles.itemBox)}
-        // href={externalLink}
-        // target="_blank"
+        className={"box is-flex is-flex-direction-column"}
         key={"item-" + index}
       >
         <figure className="image is-100x100">
           <img src={imageLink} />
         </figure>
-        <div>
+        <div className="mb-2">
           <div className="mt-2 is-size-5">{primaryText}</div>
           <div className="is-size-6">{secondaryText}</div>
         </div>
-        <div
-          className={classNames(
-            "columns",
-            "is-centered",
-            "mt-2",
-            styles.itemButtonGroup
-          )}
-        >
-          <div className="field has-addons">
+        <div className={"mt-auto"}>
+          <div className="field has-addons has-addons-centered">
             <p className="control">
               <a href={spotifyLink}>
-                <button className="button  is-success" disabled={!spotifyLink}>
+                <button className="button is-success" disabled={!spotifyLink}>
                   <span className="icon is-small">
                     <FaSpotify />
                   </span>
@@ -201,7 +192,9 @@ export default function MusicLibrary() {
         </div>
         <div className="level">
           <div className="level-left">
-            <label className="label level-item is-size-5">Tags</label>
+            <div className="is-align-items-center is-flex mr-3 is-hidden-mobile">
+              <label className="label level-item is-size-5 is-flex">Tags</label>
+            </div>
             <div className="buttons level-item">
               {tagNames.map(tag => (
                 <TagButton
@@ -215,7 +208,6 @@ export default function MusicLibrary() {
         </div>
 
         <hr />
-        {/* {!libraryDataQuery.isLoading && items != null && ( */}
         {libraryDataQuery.isLoading ? (
           <div className="panel-block">
             <div className="control columns is-centered">
@@ -228,13 +220,14 @@ export default function MusicLibrary() {
           </div>
         ) : (
           <>
-            <div className="columns is-multiline mb-5">
+            <div className="columns is-multiline is-mobile mb-5">
               {items.map((item, index) => (
                 <div
                   key={"col-" + index}
                   className={classNames(
                     "column",
-                    "is-one-fifth",
+                    "is-one-fifth-desktop",
+                    "is-half-mobile",
                     styles.itemColumn
                   )}
                 >
