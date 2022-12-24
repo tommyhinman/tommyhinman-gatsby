@@ -4,7 +4,7 @@ import * as styles from "./music-library.module.css"
 import { Helmet } from "react-helmet"
 import classNames from "classnames"
 import useDataApi from "../../components/dataApi"
-import { FaEdit, FaSpotify } from "react-icons/fa"
+import { FaEdit, FaSearch, FaSpotify } from "react-icons/fa"
 import { HiExternalLink } from "react-icons/hi"
 import AddItemModal from "./music-library/addItemModal"
 import EditItemModal from "./music-library/editItemModal"
@@ -123,11 +123,21 @@ export default function MusicLibrary() {
     setIsEditItemModalActive(false)
   }
 
+  const [search, setSearch] = useState("")
+  const handleSearchChange = event => {
+    setSearch(event.target.value)
+  }
+
   const filterData = data => {
     const enabledTags = Object.keys(tags).filter(currentTag => tags[currentTag])
     const filteredData = data
       .sort((a, b) => a.secondaryText.localeCompare(b.secondaryText))
       .sort((a, b) => a.primaryText.localeCompare(b.primaryText))
+      .filter(
+        item =>
+          item.primaryText.toLowerCase().includes(search) ||
+          item.secondaryText.toLowerCase().includes(search)
+      )
       .filter(item => {
         if (enabledTags.length > 0) {
           return (
@@ -146,7 +156,7 @@ export default function MusicLibrary() {
     if (libraryDataQuery.data) {
       setItems(filterData(libraryDataQuery.data))
     }
-  }, [libraryDataQuery.data, tags])
+  }, [libraryDataQuery.data, tags, search])
   console.log(JSON.stringify(items))
 
   const tagButtonClicked = tagName => {
@@ -163,21 +173,47 @@ export default function MusicLibrary() {
       </Helmet>
       <Layout width="wide">
         <h1 className="title">Music Library</h1>
-        <div className="buttons">
-          {tagNames.map(tag => (
-            <TagButton
-              tagName={tag}
-              isSelected={tags[tag]}
-              onClick={() => tagButtonClicked(tag)}
-            />
-          ))}
+        <div className="columns">
+          <div className="column is-four-fifths">
+            <div className="field">
+              <div className="control has-icons-left">
+                <input
+                  type="text"
+                  className="input"
+                  name="search"
+                  value={search}
+                  onChange={e => handleSearchChange(e)}
+                />
+                <span class="icon is-small is-left">
+                  <FaSearch />
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="column is-one-fifth">
+            <button
+              className="button is-primary is-fullwidth"
+              onClick={() => toggleAddItemModal()}
+            >
+              Add Item
+            </button>
+          </div>
         </div>
-        <button
-          className="button is-primary"
-          onClick={() => toggleAddItemModal()}
-        >
-          Add Item
-        </button>
+        <div className="level">
+          <div className="level-left">
+            <label className="label level-item is-size-5">Tags</label>
+            <div className="buttons level-item">
+              {tagNames.map(tag => (
+                <TagButton
+                  tagName={tag}
+                  isSelected={tags[tag]}
+                  onClick={() => tagButtonClicked(tag)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
         <hr />
         {/* {!libraryDataQuery.isLoading && items != null && ( */}
         {libraryDataQuery.isLoading ? (
