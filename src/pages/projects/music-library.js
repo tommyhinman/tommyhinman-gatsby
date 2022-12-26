@@ -88,14 +88,33 @@ export default function MusicLibrary() {
     []
   )
 
-  const initialTagState = {
-    instrumental: false,
-    party: false,
-    jazz: false,
-    rock: false,
-    metal: false,
+  const genreTagNames = [
+    "hip hop",
+    "jazz",
+    "rock",
+    "metal",
+    "emo/punk",
+    "electronic",
+  ]
+  const moodTagNames = [
+    "party",
+    "chill",
+    "focus",
+    "dark",
+    "happy",
+    "sad",
+    "instrumental",
+  ]
+
+  const initialTagState = tagNames => {
+    return tagNames.reduce((acc, tag) => {
+      acc[tag] = false
+      return acc
+    }, {})
   }
-  const [tags, setTags] = useState(initialTagState)
+
+  const [genreTags, setGenreTags] = useState(initialTagState(genreTagNames))
+  const [moodTags, setMoodTags] = useState(initialTagState(moodTagNames))
   const [isAddItemModalActive, setIsAddItemModalActive] = useState(false)
   const [isEditItemModalActive, setIsEditItemModalActive] = useState(false)
   const [currentlyEditingItemData, setCurrentlyEditingItemData] = useState()
@@ -120,7 +139,13 @@ export default function MusicLibrary() {
   }
 
   const filterData = data => {
-    const enabledTags = Object.keys(tags).filter(currentTag => tags[currentTag])
+    const enabledGenreTags = Object.keys(genreTags).filter(
+      currentTag => genreTags[currentTag]
+    )
+    const enabledMoodTags = Object.keys(moodTags).filter(
+      currentTag => moodTags[currentTag]
+    )
+    const enabledTags = enabledGenreTags.concat(enabledMoodTags)
     const filteredData = data
       .sort((a, b) => a.secondaryText.localeCompare(b.secondaryText))
       .sort((a, b) => a.primaryText.localeCompare(b.primaryText))
@@ -134,7 +159,8 @@ export default function MusicLibrary() {
           return (
             item.tags &&
             item.tags != "" &&
-            item.tags.filter(tag => enabledTags.includes(tag)).length > 0
+            enabledTags.filter(tag => item.tags.includes(tag)).length ==
+              enabledTags.length
           )
         } else {
           return true
@@ -147,14 +173,22 @@ export default function MusicLibrary() {
     if (libraryDataQuery.data) {
       setItems(filterData(libraryDataQuery.data))
     }
-  }, [libraryDataQuery.data, tags, search])
+  }, [libraryDataQuery.data, genreTags, moodTags, search])
   console.log(JSON.stringify(items))
 
-  const tagButtonClicked = tagName => {
-    setTags({ ...initialTagState, [tagName]: !tags[tagName] })
+  const genreTagButtonClicked = tagName => {
+    setGenreTags({
+      ...initialTagState(genreTagNames),
+      [tagName]: !genreTags[tagName],
+    })
   }
 
-  const tagNames = ["instrumental", "party", "jazz", "rock", "metal"]
+  const moodTagButtonClicked = tagName => {
+    setMoodTags({
+      ...initialTagState(moodTagNames),
+      [tagName]: !moodTags[tagName],
+    })
+  }
 
   return (
     <>
@@ -193,14 +227,32 @@ export default function MusicLibrary() {
         <div className="level">
           <div className="level-left">
             <div className="is-align-items-center is-flex mr-3 is-hidden-mobile">
-              <label className="label level-item is-size-5 is-flex">Tags</label>
+              <label className="label level-item is-size-5 is-flex">
+                Genre
+              </label>
             </div>
             <div className="buttons level-item">
-              {tagNames.map(tag => (
+              {genreTagNames.map(tag => (
                 <TagButton
                   tagName={tag}
-                  isSelected={tags[tag]}
-                  onClick={() => tagButtonClicked(tag)}
+                  isSelected={genreTags[tag]}
+                  onClick={() => genreTagButtonClicked(tag)}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="level">
+          <div className="level-left">
+            <div className="is-align-items-center is-flex mr-3 is-hidden-mobile">
+              <label className="label level-item is-size-5 is-flex">Mood</label>
+            </div>
+            <div className="buttons level-item">
+              {moodTagNames.map(tag => (
+                <TagButton
+                  tagName={tag}
+                  isSelected={moodTags[tag]}
+                  onClick={() => moodTagButtonClicked(tag)}
                 />
               ))}
             </div>
