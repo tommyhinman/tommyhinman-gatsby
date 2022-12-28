@@ -19,4 +19,4 @@ export const moodTagNames = [
   "instrumental",
 ]
 
-export const allTagNames = genreTagNames.concat(moodTagNames)
+export default allTagNames = genreTagNames.concat(moodTagNames)
