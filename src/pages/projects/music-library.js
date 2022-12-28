@@ -10,7 +10,7 @@ import AddItemModal from "./music-library/addItemModal"
 import EditItemModal from "./music-library/editItemModal"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSpinner } from "@fortawesome/free-solid-svg-icons"
-import { genreTagNames, moodTagNames } from "./music-library/tagData"
+import { genreTagNames, moodTagNames } from "../../data/tagData"
 
 const DATA_API_URL =
   "https://mqze13mg7g.execute-api.us-west-2.amazonaws.com/Prod/libraryItems"

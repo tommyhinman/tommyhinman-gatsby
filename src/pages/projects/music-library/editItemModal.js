@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import classNames from "classnames"
 
 import axios from "axios"
-import { allTagNames, genreTagNames, moodTagNames } from "./tagData"
+import { allTagNames, genreTagNames, moodTagNames } from "../../../data/tagData"
 const { v4: uuidv4 } = require("uuid")
 
 export default function EditItemModal({
