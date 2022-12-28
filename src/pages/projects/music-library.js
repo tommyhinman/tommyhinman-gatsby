@@ -10,6 +10,7 @@ import AddItemModal from "./music-library/addItemModal"
 import EditItemModal from "./music-library/editItemModal"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSpinner } from "@fortawesome/free-solid-svg-icons"
+import { genreTagNames, moodTagNames } from "./music-library/tagData"
 
 const DATA_API_URL =
   "https://mqze13mg7g.execute-api.us-west-2.amazonaws.com/Prod/libraryItems"
@@ -88,24 +89,6 @@ export default function MusicLibrary() {
     []
   )
 
-  const genreTagNames = [
-    "hip hop",
-    "jazz",
-    "rock",
-    "metal",
-    "emo/punk",
-    "electronic",
-  ]
-  const moodTagNames = [
-    "party",
-    "chill",
-    "focus",
-    "dark",
-    "happy",
-    "sad",
-    "instrumental",
-  ]
-
   const initialTagState = tagNames => {
     return tagNames.reduce((acc, tag) => {
       acc[tag] = false
@@ -131,6 +114,7 @@ export default function MusicLibrary() {
 
   const closeEditItemModal = () => {
     setIsEditItemModalActive(false)
+    setCurrentlyEditingItemData(null)
   }
 
   const [search, setSearch] = useState("")

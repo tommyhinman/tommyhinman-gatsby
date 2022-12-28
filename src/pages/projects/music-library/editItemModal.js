@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import classNames from "classnames"
 
 import axios from "axios"
+import { allTagNames, genreTagNames, moodTagNames } from "./tagData"
 const { v4: uuidv4 } = require("uuid")
 
 export default function EditItemModal({
@@ -18,6 +19,8 @@ export default function EditItemModal({
     externalLink: "",
     imageLink: "",
     tags: "",
+    genreTags: {},
+    moodTags: {},
   }
 
   const [formState, setFormState] = useState(EMPTY_FORM_STATE)
@@ -26,16 +29,70 @@ export default function EditItemModal({
     setFormState({
       ...formState,
       ...initialData,
-      ["tags"]:
-        initialData && initialData.tags ? initialData.tags.join(",") : "",
+      ["genreTags"]:
+        initialData && initialData.tags
+          ? genreTagNames.reduce((acc, tagName) => {
+              acc[tagName] = initialData.tags.includes(tagName)
+              return acc
+            }, {})
+          : {},
+      ["moodTags"]:
+        initialData && initialData.tags
+          ? moodTagNames.reduce((acc, tagName) => {
+              acc[tagName] = initialData.tags.includes(tagName)
+              return acc
+            }, {})
+          : {},
     })
   }, [initialData])
 
   const handleChange = event => {
-    setFormState({
-      ...formState,
-      [event.target.name]: event.target.value,
-    })
+    if (event.target.name.includes("genreTag-")) {
+      const currentGenreTags = formState.genreTags
+      const currentTagName = event.target.name.split("genreTag-")[1]
+      const newGenreTags = {
+        ...currentGenreTags,
+        [currentTagName]: event.target.checked,
+      }
+
+      let combinedTags = allTagNames.reduce((acc, curTagName) => {
+        if (newGenreTags[curTagName] || formState.moodTags[curTagName]) {
+          acc.push(curTagName)
+        }
+        return acc
+      }, [])
+
+      setFormState({
+        ...formState,
+        ["tags"]: combinedTags,
+        ["genreTags"]: newGenreTags,
+      })
+    } else if (event.target.name.includes("moodTag-")) {
+      const currentMoodTags = formState.moodTags
+      const currentTagName = event.target.name.split("moodTag-")[1]
+      const newMoodTags = {
+        ...currentMoodTags,
+        [currentTagName]: event.target.checked,
+      }
+
+      let combinedTags = allTagNames.reduce((acc, curTagName) => {
+        if (newMoodTags[curTagName] || formState.genreTags[curTagName]) {
+          acc.push(curTagName)
+        }
+        return acc
+      }, [])
+
+      setFormState({
+        ...formState,
+        ["tags"]: combinedTags,
+        ["moodTags"]: newMoodTags,
+      })
+    } else {
+      setFormState({
+        ...formState,
+        [event.target.name]: event.target.value,
+      })
+    }
   }
 
   const handleClose = () => {
@@ -47,8 +104,12 @@ export default function EditItemModal({
     event.preventDefault()
     const editUrl = dataApiUrl + "/" + formState.itemId
     const patchData = {
-      ...formState,
-      ["tags"]: formState.tags.split(",").map(tag => tag.trim().toLowerCase()),
+      primaryText: formState.primaryText,
+      secondaryText: formState.secondaryText,
+      spotifyLink: formState.spotifyLink,
+      externalLink: formState.externalLink,
+      imageLink: formState.imageLink,
+      tags: formState.tags,
     }
     const result = axios
       .patch(editUrl, patchData)
@@ -146,6 +207,50 @@ export default function EditItemModal({
                   value={formState.tags}
                   onChange={e => handleChange(e)}
                 />
+              </div>
+            </div>
+            <div className="field">
+              <label className="label">Genre Tags</label>
+              <div className="field-body">
+                {genreTagNames.map(tagName => {
+                  const checkboxName = "genreTag-" + tagName
+                  return (
+                    <div className="control mr-2">
+                      <label className="checkbox">
+                        <input
+                          type="checkbox"
+                          className="mr-1"
+                          name={checkboxName}
+                          checked={formState.genreTags[tagName]}
+                          onChange={e => handleChange(e)}
+                        />
+                        {tagName}
+                      </label>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+            <div className="field">
+              <label className="label">Mood Tags</label>
+              <div className="field-body">
+                {moodTagNames.map(tagName => {
+                  const checkboxName = "moodTag-" + tagName
+                  return (
+                    <div className="control mr-2">
+                      <label className="checkbox">
+                        <input
+                          type="checkbox"
+                          className="mr-1"
+                          name={checkboxName}
+                          checked={formState.moodTags[tagName]}
+                          onChange={e => handleChange(e)}
+                        />
+                        {tagName}
+                      </label>
+                    </div>
+                  )
+                })}
               </div>
             </div>
             <div className="control">
