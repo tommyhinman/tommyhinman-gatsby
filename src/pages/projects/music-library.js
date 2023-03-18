@@ -29,9 +29,11 @@ const LibraryItem = ({ index, item, editAction }) => {
         className={"box is-flex is-flex-direction-column"}
         key={"item-" + index}
       >
-        <figure className="image is-100x100">
-          <img src={imageLink} />
-        </figure>
+        <a href={spotifyLink}>
+          <figure className="image is-100x100">
+            <img src={imageLink} />
+          </figure>
+        </a>
         <div className="mb-2">
           <div className="mt-2 is-size-5">{primaryText}</div>
           <div className="is-size-6">{secondaryText}</div>

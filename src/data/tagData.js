@@ -7,6 +7,8 @@ export const genreTagNames = [
   "electronic",
   "folk",
   "classical",
+  "blues",
+  "pop",
 ]
 
 export const moodTagNames = [
