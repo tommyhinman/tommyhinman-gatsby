@@ -1,6 +1,10 @@
 export function getDogs() {
   return [
     {
+      title: "The Long Goodbye (1973)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/longgoodbye.png",
+    },
+    {
       title: "Trafic (1971)",
       imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/trafic.png",
     },
