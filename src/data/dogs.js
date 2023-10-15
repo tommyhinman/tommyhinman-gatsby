@@ -1,6 +1,23 @@
 export function getDogs() {
   return [
     {
+      title: "Three Colours: Red (1994)",
+      imageUrl:
+        "https://d2vxchc6g5met5.cloudfront.net/dogs/threecoloursred.png",
+    },
+    {
+      title: "The Black Cat (1934)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/theblackcat.png",
+    },
+    {
+      title: "Suspiria (1977)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/suspiria.png",
+    },
+    {
+      title: "The Tomb of Ligeia (1964)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/tombofligeia.png",
+    },
+    {
       title: "The Long Goodbye (1973)",
       imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/longgoodbye.png",
     },
