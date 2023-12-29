@@ -85,6 +85,13 @@ export default function Projects() {
             >
               Music Library
             </Project>
+            <hr />
+            <Project
+              internalLink="/projects/fruit-balls"
+              projectName="Fruit Balls"
+            >
+              Fruit Balls
+            </Project>
           </div>
         </div>
       </Layout>
