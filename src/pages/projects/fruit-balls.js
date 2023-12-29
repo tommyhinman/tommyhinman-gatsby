@@ -1,7 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import Layout from "../../components/layout"
-import Game from "./fruit-balls/Game"
+import Game from "./fruit-balls/game"
 
 export default function FruitBalls() {
   return (
