@@ -215,7 +215,7 @@ const Game = () => {
 
     Render.run(render)
 
-    const runner = Runner.create()
+    const runner = Runner.create({ isFixed: true })
 
     Runner.run(runner, engine.current)
 
