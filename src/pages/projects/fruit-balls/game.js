@@ -14,29 +14,25 @@ import { useEffect, useRef } from "react"
 const balls = [
   //cherry
   {
-    texture:
-      "https://suikagame.com/public/res/raw-assets/ad/ad16ccdc-975e-4393-ae7b-8ac79c3795f2.png",
+    texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/cherry.png",
     xScale: 0.5,
     yScale: 0.5,
   },
   //strawberry
   {
-    texture:
-      "https://suikagame.com/public/res/raw-assets/0c/0cbb3dbb-2a85-42a5-be21-9839611e5af7.png",
+    texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/strawberry.png",
     xScale: 0.5,
     yScale: 0.5,
   },
   //grape
   {
-    texture:
-      "https://suikagame.com/public/res/raw-assets/d0/d0c676e4-0956-4a03-90af-fee028cfabe4.png",
+    texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/grape.png",
     xScale: 0.5,
     yScale: 0.5,
   },
   //dekopan
   {
-    texture:
-      "https://suikagame.com/public/res/raw-assets/74/74237057-2880-4e1f-8a78-6d8ef00a1f5f.png",
+    texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/dekopan.png",
     xScale: 0.5,
     yScale: 0.5,
   },
@@ -49,44 +45,38 @@ const balls = [
 
   //apple
   {
-    texture:
-      "https://suikagame.com/public/res/raw-assets/03/03c33f55-5932-4ff7-896b-814ba3a8edb8.png",
+    texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/apple.png",
     xScale: 0.5,
     yScale: 0.5,
   },
 
   //pear
   {
-    texture:
-      "https://suikagame.com/public/res/raw-assets/66/665a0ec9-6c43-4858-974c-025514f2a0e7.png",
+    texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/pear.png",
     xScale: 0.5,
     yScale: 0.5,
   },
   //peach
   {
-    texture:
-      "https://suikagame.com/public/res/raw-assets/84/84bc9d40-83d0-480c-b46a-3ef59e603e14.png",
+    texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/peach.png",
     xScale: 0.5,
     yScale: 0.5,
   },
   // pineapple
   {
-    texture:
-      "https://suikagame.com/public/res/raw-assets/5f/5fa0264d-acbf-4a7b-8923-c106ec3b9215.png",
+    texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/pineapple.png",
     xScale: 0.5,
     yScale: 0.5,
   },
   //   melon
   {
-    texture:
-      "https://suikagame.com/public/res/raw-assets/56/564ba620-6a55-4cbe-a5a6-6fa3edd80151.png",
+    texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/melon.png",
     xScale: 0.5,
     yScale: 0.5,
   },
   //watermelon
   {
-    texture:
-      "https://playsuikagame.com/public/res/raw-assets/50/5035266c-8df3-4236-8d82-a375e97a0d9c.png",
+    texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/watermelon.png",
     xScale: 0.5,
     yScale: 0.5,
   },
@@ -133,8 +123,8 @@ const Game = () => {
 
     if (!scene.current) return
 
-    const width = 430
-    const height = 600
+    const width = Math.min(window.innerWidth, 600)
+    const height = Math.min(window.innerHeight, 1000)
 
     const render = Render.create({
       element: scene.current,
@@ -146,26 +136,55 @@ const Game = () => {
         background: "transparent",
       },
     })
-    const ground = Bodies.rectangle(0, height - 5, width * 2, 20, {
+    const visibleGround = Bodies.rectangle(width / 2, height - 1, width, 1, {
       isStatic: true,
       restitution: 0.9,
     })
+    const ground = Bodies.rectangle(width / 2, height + 30, width, 60, {
+      isStatic: true,
+      render: { opacity: 0 },
+    })
 
-    const leftWall = Bodies.rectangle(0, 0, 5, height * 2, {
+    const visibleLeftWall = Bodies.rectangle(0, height / 2, 1, height, {
       isStatic: true,
     })
 
-    const rightWall = Bodies.rectangle(width - 5, 0, 5, height * 2, {
+    const leftWall = Bodies.rectangle(-30, height / 2, 60, height, {
       isStatic: true,
+      render: { opacity: 0 },
     })
 
-    const topWall = Bodies.rectangle(0, 10, width * 2, 2, {
+    const visibleRightWall = Bodies.rectangle(
+      width - 1,
+      height / 2,
+      1,
+      height,
+      {
+        isStatic: true,
+      }
+    )
+
+    const rightWall = Bodies.rectangle(width + 30, height / 2, 60, height, {
+      isStatic: true,
+      render: { opacity: 0 },
+    })
+
+    const topWall = Bodies.rectangle(width / 2, 10, width, 2, {
       isStatic: true,
       isSensor: true,
+      render: { opacity: 0 },
     })
     topWallId = topWall.id
 
-    Composite.add(engine.current.world, [leftWall, ground, rightWall, topWall])
+    Composite.add(engine.current.world, [
+      visibleLeftWall,
+      leftWall,
+      visibleGround,
+      ground,
+      visibleRightWall,
+      rightWall,
+      topWall,
+    ])
 
     const mouse = Mouse.create(render.canvas),
       mouseConstraint = MouseConstraint.create(engine.current, {
