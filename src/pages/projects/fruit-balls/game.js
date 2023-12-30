@@ -107,6 +107,8 @@ const Game = () => {
   )
 
   const bodies = new Map()
+  let topWallId
+  const bodiesTouchingTopWall = new Set()
 
   useEffect(() => {
     const addBall = (x, y, type) => {
@@ -157,7 +159,13 @@ const Game = () => {
       isStatic: true,
     })
 
-    Composite.add(engine.current.world, [leftWall, ground, rightWall])
+    const topWall = Bodies.rectangle(0, 10, width * 2, 2, {
+      isStatic: true,
+      isSensor: true,
+    })
+    topWallId = topWall.id
+
+    Composite.add(engine.current.world, [leftWall, ground, rightWall, topWall])
 
     const mouse = Mouse.create(render.canvas),
       mouseConstraint = MouseConstraint.create(engine.current, {
@@ -179,16 +187,56 @@ const Game = () => {
     })
 
     Events.on(engine.current, "collisionStart", function (event) {
-      var pairs = event.pairs
+      const pairs = event.pairs
 
-      // change object colours to show those starting a collision
       for (var i = 0; i < pairs.length; i++) {
-        var pair = pairs[i]
-        const typeA = bodies.get(pair.bodyA.id)
-        const typeB = bodies.get(pair.bodyB.id)
+        const pair = pairs[i]
+
+        const bodyAId = pair.bodyA.id
+        const bodyBId = pair.bodyB.id
+
+        if (bodyAId === topWallId || bodyBId === topWallId) {
+          console.log("Colliding with top wall!")
+          let bodyTouchingWall
+          if (bodyAId === topWallId) {
+            bodyTouchingWall = pair.bodyB
+          }
+          if (bodyBId === topWallId) {
+            bodyTouchingWall = pair.bodyA
+          }
+
+          bodiesTouchingTopWall.add(bodyTouchingWall.id)
+
+          setTimeout(() => {
+            if (bodiesTouchingTopWall.has(bodyTouchingWall.id)) {
+              console.log("you lose!")
+              bodyTouchingWall.render.opacity = 0.1
+            }
+          }, 5000)
+          return
+        }
+
+        const typeA = bodies.get(bodyAId)
+        const typeB = bodies.get(bodyBId)
 
         if (typeA === typeB) {
           Composite.remove(engine.current.world, [pair.bodyA, pair.bodyB])
+        }
+      }
+    })
+
+    Events.on(engine.current, "collisionEnd", event => {
+      const pairs = event.pairs
+
+      for (let i = 0; i < pairs.length; i++) {
+        const pair = pairs[i]
+
+        const bodyAId = pair.bodyA.id
+        const bodyBId = pair.bodyB.id
+
+        if (bodyAId === topWallId || bodyBId === topWallId) {
+          bodiesTouchingTopWall.delete(bodyAId)
+          bodiesTouchingTopWall.delete(bodyBId)
         }
       }
     })
