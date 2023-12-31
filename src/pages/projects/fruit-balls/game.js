@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {
   Bodies,
   Composite,
@@ -95,6 +95,13 @@ const Game = () => {
       },
     })
   )
+  const [score, setScore] = useState(0)
+  const scoreRef = useRef()
+
+  scoreRef.current = score
+  // const score = useRef(1)
+
+  // const scoreCopy = score
 
   const bodies = new Map()
   let topWallId
@@ -124,7 +131,7 @@ const Game = () => {
     if (!scene.current) return
 
     const width = Math.min(window.innerWidth, 600)
-    const height = Math.min(window.innerHeight, 1000)
+    const height = Math.min(window.innerHeight, 700)
 
     const render = Render.create({
       element: scene.current,
@@ -201,7 +208,7 @@ const Game = () => {
 
     Events.on(mouseConstraint, "mousedown", function (event) {
       var mousePosition = event.mouse.position
-      const randomNum = Math.floor(Math.random() * radii.length)
+      const randomNum = Math.floor(Math.random() * 6)
       addBall(mousePosition.x, 25, randomNum)
     })
 
@@ -215,7 +222,6 @@ const Game = () => {
         const bodyBId = pair.bodyB.id
 
         if (bodyAId === topWallId || bodyBId === topWallId) {
-          console.log("Colliding with top wall!")
           let bodyTouchingWall
           if (bodyAId === topWallId) {
             bodyTouchingWall = pair.bodyB
@@ -238,7 +244,14 @@ const Game = () => {
         const typeA = bodies.get(bodyAId)
         const typeB = bodies.get(bodyBId)
 
+        if (typeA == null || typeB == null) return
+
         if (typeA === typeB) {
+          const newPoints = (typeA + 1) * 2
+          // console.log({ label: "before", score, newPoints })
+          setScore(scoreRef.current + newPoints)
+          // console.log({ label: "after", score, newPoints })
+          // score.current = newPoints + score.current
           Composite.remove(engine.current.world, [pair.bodyA, pair.bodyB])
         }
       }
@@ -280,11 +293,13 @@ const Game = () => {
       }
     })
 
-    Render.run(render)
+    if (engine.current != null) {
+      Render.run(render)
 
-    const runner = Runner.create({ isFixed: true })
+      const runner = Runner.create({ isFixed: true })
 
-    Runner.run(runner, engine.current)
+      Runner.run(runner, engine.current)
+    }
 
     return () => {
       Render.stop(render)
@@ -296,6 +311,7 @@ const Game = () => {
 
   return (
     <>
+      <div>Score: {score}</div>
       <div ref={scene}></div>
       <audio
         ref={audio}
