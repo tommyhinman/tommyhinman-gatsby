@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import {
   Bodies,
+  Body,
   Composite,
   Engine,
   Events,
   Mouse,
   MouseConstraint,
+  Query,
   Render,
   Runner,
 } from "matter-js"
@@ -91,24 +93,26 @@ const Game = () => {
   const engine = useRef(
     Engine.create({
       gravity: {
-        y: 0.8,
+        y: 0,
       },
     })
   )
   const [score, setScore] = useState(0)
   const scoreRef = useRef()
-
   scoreRef.current = score
-  // const score = useRef(1)
 
-  // const scoreCopy = score
+  const [nextBall, setNextBall] = useState(null)
+  const nextBallRef = useRef()
+  nextBallRef.current = nextBall
 
   const bodies = new Map()
   let topWallId
   const bodiesTouchingTopWall = new Set()
 
   useEffect(() => {
-    const addBall = (x, y, type) => {
+    const width = Math.min(window.innerWidth, 600)
+    const height = Math.min(window.innerHeight, 700)
+    const addBall = (x, y, type, isPlaceHolderBall = false) => {
       const ball = balls[type]
 
       const fruit = Bodies.circle(x, y, radii[type], {
@@ -118,20 +122,45 @@ const Game = () => {
         restitution: 0.5,
       })
 
-      bodies.set(fruit.id, type)
-      if (audio.current) {
-        audio.current.play()
+      if (isPlaceHolderBall) {
+        fruit.isSensor = true
+        fruit.mass = 0.01
+        fruit.friction = 1
       }
 
+      bodies.set(fruit.id, type)
+
+      // if (!isPlaceHolderBall) {
+      //
+      // }
       Composite.add(engine.current.world, [fruit])
+
+      return fruit
     }
+
+    const clickHandler = () => {
+      // First drop the real version of the current ball
+      const currentBallType = bodies.get(nextBallRef.current.id)
+      const currentBall = addBall(mouse.position.x, 25, currentBallType)
+
+      // Then delete the current fake ball
+      bodies.delete(nextBallRef.current.id)
+      Composite.remove(engine.current.world, [nextBallRef.current])
+
+      // Then make a new placeholder ball
+      const randomNum = Math.floor(Math.random() * 6)
+      const newBall = addBall(mouse.position.x, 25, randomNum, true)
+      setNextBall(newBall)
+    }
+
+    // TODO clean this it's gross!
+    const firstBall = addBall(width / 2, 25, 0, true)
+    nextBallRef.current = firstBall
+    setNextBall(firstBall)
 
     const currentEngine = engine.current
 
     if (!scene.current) return
-
-    const width = Math.min(window.innerWidth, 600)
-    const height = Math.min(window.innerHeight, 700)
 
     const render = Render.create({
       element: scene.current,
@@ -183,6 +212,19 @@ const Game = () => {
     })
     topWallId = topWall.id
 
+    const background = Bodies.rectangle(width / 2, height / 2, width, height, {
+      isStatic: true,
+      isSensor: true,
+      render: {
+        sprite: {
+          texture: "https://fruit-balls.s3.us-west-2.amazonaws.com/blue.png",
+          xScale: 0.5,
+          yScale: 0.5,
+        },
+        opacity: 0.5,
+      },
+    })
+
     Composite.add(engine.current.world, [
       visibleLeftWall,
       leftWall,
@@ -191,26 +233,71 @@ const Game = () => {
       visibleRightWall,
       rightWall,
       topWall,
+      background,
     ])
 
-    const mouse = Mouse.create(render.canvas),
-      mouseConstraint = MouseConstraint.create(engine.current, {
-        mouse: mouse,
-        constraint: {
-          stiffness: 0.2,
-          render: {
-            visible: false,
-          },
-        },
+    const mouse = Mouse.create(render.canvas)
+
+    window.addEventListener("click", clickHandler)
+
+    window.addEventListener("mousemove", () => {
+      nextBallRef.current.position.x = mouse.position.x
+    })
+
+    window.addEventListener("touchmove", () => {
+      nextBallRef.current.position.x = mouse.position.x
+    })
+
+    window.addEventListener("touchend", clickHandler)
+
+    Events.on(engine.current, "beforeUpdate", function () {
+      const gravity = engine.current.gravity
+      const bodies = Composite.allBodies(engine.current.world)
+
+      const bodiesAffectedByGravity = bodies.filter(body => {
+        return !body.isStatic && body !== nextBallRef.current
       })
 
-    Composite.add(engine.current.world, mouseConstraint)
+      // console.log({ bodiesAffectedByGravity })
 
-    Events.on(mouseConstraint, "mousedown", function (event) {
-      var mousePosition = event.mouse.position
-      const randomNum = Math.floor(Math.random() * 6)
-      addBall(mousePosition.x, 25, randomNum)
+      // bodies.forEach(body => {
+      //   if (body.id === nextBallRef.current.id) {
+      //     Body.applyForce(body, body.position, {
+      //       x: -gravity.x * gravity.scale * body.mass,
+      //       y: -gravity.y * gravity.scale * body.mass,
+      //     })
+      //   }
+      // })
+
+      bodiesAffectedByGravity.forEach(body => {
+        body.force.y += body.mass * 0.001
+      })
+
+      // nextBallRef.current.position.y = 25
+      // nextBallRef.current.force.x = 0
+      // nextBallRef.current.force.y = 0
+      // nextBallRef.current.velocity.x = 0
+      // nextBallRef.current.velocity.y = 0
+      // nextBallRef.current.angularVelocity.
     })
+
+    // const mouseConstraint = MouseConstraint.create(engine.current, {
+    //   mouse: mouse,
+    //   constraint: {
+    //     stiffness: 0.2,
+    //     render: {
+    //       visible: false,
+    //     },
+    //   },
+    // })
+
+    // Composite.add(engine.current.world, mouseConstraint)
+
+    // Events.on(mouseConstraint, "mousedown", function (event) {
+    //   var mousePosition = event.mouse.position
+    //   const randomNum = Math.floor(Math.random() * 6)
+    //   addBall(mousePosition.x, 25, randomNum)
+    // })
 
     Events.on(engine.current, "collisionStart", function (event) {
       const pairs = event.pairs
@@ -312,6 +399,12 @@ const Game = () => {
   return (
     <>
       <div>Score: {score}</div>
+      {nextBall && (
+        <div>
+          Next ball:{" "}
+          {nextBall.angularVelocity.x + "," + nextBall.angularVelocity.y}
+        </div>
+      )}
       <div ref={scene}></div>
       <audio
         ref={audio}
