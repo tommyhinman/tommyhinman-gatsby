@@ -1,13 +1,10 @@
 import React, { useState } from "react"
 import {
   Bodies,
-  Body,
   Composite,
   Engine,
   Events,
   Mouse,
-  MouseConstraint,
-  Query,
   Render,
   Runner,
 } from "matter-js"
@@ -101,9 +98,7 @@ const Game = () => {
   const scoreRef = useRef()
   scoreRef.current = score
 
-  const [nextBall, setNextBall] = useState(null)
-  const nextBallRef = useRef()
-  nextBallRef.current = nextBall
+  let nextBall = null
 
   const bodies = new Map()
   let topWallId
@@ -115,16 +110,22 @@ const Game = () => {
     const addBall = (x, y, type, isPlaceHolderBall = false) => {
       const ball = balls[type]
 
-      const fruit = Bodies.circle(x, y, radii[type], {
+      const fruitProperties = {
         render: {
           sprite: ball,
         },
         restitution: 0.5,
-      })
+      }
 
       if (isPlaceHolderBall) {
-        fruit.isSensor = true
-        fruit.isStatic = true
+        fruitProperties.isSensor = true
+        fruitProperties.isStatic = true
+      }
+
+      const fruit = Bodies.circle(x, y, radii[type], fruitProperties)
+
+      if (isPlaceHolderBall) {
+        nextBall = fruit
       }
 
       bodies.set(fruit.id, type)
@@ -135,21 +136,27 @@ const Game = () => {
     }
 
     const clickHandler = () => {
+      if (nextBall == null) return
       if (audio.current) {
         audio.current.play()
       }
+
       // First drop the real version of the current ball
-      const currentBallType = bodies.get(nextBallRef.current.id)
-      const currentBall = addBall(mouse.position.x, 25, currentBallType)
+      const currentBallType = bodies.get(nextBall.id)
+      // Don't create the ball at exactly 0 or it will get stuck in the wall.
+      const xPosition = Math.max(mouse.position.x, 1)
+      addBall(xPosition, 25, currentBallType)
 
       // Then delete the current fake ball
-      bodies.delete(nextBallRef.current.id)
-      Composite.remove(engine.current.world, [nextBallRef.current])
+      bodies.delete(nextBall.id)
+      Composite.remove(engine.current.world, [nextBall])
+      nextBall = null
 
-      // Then make a new placeholder ball
-      const randomNum = Math.floor(Math.random() * 6)
-      const newBall = addBall(mouse.position.x, 25, randomNum, true)
-      setNextBall(newBall)
+      // Then make a new placeholder ball after a delay
+      setTimeout(() => {
+        const randomNum = Math.floor(Math.random() * 6)
+        addBall(mouse.position.x, 25, randomNum, true)
+      }, 200)
     }
 
     const collisionHandler = event => {
@@ -181,7 +188,7 @@ const Game = () => {
           continue
         }
 
-        if (pair.bodyA === nextBallRef || pair.bodyB === nextBallRef) continue
+        if (pair.bodyA === nextBall || pair.bodyB === nextBall) continue
 
         const typeA = bodies.get(bodyAId)
         const typeB = bodies.get(bodyBId)
@@ -190,19 +197,14 @@ const Game = () => {
 
         if (typeA === typeB) {
           const newPoints = (typeA + 1) * 2
-          // console.log({ label: "before", score, newPoints })
           setScore(scoreRef.current + newPoints)
-          // console.log({ label: "after", score, newPoints })
-          // score.current = newPoints + score.current
           Composite.remove(engine.current.world, [pair.bodyA, pair.bodyB])
         }
       }
     }
 
-    // TODO clean this it's gross!
     const firstBall = addBall(width / 2, 25, 0, true)
-    nextBallRef.current = firstBall
-    setNextBall(firstBall)
+    nextBall = firstBall
 
     const currentEngine = engine.current
 
@@ -287,11 +289,13 @@ const Game = () => {
     window.addEventListener("click", clickHandler)
 
     window.addEventListener("mousemove", () => {
-      nextBallRef.current.position.x = mouse.position.x
+      if (nextBall != null) {
+        nextBall.position.x = mouse.position.x
+      }
     })
 
     window.addEventListener("touchmove", () => {
-      nextBallRef.current.position.x = mouse.position.x
+      nextBall.position.x = mouse.position.x
     })
 
     window.addEventListener("touchend", clickHandler)
