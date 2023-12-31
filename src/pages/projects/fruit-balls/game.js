@@ -135,6 +135,9 @@ const Game = () => {
     }
 
     const clickHandler = () => {
+      if (audio.current) {
+        audio.current.play()
+      }
       // First drop the real version of the current ball
       const currentBallType = bodies.get(nextBallRef.current.id)
       const currentBall = addBall(mouse.position.x, 25, currentBallType)
