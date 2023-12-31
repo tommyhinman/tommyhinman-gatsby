@@ -388,7 +388,7 @@ const Game = () => {
 
   return (
     <>
-      <div>Score: {score}</div>
+      <div style={{ position: "absolute" }}>Score: {score}</div>
       <div ref={scene}></div>
       <audio
         ref={audio}
