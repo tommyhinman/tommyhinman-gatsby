@@ -93,7 +93,7 @@ const Game = () => {
   const engine = useRef(
     Engine.create({
       gravity: {
-        y: 0,
+        y: 0.8,
       },
     })
   )
@@ -150,6 +150,53 @@ const Game = () => {
       const randomNum = Math.floor(Math.random() * 6)
       const newBall = addBall(mouse.position.x, 25, randomNum, true)
       setNextBall(newBall)
+    }
+
+    const collisionHandler = event => {
+      const pairs = event.pairs
+
+      for (var i = 0; i < pairs.length; i++) {
+        const pair = pairs[i]
+
+        const bodyAId = pair.bodyA.id
+        const bodyBId = pair.bodyB.id
+
+        if (bodyAId === topWallId || bodyBId === topWallId) {
+          let bodyTouchingWall
+          if (bodyAId === topWallId) {
+            bodyTouchingWall = pair.bodyB
+          }
+          if (bodyBId === topWallId) {
+            bodyTouchingWall = pair.bodyA
+          }
+
+          bodiesTouchingTopWall.add(bodyTouchingWall.id)
+
+          setTimeout(() => {
+            if (bodiesTouchingTopWall.has(bodyTouchingWall.id)) {
+              console.log("you lose!")
+              bodyTouchingWall.render.opacity = 0.1
+            }
+          }, 5000)
+          continue
+        }
+
+        if (pair.bodyA === nextBallRef || pair.bodyB === nextBallRef) continue
+
+        const typeA = bodies.get(bodyAId)
+        const typeB = bodies.get(bodyBId)
+
+        if (typeA == null || typeB == null) continue
+
+        if (typeA === typeB) {
+          const newPoints = (typeA + 1) * 2
+          // console.log({ label: "before", score, newPoints })
+          setScore(scoreRef.current + newPoints)
+          // console.log({ label: "after", score, newPoints })
+          // score.current = newPoints + score.current
+          Composite.remove(engine.current.world, [pair.bodyA, pair.bodyB])
+        }
+      }
     }
 
     // TODO clean this it's gross!
@@ -249,93 +296,7 @@ const Game = () => {
 
     window.addEventListener("touchend", clickHandler)
 
-    Events.on(engine.current, "beforeUpdate", function () {
-      const gravity = engine.current.gravity
-      const bodies = Composite.allBodies(engine.current.world)
-
-      const bodiesAffectedByGravity = bodies.filter(body => {
-        return !body.isStatic && body !== nextBallRef.current
-      })
-
-      // console.log({ bodiesAffectedByGravity })
-
-      // bodies.forEach(body => {
-      //   if (body.id === nextBallRef.current.id) {
-      //     Body.applyForce(body, body.position, {
-      //       x: -gravity.x * gravity.scale * body.mass,
-      //       y: -gravity.y * gravity.scale * body.mass,
-      //     })
-      //   }
-      // })
-
-      bodiesAffectedByGravity.forEach(body => {
-        body.force.y += body.mass * 0.001
-      })
-
-      // nextBallRef.current.position.y = 25
-      // nextBallRef.current.force.x = 0
-      // nextBallRef.current.force.y = 0
-      // nextBallRef.current.velocity.x = 0
-      // nextBallRef.current.velocity.y = 0
-      // nextBallRef.current.angularVelocity.
-    })
-
-    // const mouseConstraint = MouseConstraint.create(engine.current, {
-    //   mouse: mouse,
-    //   constraint: {
-    //     stiffness: 0.2,
-    //     render: {
-    //       visible: false,
-    //     },
-    //   },
-    // })
-
-    // Composite.add(engine.current.world, mouseConstraint)
-
-    Events.on(engine.current, "collisionStart", function (event) {
-      const pairs = event.pairs
-
-      for (var i = 0; i < pairs.length; i++) {
-        const pair = pairs[i]
-
-        const bodyAId = pair.bodyA.id
-        const bodyBId = pair.bodyB.id
-
-        if (bodyAId === topWallId || bodyBId === topWallId) {
-          let bodyTouchingWall
-          if (bodyAId === topWallId) {
-            bodyTouchingWall = pair.bodyB
-          }
-          if (bodyBId === topWallId) {
-            bodyTouchingWall = pair.bodyA
-          }
-
-          bodiesTouchingTopWall.add(bodyTouchingWall.id)
-
-          setTimeout(() => {
-            if (bodiesTouchingTopWall.has(bodyTouchingWall.id)) {
-              console.log("you lose!")
-              bodyTouchingWall.render.opacity = 0.1
-            }
-          }, 5000)
-          return
-        }
-
-        const typeA = bodies.get(bodyAId)
-        const typeB = bodies.get(bodyBId)
-
-        if (typeA == null || typeB == null) return
-
-        if (typeA === typeB) {
-          const newPoints = (typeA + 1) * 2
-          // console.log({ label: "before", score, newPoints })
-          setScore(scoreRef.current + newPoints)
-          // console.log({ label: "after", score, newPoints })
-          // score.current = newPoints + score.current
-          Composite.remove(engine.current.world, [pair.bodyA, pair.bodyB])
-        }
-      }
-    })
+    Events.on(engine.current, "collisionStart", collisionHandler)
 
     Events.on(engine.current, "collisionEnd", event => {
       const pairs = event.pairs
@@ -376,7 +337,7 @@ const Game = () => {
     if (engine.current != null) {
       Render.run(render)
 
-      const runner = Runner.create({ isFixed: true })
+      const runner = Runner.create({ isFixed: false })
 
       Runner.run(runner, engine.current)
     }
