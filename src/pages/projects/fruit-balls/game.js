@@ -124,15 +124,11 @@ const Game = () => {
 
       if (isPlaceHolderBall) {
         fruit.isSensor = true
-        fruit.mass = 0.01
-        fruit.friction = 1
+        fruit.isStatic = true
       }
 
       bodies.set(fruit.id, type)
 
-      // if (!isPlaceHolderBall) {
-      //
-      // }
       Composite.add(engine.current.world, [fruit])
 
       return fruit
@@ -293,12 +289,6 @@ const Game = () => {
 
     // Composite.add(engine.current.world, mouseConstraint)
 
-    // Events.on(mouseConstraint, "mousedown", function (event) {
-    //   var mousePosition = event.mouse.position
-    //   const randomNum = Math.floor(Math.random() * 6)
-    //   addBall(mousePosition.x, 25, randomNum)
-    // })
-
     Events.on(engine.current, "collisionStart", function (event) {
       const pairs = event.pairs
 
@@ -399,12 +389,6 @@ const Game = () => {
   return (
     <>
       <div>Score: {score}</div>
-      {nextBall && (
-        <div>
-          Next ball:{" "}
-          {nextBall.angularVelocity.x + "," + nextBall.angularVelocity.y}
-        </div>
-      )}
       <div ref={scene}></div>
       <audio
         ref={audio}
