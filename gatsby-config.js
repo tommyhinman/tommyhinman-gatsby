@@ -6,12 +6,13 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        // The property ID; the tracking code won't be generated without it
-        trackingId: `UA-41246294-1`,
-        head: true,
-      }
+        trackingIds: [`G-2LHTK5G0K5`],
+        gtagConfig: {
+          anonymize_ip: true,
+        },
+      },
     },
     `gatsby-plugin-react-helmet`,
     {
