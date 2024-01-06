@@ -44,6 +44,7 @@
     "react-typography": "^0.16.23",
     "seed-random": "^2.2.0",
     "seedrandom": "^3.0.5",
+    "styled-components": "^6.1.6",
     "toastr": "^2.1.4",
     "typescript": "^5.3.3",
     "typography": "^0.16.21",

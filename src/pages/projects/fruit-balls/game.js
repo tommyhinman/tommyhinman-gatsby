@@ -9,6 +9,23 @@ import {
   Runner,
 } from "matter-js"
 import { useEffect, useRef } from "react"
+import styled from 'styled-components'
+
+const Score = styled.div`
+  position: absolute;
+  font-weight: bold;
+  padding: 24px;
+  font-size: 36px;
+`
+const LosingModal = styled.div`
+  text-align: center;
+  font-size: 96px;
+  font-weight: bold;
+  position:absolute;
+  top: 40%;
+  left: 0;
+  right:0;
+`
 
 const balls = [
   //cherry
@@ -87,6 +104,7 @@ const Game = () => {
   const scene = useRef(null)
   const audio = useRef(null)
   const popAudio = useRef(null)
+
   const engine = useRef(
     Engine.create({
       gravity: {
@@ -98,7 +116,11 @@ const Game = () => {
   const scoreRef = useRef()
   scoreRef.current = score
 
+  const [hasLost, setHasLost] = useState(false)
+  const hasLostRef = useRef()
+  hasLostRef.current = hasLost
   let nextBall = null
+
 
   const bodies = new Map()
   let topWallId
@@ -136,6 +158,7 @@ const Game = () => {
     }
 
     const clickHandler = () => {
+      if (hasLost.current) return
       if (nextBall == null) return
       if (audio.current) {
         audio.current.play()
@@ -183,6 +206,8 @@ const Game = () => {
             if (bodiesTouchingTopWall.has(bodyTouchingWall.id)) {
               console.log("you lose!")
               bodyTouchingWall.render.opacity = 0.1
+              setHasLost(true)
+              engine.current.gravity.y = -1
             }
           }, 5000)
           continue
@@ -356,8 +381,9 @@ const Game = () => {
 
   return (
     <>
-      <div style={{ position: "absolute" }}>Score: {score}</div>
+      <Score>{score}</Score>
       <div ref={scene}></div>
+      {hasLost && <LosingModal>You lost!</LosingModal>}
       <audio
         ref={audio}
         src="https://cdn.freesound.org/previews/104/104940_161750-lq.mp3"
