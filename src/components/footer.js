@@ -8,7 +8,7 @@ class Footer extends Component {
       <footer className="footer sticky">
         <div className="content has-text-centered">
           <p className="is-size-7">
-            2023 - tommy hinman. source at{" "}
+            2024 - tommy hinman. source at{" "}
             <a href="https://github.com/tommyhinman/tommyhinman-gatsby">
               github
             </a>
