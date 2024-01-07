@@ -127,7 +127,7 @@ const Game = () => {
 
   useEffect(() => {
     const width = Math.min(window.innerWidth, 600)
-    const height = Math.min(window.innerHeight, 800)
+    const height = Math.min(window.innerHeight, 700)
     const addBall = (x, y, type, isPlaceHolderBall = false) => {
       const ball = balls[type]
 
@@ -284,6 +284,11 @@ const Game = () => {
     })
     topWallId = topWall.id
 
+    const visibleTopWall = Bodies.rectangle(width / 2, 0, width, 1, {
+      isStatic: true,
+      isSensor: true,
+    })
+
     const background = Bodies.rectangle(width / 2, height / 2, width, height, {
       isStatic: true,
       isSensor: true,
@@ -305,6 +310,7 @@ const Game = () => {
       visibleRightWall,
       rightWall,
       topWall,
+      visibleTopWall,
       background,
     ])
 

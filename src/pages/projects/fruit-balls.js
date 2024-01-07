@@ -4,6 +4,10 @@ import Game from "./fruit-balls/game"
 import "../../mystyles.scss"
 
 export default function FruitBalls() {
+  const width = Math.min(window.innerWidth, 600)
+  const height = Math.min(window.innerHeight, 800)
+
+  const centerGame = width > 600
   return (
     <>
       <Helmet>
@@ -14,7 +18,18 @@ export default function FruitBalls() {
         />
         <title>fruitballs | tommyhinman</title>
       </Helmet>
-      <Game />
+
+      <div class="section pt-5 is-hidden-mobile">
+        <div class="columns is-centered">
+          <div class="column is-6-desktop">
+            <Game />
+          </div>
+        </div>
+      </div>
+
+      <div class="is-hidden-tablet">
+        <Game />
+      </div>
     </>
   )
 }
