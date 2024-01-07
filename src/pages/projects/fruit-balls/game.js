@@ -9,7 +9,7 @@ import {
   Runner,
 } from "matter-js"
 import { useEffect, useRef } from "react"
-import styled from 'styled-components'
+import styled from "styled-components"
 
 const Score = styled.div`
   position: absolute;
@@ -21,10 +21,10 @@ const LosingModal = styled.div`
   text-align: center;
   font-size: 96px;
   font-weight: bold;
-  position:absolute;
+  position: absolute;
   top: 40%;
   left: 0;
-  right:0;
+  right: 0;
 `
 
 const balls = [
@@ -121,14 +121,13 @@ const Game = () => {
   hasLostRef.current = hasLost
   let nextBall = null
 
-
   const bodies = new Map()
   let topWallId
   const bodiesTouchingTopWall = new Set()
 
   useEffect(() => {
     const width = Math.min(window.innerWidth, 600)
-    const height = Math.min(window.innerHeight, 700)
+    const height = Math.min(window.innerHeight, 800)
     const addBall = (x, y, type, isPlaceHolderBall = false) => {
       const ball = balls[type]
 
