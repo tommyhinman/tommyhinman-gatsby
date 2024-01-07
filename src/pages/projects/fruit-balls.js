@@ -15,16 +15,12 @@ export default function FruitBalls() {
         <title>fruitballs | tommyhinman</title>
       </Helmet>
 
-      <div class="section pt-5 is-hidden-mobile">
+      <div>
         <div class="columns is-centered">
           <div class="column is-6-desktop">
             <Game />
           </div>
         </div>
-      </div>
-
-      <div class="is-hidden-tablet">
-        <Game />
       </div>
     </>
   )
