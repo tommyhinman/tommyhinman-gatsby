@@ -15,6 +15,23 @@ import { genreTagNames, moodTagNames } from "../../data/tagData"
 const DATA_API_URL =
   "https://mqze13mg7g.execute-api.us-west-2.amazonaws.com/Prod/libraryItems"
 
+const truncate = string => {
+  const maxLength = 40
+  return string.length > maxLength
+    ? string.slice(0, maxLength - 1) + "..."
+    : string
+}
+
+const getGenreClass = tags => {
+  if (tags == null) return ""
+  const genreTags = tags.filter(tag => genreTagNames.includes(tag))
+  if (genreTags.length == 0) return ""
+  const firstGenre = genreTags[0].replace(" ", "") // Just pick the first genre to use for colour.
+  return "genre" + firstGenre.slice(0, 1).toUpperCase() + firstGenre.slice(1)
+}
+
+console.log({ styles })
+
 const LibraryItem = ({ index, item, editAction }) => {
   const {
     primaryText,
@@ -22,27 +39,38 @@ const LibraryItem = ({ index, item, editAction }) => {
     imageLink = "https://tommyhinman-albums.s3-us-west-2.amazonaws.com/512/corrupted-garten-der-unbewusstheit.jpg",
     spotifyLink,
     externalLink,
+    tags,
   } = item
+  const genreClass = getGenreClass(tags) || ""
+  console.log(primaryText + " " + genreClass)
   return (
     <>
       <div
-        className={"box is-flex is-flex-direction-column"}
+        className={classNames(
+          "box",
+          "is-flex",
+          "is-flex-direction-column",
+          styles.itemBox,
+          styles[genreClass]
+        )}
         key={"item-" + index}
       >
+        {/*
+          Hiding album art for now because images are being blocked and need to be self-hosted
         <a href={spotifyLink}>
           <figure className="image is-100x100">
             <img src={imageLink} />
           </figure>
-        </a>
+        </a> */}
         <div className="mb-2">
           <div className="mt-2 is-size-5">{primaryText}</div>
-          <div className="is-size-6">{secondaryText}</div>
+          <div className="is-size-6">{truncate(secondaryText)}</div>
         </div>
         <div className={"mt-auto"}>
           <div className="field has-addons has-addons-centered">
             <p className="control">
               <a href={spotifyLink}>
-                <button className="button is-success" disabled={!spotifyLink}>
+                <button className="button" disabled={!spotifyLink}>
                   <span className="icon is-small">
                     <FaSpotify />
                   </span>
@@ -258,15 +286,14 @@ export default function MusicLibrary() {
           </div>
         ) : (
           <>
-            <div className="columns is-multiline is-mobile mb-5">
+            <div className="columns is-multiline is-mobile mb-5 is-align-items-stretch">
               {items.map((item, index) => (
                 <div
                   key={"col-" + index}
                   className={classNames(
                     "column",
                     "is-one-fifth-desktop",
-                    "is-half-mobile",
-                    styles.itemColumn
+                    "is-half-mobile"
                   )}
                 >
                   <LibraryItem

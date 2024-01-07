@@ -1,13 +1,32 @@
-.itemColumn {
-    display: flex;
-}
-
 .itemBox {
-    /* display: flex;
-    flex-direction:column;
-    justify-content:space-between */
+    height: 100%;
+    /* background-color:#7bd4ea43; */
 }
 
-.itemButtonGroup {
-    /* margin-top: auto; */
+.genre-jazz {
+    background-color:#eac37b43;
+}
+
+.genre-folk {
+    background-color:#7bd4ea43;
+}
+
+.genre-hiphop {
+    background-color:#df7bea43;
+}
+
+.genre-rock {
+    background-color:#adea7b43;
+}
+
+.genre-electronic {
+    background-color:#e1ea7b43;
+}
+
+.genre-classical {
+    background-color:#ea7bc143;
+}
+
+.genre-blues {
+    background-color:#7b7bea43;
 }
