@@ -56,7 +56,7 @@ class Navbar extends Component {
 
   render() {
     const years = this.props.years.sort(
-      (a, b) => a.pageContext.aotyYear - b.pageContext.aotyYear
+      (a, b) => b.pageContext.aotyYear - a.pageContext.aotyYear
     )
     return (
       <div>
