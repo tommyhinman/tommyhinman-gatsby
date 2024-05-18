@@ -27,7 +27,7 @@ const dataFetchReducer = (state, action) => {
   }
 }
 
-const useDataApi = (initialUrl, initialData) => {
+const useDataApi = (initialUrl, initialData, config = null) => {
   const [url, setUrl] = useState(initialUrl)
 
   const [state, dispatch] = useReducer(dataFetchReducer, {
@@ -46,7 +46,7 @@ const useDataApi = (initialUrl, initialData) => {
       if (url != "") {
         try {
           console.log("Making http request to " + url)
-          const result = await axios(url)
+          const result = await axios.get(url, config)
           if (!didCancel) {
             dispatch({ type: "FETCH_SUCCESS", payload: result.data })
           }

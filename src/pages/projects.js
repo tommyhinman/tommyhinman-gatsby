@@ -92,6 +92,10 @@ export default function Projects() {
             >
               Fruit Balls
             </Project>
+            <hr />
+            <Project internalLink="/projects/movies" projectName="Movies">
+              movie game
+            </Project>
           </div>
         </div>
       </Layout>

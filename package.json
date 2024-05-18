@@ -40,6 +40,7 @@
     "react-helmet": "^6.1.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.7.1",
+    "react-search-autocomplete": "^8.5.2",
     "react-spinners": "^0.13.7",
     "react-typography": "^0.16.23",
     "seed-random": "^2.2.0",
@@ -52,6 +53,7 @@
     "typography-theme-fairy-gates": "^0.16.19",
     "typography-theme-lincoln": "^0.16.19",
     "typography-theme-twin-peaks": "^0.16.19",
+    "use-debounce": "^10.0.0",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
