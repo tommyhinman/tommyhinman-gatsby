@@ -1,6 +1,30 @@
 export function getDogs() {
   return [
     {
+      title: "The Way of the Dragon (1972)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/wayofdragon.png",
+    },
+    {
+      title: "Songs from the Second Floor (2000)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/secondfloor.png",
+    },
+    {
+      title: "Model (1981)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/model.png",
+    },
+    {
+      title: "Roadkill (1989)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/roadkill.png",
+    },
+    {
+      title: "Reign of Terror (1949)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/reignofterror.png",
+    },
+    {
+      title: "Kanehsatake, 270 Years of Resistance (1993)",
+      imageUrl: "https://d2vxchc6g5met5.cloudfront.net/dogs/kanehsatake.png",
+    },
+    {
       title: "Three Colours: Red (1994)",
       imageUrl:
         "https://d2vxchc6g5met5.cloudfront.net/dogs/threecoloursred.png",
