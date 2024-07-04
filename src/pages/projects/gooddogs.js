@@ -8,8 +8,6 @@ const isMobileWidth = width => {
   return width <= 768
 }
 
-let modalEnabled = false
-
 const Dog = ({ dogData, onImageClick }) => {
   return (
     <div className=" container">
