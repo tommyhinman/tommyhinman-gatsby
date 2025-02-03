@@ -1,0 +1,217 @@
+{
+    "name": "2024",
+    "link": "https://docs.google.com/spreadsheets/d/13NCJ1loslmsWWS1d_azi-OJZf3WUL5iJ3017QtGM090/edit",
+    "samplerPlaylist": "",
+    "albums": [
+        {
+            "place": "1",
+            "artistName": "The Body & Dis Fig",
+            "albumName": "Orchards of a Futile Heaven",
+            "albumImageFilename": "body-dis-fig-orchards.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/3SbIaCbHrWBP8aLrJMIt3e?si=XxlnGRsgRdGSxKm6ZLTlbQ"
+        },
+        {
+            "place": "2",
+            "artistName": "MJ Lenderman",
+            "albumName": "Manning Fireworks",
+            "albumImageFilename": "mj-lenderman-manning-fireworks.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/1bKiiYGt1fzm9YMlTnUqpN?si=kdXgReBpT6WSBtbpdAJu1w"
+        },
+        {
+            "place": "3",
+            "artistName": "Waxahatchee",
+            "albumName": "Tigers Blood",
+            "albumImageFilename": "waxahatchee-tigers-blood.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/2n3HUMLmNl0Cm2atVwWSK6?si=Xig30QTJQ3-nGx1NVqeBQA"
+        },
+        {
+            "place": "4",
+            "artistName": "Blood Incantation",
+            "albumName": "Absolute Elsewhere",
+            "albumImageFilename": "blood-incantation-absolute-elsewhere.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/7hriIeLMviZKpNfcXgpsd8?si=etToAn9BQxmikJOFl8esWQ"
+        },
+        {
+            "place": "5",
+            "artistName": "Cowboy Sadness",
+            "albumName": "Selected Jambient Works Vol. 1",
+            "albumImageFilename": "cowboy-sadness-selected-jambient.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/06L5BvN5YEPJnlmyGil8KB?si=69NcbcnsQIiuX09fG283sA"
+        },
+        {
+            "place": "6",
+            "artistName": "Been Stellar",
+            "albumName": "Scream from New York, NY",
+            "albumImageFilename": "been-stellar-scream.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/1Wrak3bc0EjtxPySE4MPDe?si=eZDYXeBFQnCqjOVSBxM6Eg"
+        },
+        {
+            "place": "7",
+            "artistName": "Chat Pile",
+            "albumName": "Cool World",
+            "albumImageFilename": "chat-pile-cool-world.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/3k7GhMNdQ0KXGkC84qVRf2?si=kPtPz1mVTLWBd7jrC7i_fQ"
+        },
+        {
+            "place": "8",
+            "artistName": "Godspeed You! Black Emperor",
+            "albumName": "\"NO TITLE AS OF 13 FEBRUARY 2024 28,340 DEAD\"",
+            "albumImageFilename": "godspeed-you-no-title.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/1qG30zCAZ30hsmA5wAlaQ3?si=98AvXnJ7S8ir3AcnLrxLtQ"
+        },
+        {
+            "place": "9",
+            "artistName": "BIG|BRAVE",
+            "albumName": "A Chaos of Flowers",
+            "albumImageFilename": "big-brave-chaos-of-flowers.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/114h7UC231Io9uDzKEMybe?si=OPIiUHi7SgmpiM9hZt6sDg"
+        },
+        {
+            "place": "10",
+            "artistName": "Thou",
+            "albumName": "Umbilical",
+            "albumImageFilename": "thou-umbilical.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/1WILkP95BuckkTIm4OIQRm?si=nMaCqnYeT5K6g8OqnEpRIA"
+        },
+        {
+            "place": "11",
+            "artistName": "Dolly",
+            "albumName": "Interloper",
+            "albumImageFilename": "dolly-interloper.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/5LElgy2uJUTQd142TCkoBe?si=RY-XWmoxR2GblERQ5UCTYw"
+        },
+        {
+            "place": "12",
+            "artistName": "Colin Stetson",
+            "albumName": "The Love it Took to Leave You",
+            "albumImageFilename": "colin-stetson-love-it-took.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/2Mlw1kA7MvXc7rtlBba4KN?si=ZbjH_NgjQEqT77UivpuWUg"
+        },
+        {
+            "place": "13",
+            "artistName": "Infant Island",
+            "albumName": "Obsidian Wreath",
+            "albumImageFilename": "infant-island-obsidian-wreath.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/5KV2TIucWQfU954VB5hF1y?si=1wB7LBAPSi-qFlYb2B9Nsw"
+        },
+        {
+            "place": "14",
+            "artistName": "Bibi Club",
+            "albumName": "Feu de garde",
+            "albumImageFilename": "bibi-club-feu-de-garde.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/4mylCMxsXSVvUbnbK6N8Fn?si=h8szrF1RSaq3hadYGIhC2w"
+        },
+        {
+            "place": "15",
+            "artistName": "Cindy Lee",
+            "albumName": "Diamond Jubilee",
+            "albumImageFilename": "cindy-lee-diamond-jubilee.jpg",
+            "albumSpotifyLink": "https://cindylee.bandcamp.com/album/diamond-jubilee"
+        },
+        {
+            "place": "16",
+            "artistName": "Wasted Death",
+            "albumName": "Season of Evil",
+            "albumImageFilename": "wasted-death-season-of-evil.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/6rzoAtEu5iRTQLcdDRApGo?si=jAYKM9ApRg2vsiutcXSeZQ"
+        },
+        {
+            "place": "17",
+            "artistName": "From Indian Lakes",
+            "albumName": "Head Void",
+            "albumImageFilename": "from-indian-lakes-head-void.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/7Km5n6OxT2ZUPJv1sBcTXR?si=7w4d5dAWRKO2KILVIUFmVQ"
+        },
+        {
+            "place": "18",
+            "artistName": "Dave Harrington",
+            "albumName": "Skull Dream",
+            "albumImageFilename": "dave-harrington-skull-dream.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/7rnr8dYQEdyCDKNdCaVQwy?si=Vyysy2gNSNudZUc72s7Lxw"
+        },
+        {
+            "place": "19",
+            "artistName": "Father John Misty",
+            "albumName": "Mahashmashana",
+            "albumImageFilename": "father-john-misty-mahashmashana.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/2oJHtuXrCJ0KMH5GrC6Qdw?si=tZ1QSstOQOakS3_a3Z4scw"
+        },
+        {
+            "place": "20",
+            "artistName": "Missouri Executive Order 44",
+            "albumName": "Salt Sermon",
+            "albumImageFilename": "missouri-exec-salt-sermon.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/3yyDV3P12TiZ0UPZ1PyMHt?si=Lwg8VVpOSFubC7rnn35UGg"
+        },
+        {
+            "place": "21",
+            "artistName": "C Turtle",
+            "albumName": "Expensive Thrills",
+            "albumImageFilename": "c-turtle-expensive-thrills.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/5dpFQjEaHPiURz2ZF08nth?si=bm-iYsKdSEe48NOGcwn-AA"
+        },
+        {
+            "place": "22",
+            "artistName": "Mannequin Pussy",
+            "albumName": "I Got Heaven",
+            "albumImageFilename": "mannequin-pussy-i-got-heaven.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/5ROzqM7rbMYoKbQIw4i7fp?si=vPknUDFAS_mo6kNzn1RjfA"
+        },
+        {
+            "place": "23",
+            "artistName": "Pile",
+            "albumName": "Hot Air Balloon",
+            "albumImageFilename": "pile-hot-air-balloon.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/6FQhPhyUfZcfqvjeGd4lhC?si=lt2af-X6Sf-bGM4UD7niyQ"
+        },
+        {
+            "place": "24",
+            "artistName": "Horse Jumper of Love",
+            "albumName": "Disaster Trick",
+            "albumImageFilename": "horse-jumper-of-love-disaster-trick.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/2iweheHvFdlAjMagBAc2ki?si=g3VJGwuRR0ODzYDpVZe7wA"
+        },
+        {
+            "place": "25",
+            "artistName": "Craven Faults",
+            "albumName": "Bounds",
+            "albumImageFilename": "craven-faults-bounds.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/4J8FhkUR3XVNSJorli7vJv?si=7Sihiz7WTCCPtKehOvwxzQ"
+        },
+        {
+            "place": "26",
+            "artistName": "Neighbours Burning Neighbours",
+            "albumName": "Burning Neighbours",
+            "albumImageFilename": "neighbors-burning.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/7uL0fNehqZNYSoo9ovHixI?si=v_ivctifSB2BUtJg4qgOVQ"
+        },
+        {
+            "place": "27",
+            "artistName": "Kelly Lee Owens",
+            "albumName": "Dreamstate",
+            "albumImageFilename": "kelly-lee-owens-dreamstate.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/4OL7O0xoj0xjyRrTA3clwd?si=-B4TBLp1SwS8Cx4IHym2Mw"
+        },
+        {
+            "place": "28",
+            "artistName": "meth.",
+            "albumName": "SHAME",
+            "albumImageFilename": "meth-shame.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/6ToLqerOz2Syz1HOU2Kvml?si=Nt0pSiaBRteIqKcOTMNj9g"
+        },
+        {
+            "place": "29",
+            "artistName": "Warrington Runcorn New Town Development Plan",
+            "albumName": "Your Community Hub",
+            "albumImageFilename": "warrington-runcorn-your-community-hub.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/2rXLu5BdSSNwP6pBBJizo5?si=1KR6hx0-R1ib3mNK397kgA"
+        },
+        {
+            "place": "30",
+            "artistName": "Greg Foat",
+            "albumName": "Live at Villa Maximus, Mykonos",
+            "albumImageFilename": "greg-foat-villa-maximus.jpg",
+            "albumSpotifyLink": "https://open.spotify.com/album/6xq2Gz1Y13cPvUd4ZF1Ny7?si=r7k3_5FBSZa3dSZl2SP0eA"
+        }
+    ]
+}
