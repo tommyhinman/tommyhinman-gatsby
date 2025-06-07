@@ -75,7 +75,10 @@ export default function Projects() {
               publicly for now!
             </Project>
             <hr />
-            <Project internalLink="/projects/gooddogs" projectName="Good Dogs">
+            <Project
+              externalLink="https://gooddogs.tommyhinman.com"
+              projectName="Good Dogs"
+            >
               Good dogs
             </Project>
             <hr />

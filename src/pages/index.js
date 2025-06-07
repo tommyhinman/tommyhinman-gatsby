@@ -7,6 +7,7 @@ import { IoIosGitBranch } from "react-icons/io"
 import { FaLastfm } from "react-icons/fa"
 import { MdMailOutline } from "react-icons/md"
 import { RiGamepadLine, RiBook3Line, RiFilmLine } from "react-icons/ri"
+import { GiSittingDog } from "react-icons/gi"
 import classNames from "classnames"
 
 export default function Home() {
@@ -25,7 +26,7 @@ export default function Home() {
           </h1>
           <hr />
           <div className="tile is-ancestor">
-            <div className={buttonTileClasses}>
+            {/* <div className={buttonTileClasses}>
               <a
                 href="mailto:tommyhinman@gmail.com"
                 className="button is-medium is-fullwidth"
@@ -35,7 +36,7 @@ export default function Home() {
                 </span>
                 <span>contact</span>
               </a>
-            </div>
+            </div> */}
             <div className={buttonTileClasses}>
               <a
                 href="https://github.com/tommyhinman"
@@ -78,6 +79,17 @@ export default function Home() {
                   <RiFilmLine />
                 </span>
                 <span>letterboxd</span>
+              </a>
+            </div>
+            <div className={buttonTileClasses}>
+              <a
+                href="https://gooddogs.tommyhinman.com"
+                className="button is-medium is-fullwidth"
+              >
+                <span className="icon">
+                  <GiSittingDog />
+                </span>
+                <span>good dogs</span>
               </a>
             </div>
           </div>

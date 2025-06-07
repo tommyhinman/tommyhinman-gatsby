@@ -66,6 +66,13 @@ export default function Gooddogs() {
       </Helmet>
       <Layout>
         <h1 className="title is-size-2-desktop is-size-3-mobile">Good Dogs</h1>
+        <div className="notification is-info">
+          Now being updated at{" "}
+          <a href="https://gooddogs.tommyhinman.com">
+            gooddogs.tommyhinman.com
+          </a>
+          !
+        </div>
         <div className=" mt-0 mb-5">
           {dogs.map((dog, index, arr) => (
             <>
