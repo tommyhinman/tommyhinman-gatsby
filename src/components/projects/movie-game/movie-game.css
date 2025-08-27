@@ -7,10 +7,31 @@
   left: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh; /* Use dynamic viewport height for mobile */
   z-index: 9999;
   background: var(--bg-color);
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+/* Mobile-specific fixes */
+@media screen and (max-width: 768px) {
+  .movie-game-app {
+    height: 100dvh; /* Dynamic viewport height */
+    min-height: -webkit-fill-available; /* iOS Safari fallback */
+  }
+  
+  /* Ensure content can scroll to bottom */
+  .movie-game-container {
+    padding-bottom: 20px; /* Add extra padding at bottom */
+  }
+  
+  /* Make sure buttons are accessible */
+  .game-controls,
+  .win-buttons,
+  .game-over-buttons {
+    margin-bottom: 20px;
+  }
 }
 
 /* Reset any inherited styles */
