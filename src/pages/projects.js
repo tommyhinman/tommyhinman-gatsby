@@ -96,8 +96,8 @@ export default function Projects() {
               Fruit Balls
             </Project>
             <hr />
-            <Project internalLink="/projects/movies" projectName="Movies">
-              movie game
+            <Project internalLink="/projects/movie-game" projectName="Movie Connection Game">
+              Connect two movies through the people who worked on them! Daily challenges with new movie connections to solve.
             </Project>
           </div>
         </div>
