@@ -46,23 +46,26 @@ const MovieConnectionGame = ({
     onAddMovie(movieStep);
   };
 
-  const handleHint = async () => {
+  const handleHint = async (movieId = null) => {
     onHint();
     
     try {
-      let movieId;
+      let targetMovieId;
       
-      if (userPath.length === 0) {
+      if (movieId) {
+        // If a specific movie ID is provided, use that
+        targetMovieId = movieId;
+      } else if (userPath.length === 0) {
         // First step hint - show info about the start movie
-        movieId = challenge?.start_movie?.id;
+        targetMovieId = challenge?.start_movie?.id;
       } else {
         // Show info about the current movie in the path
         const currentMovie = userPath[userPath.length - 1].movie;
-        movieId = currentMovie.id;
+        targetMovieId = currentMovie.id;
       }
 
-      setHintedMovieId(movieId);
-      setHintedMovies(prev => new Set([...prev, movieId]));
+      setHintedMovieId(targetMovieId);
+      setHintedMovies(prev => new Set([...prev, targetMovieId]));
     } catch (error) {
       console.error("Error providing hint:", error);
     }
@@ -336,9 +339,7 @@ const MovieConnectionGame = ({
 
   return (
     <div className="game-container">
-      <div className="back-button-container">
-        <a href="/projects" className="back-button">← Back to Projects</a>
-      </div>
+
       <div className="game-header">
         <h1>Baconator</h1>
         <div className="difficulty-badge">

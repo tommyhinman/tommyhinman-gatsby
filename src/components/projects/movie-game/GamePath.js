@@ -70,7 +70,7 @@ const MovieStepWithHint = ({ movie, stepNumber, label, isHinted, onHintLoad, isC
         <div className="movie-controls">
           <button 
             className={`movie-control-btn hint-btn ${hasBeenHinted ? 'disabled' : ''}`}
-            onClick={onHint}
+            onClick={() => onHint(movie?.id)}
             disabled={hasBeenHinted}
             title={hasBeenHinted ? "Hint already used for this movie" : "Get hint for this movie"}
           >
@@ -128,17 +128,17 @@ const GamePath = ({ userPath, startMovie, endMovie, hintedMovieId, hintedMovies,
           
           <div className="path-arrow-vertical">↓</div>
           
-          <MovieStepWithHint 
-            movie={endMovie}
-            stepNumber="?"
-            label="TARGET"
-            isHinted={hintedMovieId === endMovie?.id}
-            isCurrentMovie={false}
-            onHint={onHint}
-            onBacktrack={onBacktrack}
-            canBacktrack={false}
-            hasBeenHinted={hintedMovies.has(endMovie?.id)}
-          />
+                  <MovieStepWithHint 
+          movie={endMovie}
+          stepNumber="?"
+          label="TARGET"
+          isHinted={hintedMovieId === endMovie?.id}
+          isCurrentMovie={true}
+          onHint={onHint}
+          onBacktrack={onBacktrack}
+          canBacktrack={false}
+          hasBeenHinted={hintedMovies.has(endMovie?.id)}
+        />
         </div>
       </div>
     );
@@ -193,7 +193,7 @@ const GamePath = ({ userPath, startMovie, endMovie, hintedMovieId, hintedMovies,
           stepNumber={userPath.length + 2}
           label="TARGET"
                       isHinted={hintedMovieId === endMovie?.id}
-            isCurrentMovie={false}
+            isCurrentMovie={true}
             onHint={onHint}
             onBacktrack={onBacktrack}
             canBacktrack={false}

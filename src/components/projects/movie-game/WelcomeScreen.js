@@ -181,9 +181,7 @@ const WelcomeScreen = ({ onStartGame, challengeDate }) => {
   return (
     <div className="welcome-screen">
       <div className="welcome-content">
-        <div className="back-button-container">
-          <a href="/projects" className="back-button">← Back to Projects</a>
-        </div>
+        
         <h1>Baconator</h1>
         <div className="work-in-progress">
           <div className="wip-banner">

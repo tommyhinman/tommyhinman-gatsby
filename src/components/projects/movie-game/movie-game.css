@@ -795,6 +795,16 @@ body.light-theme {
   margin-bottom: 16px;
 }
 
+/* Ensure movie cards have equal height */
+.challenge-movies .movie-card {
+  height: 140px; /* Fixed height for both cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px !important; /* Override existing padding for better centering */
+}
+
 .dark-theme .movie-card {
   background: #2d1a1a;
   border: 2px solid #D81E05;
