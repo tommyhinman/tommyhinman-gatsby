@@ -1,0 +1,39 @@
+{
+  "date": "2025-08-19",
+  "difficulty": "hard",
+  "start_movie": {
+    "id": 424,
+    "title": "Schindler's List",
+    "year": "1993",
+    "poster_path": "/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg"
+  },
+  "end_movie": {
+    "id": 324786,
+    "title": "Hacksaw Ridge",
+    "year": "2016",
+    "poster_path": "/wuz8TjCIWR2EVVMuEfBnQ1vuGS3.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 3896,
+      "name": "Liam Neeson",
+      "role": "actor",
+      "character": "Oskar Schindler",
+      "popularity": 4.3086
+    },
+    {
+      "id": 2669,
+      "title": "The Bounty",
+      "release_date": "1984-05-04",
+      "popularity": 2.5472
+    },
+    {
+      "id": 2461,
+      "name": "Mel Gibson",
+      "role": "actor",
+      "character": "Fletcher Christian",
+      "popularity": 3.5043
+    }
+  ],
+  "steps": 1
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2025-08-25",
+  "difficulty": "easy",
+  "start_movie": {
+    "id": 197,
+    "title": "Braveheart",
+    "year": "1995",
+    "poster_path": "/or1gBugydmjToAEq7OZY0owwFk.jpg"
+  },
+  "end_movie": {
+    "id": 62,
+    "title": "2001: A Space Odyssey",
+    "year": "1968",
+    "poster_path": "/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 2461,
+      "name": "Mel Gibson",
+      "role": "actor",
+      "character": "William Wallace",
+      "popularity": 3.5043
+    },
+    {
+      "id": 322525,
+      "title": "Laddie: The Man Behind the Movies",
+      "release_date": "2017-11-12",
+      "popularity": 0.8742
+    },
+    {
+      "id": 578,
+      "name": "Ridley Scott",
+      "role": "actor",
+      "character": "Self",
+      "popularity": 1.737
+    },
+    {
+      "id": 615434,
+      "title": "Trumbull Land",
+      "release_date": "2018-10-15",
+      "popularity": 1.4427
+    },
+    {
+      "id": 240,
+      "name": "Stanley Kubrick",
+      "role": "actor",
+      "character": "Self (archive footage)",
+      "popularity": 1.1125
+    },
+    {
+      "id": 62,
+      "title": "2001: A Space Odyssey",
+      "release_date": "1968-04-02",
+      "popularity": 9.2476
+    }
+  ],
+  "steps": 3
+}

@@ -53,7 +53,7 @@ const WelcomeScreen = ({ onStartGame, challengeDate }) => {
       // Check each date efficiently - only include dates that return valid JSON
       const promises = uniqueDates.map(async dateString => {
         try {
-          const response = await fetch(`/challenges/challenge_${dateString}.json`);
+          const response = await fetch(`/projects/movie-game/challenges/challenge_${dateString}.json`);
           if (response.ok) {
             // Try to parse the JSON to make sure it's valid
             const data = await response.json();

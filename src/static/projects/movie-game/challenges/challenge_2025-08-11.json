@@ -1,0 +1,39 @@
+{
+  "date": "2025-08-11",
+  "difficulty": "hard",
+  "start_movie": {
+    "id": 939243,
+    "title": "Sonic the Hedgehog 3",
+    "year": "2024",
+    "poster_path": "/d8Ryb8AunYAuycVKDp5HpdWPKgC.jpg"
+  },
+  "end_movie": {
+    "id": 107,
+    "title": "Snatch",
+    "year": "2000",
+    "poster_path": "/kJZoAHq1SLDdWjeNGtlHAnGpmFV.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 17605,
+      "name": "Idris Elba",
+      "role": "actor",
+      "character": "Knuckles (voice)",
+      "popularity": 2.5991
+    },
+    {
+      "id": 13809,
+      "title": "RocknRolla",
+      "release_date": "2008-09-04",
+      "popularity": 3.643
+    },
+    {
+      "id": 956,
+      "name": "Guy Ritchie",
+      "role": "writer",
+      "character": "",
+      "popularity": 2.1349
+    }
+  ],
+  "steps": 1
+}

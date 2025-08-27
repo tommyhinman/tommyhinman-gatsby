@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-02",
+  "difficulty": "easy",
+  "start_movie": {
+    "id": 14,
+    "title": "American Beauty",
+    "year": "1999",
+    "poster_path": "/wby9315QzVKdW9BonAefg8jGTTb.jpg"
+  },
+  "end_movie": {
+    "id": 1058537,
+    "title": "Angels Fallen: Warriors of Peace",
+    "year": "2024",
+    "poster_path": "/dKdKUSGQ9E0G73WPr9xIHrofpkT.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 1979,
+      "name": "Kevin Spacey",
+      "role": "actor",
+      "character": "Lester Burnham",
+      "popularity": 1.5819
+    },
+    {
+      "id": 6950,
+      "title": "Outbreak",
+      "release_date": "1995-03-10",
+      "popularity": 4.6828
+    },
+    {
+      "id": 9777,
+      "name": "Cuba Gooding Jr.",
+      "role": "actor",
+      "character": "Major Salt",
+      "popularity": 1.3755
+    },
+    {
+      "id": 1058537,
+      "title": "Angels Fallen: Warriors of Peace",
+      "release_date": "2024-07-09",
+      "popularity": 38.4019
+    }
+  ],
+  "steps": 2
+}

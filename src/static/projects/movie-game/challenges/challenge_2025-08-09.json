@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-09",
+  "difficulty": "easy",
+  "start_movie": {
+    "id": 510,
+    "title": "One Flew Over the Cuckoo's Nest",
+    "year": "1975",
+    "poster_path": "/kjWsMh72V6d8KRLV4EOoSJLT1H7.jpg"
+  },
+  "end_movie": {
+    "id": 600,
+    "title": "Full Metal Jacket",
+    "year": "1987",
+    "poster_path": "/kMKyx1k8hWWscYFnPbnxxN4Eqo4.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 514,
+      "name": "Jack Nicholson",
+      "role": "actor",
+      "character": "Randle Patrick McMurphy",
+      "popularity": 1.834
+    },
+    {
+      "id": 18875,
+      "title": "Making 'The Shining'",
+      "release_date": "1980-10-04",
+      "popularity": 0.7438
+    },
+    {
+      "id": 240,
+      "name": "Stanley Kubrick",
+      "role": "actor",
+      "character": "Self",
+      "popularity": 1.1125
+    },
+    {
+      "id": 600,
+      "title": "Full Metal Jacket",
+      "release_date": "1987-06-26",
+      "popularity": 6.9117
+    }
+  ],
+  "steps": 2
+}

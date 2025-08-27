@@ -1,0 +1,58 @@
+{
+  "date": "2025-08-15",
+  "difficulty": "hard",
+  "start_movie": {
+    "id": 2118,
+    "title": "L.A. Confidential",
+    "year": "1997",
+    "poster_path": "/lWCgf5sD5FpMljjpkRhcC8pXcch.jpg"
+  },
+  "end_movie": {
+    "id": 86767,
+    "title": "The First Time",
+    "year": "1969",
+    "poster_path": "/tMeuZaFCyQiDUfGo2Rgfkf6obZi.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 1979,
+      "name": "Kevin Spacey",
+      "role": "actor",
+      "character": "Jack Vincennes",
+      "popularity": 1.5819
+    },
+    {
+      "id": 3525,
+      "title": "Working Girl",
+      "release_date": "1988-12-20",
+      "popularity": 1.9005
+    },
+    {
+      "id": 17485,
+      "name": "Oliver Platt",
+      "role": "actor",
+      "character": "Lutz",
+      "popularity": 1.3139
+    },
+    {
+      "id": 8583,
+      "title": "Dangerous Beauty",
+      "release_date": "1998-02-20",
+      "popularity": 3.0348
+    },
+    {
+      "id": 14061,
+      "name": "Jacqueline Bisset",
+      "role": "actor",
+      "character": "Paola Franco",
+      "popularity": 2.7893
+    },
+    {
+      "id": 86767,
+      "title": "The First Time",
+      "release_date": "1969-06-11",
+      "popularity": 36.3855
+    }
+  ],
+  "steps": 3
+}

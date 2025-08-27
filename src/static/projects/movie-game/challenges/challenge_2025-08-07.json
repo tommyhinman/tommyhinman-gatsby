@@ -1,0 +1,39 @@
+{
+  "date": "2025-08-07",
+  "difficulty": "medium",
+  "start_movie": {
+    "id": 6977,
+    "title": "No Country for Old Men",
+    "year": "2007",
+    "poster_path": "/6d5XOczc226jECq0LIX0siKtgHR.jpg"
+  },
+  "end_movie": {
+    "id": 120,
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "year": "2001",
+    "poster_path": "/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 39520,
+      "name": "Garret Dillahunt",
+      "role": "actor",
+      "character": "Wendell",
+      "popularity": 1.937
+    },
+    {
+      "id": 20766,
+      "title": "The Road",
+      "release_date": "2009-11-25",
+      "popularity": 3.1675
+    },
+    {
+      "id": 110,
+      "name": "Viggo Mortensen",
+      "role": "actor",
+      "character": "Father",
+      "popularity": 2.1328
+    }
+  ],
+  "steps": 1
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2025-08-14",
+  "difficulty": "medium",
+  "start_movie": {
+    "id": 284,
+    "title": "The Apartment",
+    "year": "1960",
+    "poster_path": "/hhSRt1KKfRT0yEhEtRW3qp31JFU.jpg"
+  },
+  "end_movie": {
+    "id": 762,
+    "title": "Monty Python and the Holy Grail",
+    "year": "1975",
+    "poster_path": "/hWx1ANiWEWWyzKPN0us35HCGnhQ.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 4090,
+      "name": "Shirley MacLaine",
+      "role": "actor",
+      "character": "Fran Kubelik",
+      "popularity": 1.494
+    },
+    {
+      "id": 11950,
+      "title": "Cannonball Run II",
+      "release_date": "1984-06-29",
+      "popularity": 2.292
+    },
+    {
+      "id": 6844,
+      "name": "Dom DeLuise",
+      "role": "actor",
+      "character": "Victor Prinzim / Captain Chaos / Don Canneloni",
+      "popularity": 0.7716
+    },
+    {
+      "id": 10380,
+      "title": "An American Tail: Fievel Goes West",
+      "release_date": "1991-11-21",
+      "popularity": 2.4917
+    },
+    {
+      "id": 8930,
+      "name": "John Cleese",
+      "role": "actor",
+      "character": "Cat R. Waul (voice)",
+      "popularity": 0.9542
+    },
+    {
+      "id": 762,
+      "title": "Monty Python and the Holy Grail",
+      "release_date": "1975-04-03",
+      "popularity": 5.6489
+    }
+  ],
+  "steps": 3
+}

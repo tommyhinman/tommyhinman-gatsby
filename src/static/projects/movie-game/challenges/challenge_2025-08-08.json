@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-08",
+  "difficulty": "easy",
+  "start_movie": {
+    "id": 453,
+    "title": "A Beautiful Mind",
+    "year": "2001",
+    "poster_path": "/rEIg5yJdNOt9fmX4P8gU9LeNoTQ.jpg"
+  },
+  "end_movie": {
+    "id": 197,
+    "title": "Braveheart",
+    "year": "1995",
+    "poster_path": "/or1gBugydmjToAEq7OZY0owwFk.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 6162,
+      "name": "Paul Bettany",
+      "role": "actor",
+      "character": "Charles Herman",
+      "popularity": 2.7738
+    },
+    {
+      "id": 17044,
+      "title": "The Land Girls",
+      "release_date": "1998-06-12",
+      "popularity": 0.8507
+    },
+    {
+      "id": 2462,
+      "name": "Catherine McCormack",
+      "role": "actor",
+      "character": "Stella",
+      "popularity": 1.6346
+    },
+    {
+      "id": 197,
+      "title": "Braveheart",
+      "release_date": "1995-05-24",
+      "popularity": 9.225
+    }
+  ],
+  "steps": 2
+}

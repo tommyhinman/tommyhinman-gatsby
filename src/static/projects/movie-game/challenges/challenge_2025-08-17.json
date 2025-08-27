@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-17",
+  "difficulty": "easy",
+  "start_movie": {
+    "id": 2118,
+    "title": "L.A. Confidential",
+    "year": "1997",
+    "poster_path": "/lWCgf5sD5FpMljjpkRhcC8pXcch.jpg"
+  },
+  "end_movie": {
+    "id": 100,
+    "title": "Lock, Stock and Two Smoking Barrels",
+    "year": "1998",
+    "poster_path": "/6pJB2t3MbQUy9m5pFIBHXLqnqNd.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 326,
+      "name": "Kim Basinger",
+      "role": "actor",
+      "character": "Lynn Bracken",
+      "popularity": 1.5462
+    },
+    {
+      "id": 9759,
+      "title": "Cellular",
+      "release_date": "2004-09-06",
+      "popularity": 2.7813
+    },
+    {
+      "id": 976,
+      "name": "Jason Statham",
+      "role": "actor",
+      "character": "Ethan",
+      "popularity": 9.987
+    },
+    {
+      "id": 100,
+      "title": "Lock, Stock and Two Smoking Barrels",
+      "release_date": "1998-08-28",
+      "popularity": 2.4887
+    }
+  ],
+  "steps": 2
+}

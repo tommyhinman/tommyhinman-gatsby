@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-06",
+  "difficulty": "medium",
+  "start_movie": {
+    "id": 242,
+    "title": "The Godfather Part III",
+    "year": "1990",
+    "poster_path": "/lm3pQ2QoQ16pextRsmnUbG2onES.jpg"
+  },
+  "end_movie": {
+    "id": 27205,
+    "title": "Inception",
+    "year": "2010",
+    "poster_path": "/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 1158,
+      "name": "Al Pacino",
+      "role": "actor",
+      "character": "Michael Corleone",
+      "popularity": 2.7468
+    },
+    {
+      "id": 320,
+      "title": "Insomnia",
+      "release_date": "2002-05-24",
+      "popularity": 3.509
+    },
+    {
+      "id": 525,
+      "name": "Christopher Nolan",
+      "role": "director",
+      "character": "",
+      "popularity": 2.5594
+    },
+    {
+      "id": 27205,
+      "title": "Inception",
+      "release_date": "2010-07-15",
+      "popularity": 28.49
+    }
+  ],
+  "steps": 2
+}

@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-31",
+  "difficulty": "easy",
+  "start_movie": {
+    "id": 238,
+    "title": "The Godfather",
+    "year": "1972",
+    "poster_path": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg"
+  },
+  "end_movie": {
+    "id": 857,
+    "title": "Saving Private Ryan",
+    "year": "1998",
+    "poster_path": "/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 1158,
+      "name": "Al Pacino",
+      "role": "actor",
+      "character": "Michael Corleone",
+      "popularity": 2.7468
+    },
+    {
+      "id": 298,
+      "title": "Ocean's Thirteen",
+      "release_date": "2007-06-05",
+      "popularity": 5.8532
+    },
+    {
+      "id": 1892,
+      "name": "Matt Damon",
+      "role": "actor",
+      "character": "Linus Caldwell",
+      "popularity": 9.9391
+    },
+    {
+      "id": 857,
+      "title": "Saving Private Ryan",
+      "release_date": "1998-07-24",
+      "popularity": 13.119
+    }
+  ],
+  "steps": 2
+}

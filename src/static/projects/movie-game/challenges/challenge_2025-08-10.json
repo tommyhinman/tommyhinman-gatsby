@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-10",
+  "difficulty": "hard",
+  "start_movie": {
+    "id": 27205,
+    "title": "Inception",
+    "year": "2010",
+    "poster_path": "/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg"
+  },
+  "end_movie": {
+    "id": 694,
+    "title": "The Shining",
+    "year": "1980",
+    "poster_path": "/xazWoLealQwEgqZ89MLZklLZD3k.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 6193,
+      "name": "Leonardo DiCaprio",
+      "role": "actor",
+      "character": "Dom Cobb",
+      "popularity": 3.9701
+    },
+    {
+      "id": 1422,
+      "title": "The Departed",
+      "release_date": "2006-10-04",
+      "popularity": 11.6269
+    },
+    {
+      "id": 514,
+      "name": "Jack Nicholson",
+      "role": "actor",
+      "character": "Costello",
+      "popularity": 1.834
+    },
+    {
+      "id": 694,
+      "title": "The Shining",
+      "release_date": "1980-05-23",
+      "popularity": 10.7452
+    }
+  ],
+  "steps": 2
+}

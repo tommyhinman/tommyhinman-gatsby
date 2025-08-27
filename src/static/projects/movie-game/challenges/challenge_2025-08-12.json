@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-12",
+  "difficulty": "medium",
+  "start_movie": {
+    "id": 7451,
+    "title": "xXx",
+    "year": "2002",
+    "poster_path": "/xeEw3eLeSFmJgXZzmF2Efww0q3s.jpg"
+  },
+  "end_movie": {
+    "id": 28,
+    "title": "Apocalypse Now",
+    "year": "1979",
+    "poster_path": "/gQB8Y5RCMkv2zwzFHbUJX3kAhvA.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 18514,
+      "name": "Asia Argento",
+      "role": "actor",
+      "character": "Yelena",
+      "popularity": 2.3497
+    },
+    {
+      "id": 44435,
+      "title": "Trauma",
+      "release_date": "1993-03-12",
+      "popularity": 1.4355
+    },
+    {
+      "id": 8351,
+      "name": "Frederic Forrest",
+      "role": "actor",
+      "character": "Dr. Judd",
+      "popularity": 0.4736
+    },
+    {
+      "id": 28,
+      "title": "Apocalypse Now",
+      "release_date": "1979-05-19",
+      "popularity": 9.7406
+    }
+  ],
+  "steps": 2
+}

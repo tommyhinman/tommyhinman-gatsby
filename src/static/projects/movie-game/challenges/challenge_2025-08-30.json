@@ -1,0 +1,71 @@
+{
+  "date": "2025-08-30",
+  "difficulty": "medium",
+  "start_movie": {
+    "id": 275,
+    "title": "Fargo",
+    "year": "1996",
+    "poster_path": "/rt7cpEr1uP6RTZykBFhBTcRaKvG.jpg"
+  },
+  "end_movie": {
+    "id": 1240475,
+    "title": "Hunt the Wicked",
+    "year": "2024",
+    "poster_path": "/m5UBHbEjQJx3AkRZWRY6A4l4ZDT.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 3910,
+      "name": "Frances McDormand",
+      "role": "actor",
+      "character": "Marge Gunderson",
+      "popularity": 1.1616
+    },
+    {
+      "id": 6964,
+      "title": "Something's Gotta Give",
+      "release_date": "2003-12-12",
+      "popularity": 2.8274
+    },
+    {
+      "id": 6384,
+      "name": "Keanu Reeves",
+      "role": "actor",
+      "character": "Dr. Julian Mercer",
+      "popularity": 5.3877
+    },
+    {
+      "id": 605,
+      "title": "The Matrix Revolutions",
+      "release_date": "2003-11-05",
+      "popularity": 10.0338
+    },
+    {
+      "id": 52908,
+      "name": "Collin Chou",
+      "role": "actor",
+      "character": "Seraph",
+      "popularity": 0.6668
+    },
+    {
+      "id": 18725,
+      "title": "The Enforcer",
+      "release_date": "1995-02-08",
+      "popularity": 1.8493
+    },
+    {
+      "id": 83487,
+      "name": "Xie Miao",
+      "role": "actor",
+      "character": "Johnny Kung",
+      "popularity": 1.1677
+    },
+    {
+      "id": 1240475,
+      "title": "Hunt the Wicked",
+      "release_date": "2024-07-18",
+      "popularity": 14.327
+    }
+  ],
+  "steps": 4
+}

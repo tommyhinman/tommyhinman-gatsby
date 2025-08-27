@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-26",
+  "difficulty": "hard",
+  "start_movie": {
+    "id": 89,
+    "title": "Indiana Jones and the Last Crusade",
+    "year": "1989",
+    "poster_path": "/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg"
+  },
+  "end_movie": {
+    "id": 807,
+    "title": "Se7en",
+    "year": "1995",
+    "poster_path": "/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 3,
+      "name": "Harrison Ford",
+      "role": "actor",
+      "character": "Indiana Jones",
+      "popularity": 3.0649
+    },
+    {
+      "id": 4477,
+      "title": "The Devil's Own",
+      "release_date": "1997-03-13",
+      "popularity": 2.8615
+    },
+    {
+      "id": 287,
+      "name": "Brad Pitt",
+      "role": "actor",
+      "character": "Rory Devaney",
+      "popularity": 9.6743
+    },
+    {
+      "id": 807,
+      "title": "Se7en",
+      "release_date": "1995-09-22",
+      "popularity": 20.3085
+    }
+  ],
+  "steps": 2
+}

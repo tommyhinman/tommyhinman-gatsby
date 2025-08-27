@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-13",
+  "difficulty": "easy",
+  "start_movie": {
+    "id": 28,
+    "title": "Apocalypse Now",
+    "year": "1979",
+    "poster_path": "/gQB8Y5RCMkv2zwzFHbUJX3kAhvA.jpg"
+  },
+  "end_movie": {
+    "id": 101,
+    "title": "L\u00e9on: The Professional",
+    "year": "1994",
+    "poster_path": "/bxB2q91nKYp8JNzqE7t7TWBVupB.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 1776,
+      "name": "Francis Ford Coppola",
+      "role": "director",
+      "character": "",
+      "popularity": 1.0914
+    },
+    {
+      "id": 385822,
+      "title": "Blood Lines: Dracula - The Man. The Myth. The Movies.",
+      "release_date": "1992-01-01",
+      "popularity": 3.2327
+    },
+    {
+      "id": 64,
+      "name": "Gary Oldman",
+      "role": "actor",
+      "character": "Self",
+      "popularity": 13.8871
+    },
+    {
+      "id": 101,
+      "title": "L\u00e9on: The Professional",
+      "release_date": "1994-09-14",
+      "popularity": 10.3144
+    }
+  ],
+  "steps": 2
+}

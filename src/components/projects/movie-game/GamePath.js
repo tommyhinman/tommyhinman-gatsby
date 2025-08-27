@@ -6,7 +6,7 @@ const MovieStepWithHint = ({ movie, stepNumber, label, isHinted, onHintLoad, isC
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (isHinted && movie.id) {
+    if (isHinted && movie?.id) {
       setLoading(true);
       getMovieCreditsForHint(movie.id)
         .then(credits => {
@@ -21,7 +21,19 @@ const MovieStepWithHint = ({ movie, stepNumber, label, isHinted, onHintLoad, isC
           setLoading(false);
         });
     }
-  }, [isHinted, movie.id, onHintLoad]);
+  }, [isHinted, movie?.id, onHintLoad]);
+
+  // Guard clause to handle undefined movie (after all hooks)
+  if (!movie) {
+    return (
+      <div className="movie-step">
+        <div className="step-number">{stepNumber}</div>
+        <div className="movie-info">
+          <span className="movie-title">Loading...</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className={`movie-step ${label?.toLowerCase()}`}>
@@ -80,6 +92,20 @@ const MovieStepWithHint = ({ movie, stepNumber, label, isHinted, onHintLoad, isC
 };
 
 const GamePath = ({ userPath, startMovie, endMovie, hintedMovieId, hintedMovies, onHint, onBacktrack, canBacktrack }) => {
+  // Guard clause to handle undefined movies
+  if (!startMovie || !endMovie) {
+    return (
+      <div className="game-path">
+        <div className="path-header">
+          <h3>Your Path</h3>
+        </div>
+        <div className="loading">
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
   if (userPath.length === 0) {
     return (
       <div className="game-path">
@@ -92,12 +118,12 @@ const GamePath = ({ userPath, startMovie, endMovie, hintedMovieId, hintedMovies,
             movie={startMovie}
             stepNumber="1"
             label="START"
-            isHinted={hintedMovieId === startMovie.id}
+            isHinted={hintedMovieId === startMovie?.id}
             isCurrentMovie={userPath.length === 0}
             onHint={onHint}
             onBacktrack={onBacktrack}
             canBacktrack={false}
-            hasBeenHinted={hintedMovies.has(startMovie.id)}
+            hasBeenHinted={hintedMovies.has(startMovie?.id)}
           />
           
           <div className="path-arrow-vertical">↓</div>
@@ -106,12 +132,12 @@ const GamePath = ({ userPath, startMovie, endMovie, hintedMovieId, hintedMovies,
             movie={endMovie}
             stepNumber="?"
             label="TARGET"
-            isHinted={hintedMovieId === endMovie.id}
+            isHinted={hintedMovieId === endMovie?.id}
             isCurrentMovie={false}
             onHint={onHint}
             onBacktrack={onBacktrack}
             canBacktrack={false}
-            hasBeenHinted={hintedMovies.has(endMovie.id)}
+            hasBeenHinted={hintedMovies.has(endMovie?.id)}
           />
         </div>
       </div>
@@ -129,12 +155,12 @@ const GamePath = ({ userPath, startMovie, endMovie, hintedMovieId, hintedMovies,
           movie={startMovie}
           stepNumber="1"
           label="START"
-          isHinted={hintedMovieId === startMovie.id}
-          isCurrentMovie={userPath.length === 0}
-          onHint={onHint}
-          onBacktrack={onBacktrack}
-          canBacktrack={false}
-          hasBeenHinted={hintedMovies.has(startMovie.id)}
+                      isHinted={hintedMovieId === startMovie?.id}
+            isCurrentMovie={userPath.length === 0}
+            onHint={onHint}
+            onBacktrack={onBacktrack}
+            canBacktrack={false}
+            hasBeenHinted={hintedMovies.has(startMovie?.id)}
         />
         
         {userPath.map((step, index) => (
@@ -150,12 +176,12 @@ const GamePath = ({ userPath, startMovie, endMovie, hintedMovieId, hintedMovies,
             <MovieStepWithHint 
               movie={step.movie}
               stepNumber={index + 2}
-              isHinted={hintedMovieId === step.movie.id}
-              isCurrentMovie={index === userPath.length - 1}
-              onHint={onHint}
-              onBacktrack={onBacktrack}
-              canBacktrack={canBacktrack}
-              hasBeenHinted={hintedMovies.has(step.movie.id)}
+                          isHinted={hintedMovieId === step.movie?.id}
+            isCurrentMovie={index === userPath.length - 1}
+            onHint={onHint}
+            onBacktrack={onBacktrack}
+            canBacktrack={canBacktrack}
+            hasBeenHinted={hintedMovies.has(step.movie?.id)}
             />
           </div>
         ))}
@@ -166,12 +192,12 @@ const GamePath = ({ userPath, startMovie, endMovie, hintedMovieId, hintedMovies,
           movie={endMovie}
           stepNumber={userPath.length + 2}
           label="TARGET"
-          isHinted={hintedMovieId === endMovie.id}
-          isCurrentMovie={false}
-          onHint={onHint}
-          onBacktrack={onBacktrack}
-          canBacktrack={false}
-          hasBeenHinted={hintedMovies.has(endMovie.id)}
+                      isHinted={hintedMovieId === endMovie?.id}
+            isCurrentMovie={false}
+            onHint={onHint}
+            onBacktrack={onBacktrack}
+            canBacktrack={false}
+            hasBeenHinted={hintedMovies.has(endMovie?.id)}
         />
       </div>
     </div>

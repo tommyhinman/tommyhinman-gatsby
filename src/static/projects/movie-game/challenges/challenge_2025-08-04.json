@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-04",
+  "difficulty": "hard",
+  "start_movie": {
+    "id": 27205,
+    "title": "Inception",
+    "year": "2010",
+    "poster_path": "/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg"
+  },
+  "end_movie": {
+    "id": 89,
+    "title": "Indiana Jones and the Last Crusade",
+    "year": "1989",
+    "poster_path": "/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 6193,
+      "name": "Leonardo DiCaprio",
+      "role": "actor",
+      "character": "Dom Cobb",
+      "popularity": 3.9701
+    },
+    {
+      "id": 640,
+      "title": "Catch Me If You Can",
+      "release_date": "2002-12-16",
+      "popularity": 12.4963
+    },
+    {
+      "id": 488,
+      "name": "Steven Spielberg",
+      "role": "director",
+      "character": "",
+      "popularity": 2.7147
+    },
+    {
+      "id": 89,
+      "title": "Indiana Jones and the Last Crusade",
+      "release_date": "1989-05-24",
+      "popularity": 7.6061
+    }
+  ],
+  "steps": 2
+}

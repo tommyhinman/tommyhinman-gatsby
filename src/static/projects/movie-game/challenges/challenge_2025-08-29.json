@@ -1,0 +1,58 @@
+{
+  "date": "2025-08-29",
+  "difficulty": "easy",
+  "start_movie": {
+    "id": 453,
+    "title": "A Beautiful Mind",
+    "year": "2001",
+    "poster_path": "/rEIg5yJdNOt9fmX4P8gU9LeNoTQ.jpg"
+  },
+  "end_movie": {
+    "id": 600,
+    "title": "Full Metal Jacket",
+    "year": "1987",
+    "poster_path": "/kMKyx1k8hWWscYFnPbnxxN4Eqo4.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 934,
+      "name": "Russell Crowe",
+      "role": "actor",
+      "character": "John Nash",
+      "popularity": 2.8519
+    },
+    {
+      "id": 616037,
+      "title": "Thor: Love and Thunder",
+      "release_date": "2022-07-06",
+      "popularity": 9.9383
+    },
+    {
+      "id": 3894,
+      "name": "Christian Bale",
+      "role": "actor",
+      "character": "Gorr",
+      "popularity": 2.213
+    },
+    {
+      "id": 49026,
+      "title": "The Dark Knight Rises",
+      "release_date": "2012-07-17",
+      "popularity": 16.5287
+    },
+    {
+      "id": 8654,
+      "name": "Matthew Modine",
+      "role": "actor",
+      "character": "Foley",
+      "popularity": 1.3863
+    },
+    {
+      "id": 600,
+      "title": "Full Metal Jacket",
+      "release_date": "1987-06-26",
+      "popularity": 6.9117
+    }
+  ],
+  "steps": 3
+}

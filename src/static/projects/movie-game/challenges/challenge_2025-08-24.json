@@ -1,0 +1,58 @@
+{
+  "date": "2025-08-24",
+  "difficulty": "hard",
+  "start_movie": {
+    "id": 1240475,
+    "title": "Hunt the Wicked",
+    "year": "2024",
+    "poster_path": "/m5UBHbEjQJx3AkRZWRY6A4l4ZDT.jpg"
+  },
+  "end_movie": {
+    "id": 77,
+    "title": "Memento",
+    "year": "2000",
+    "poster_path": "/fKTPH2WvH8nHTXeBYBVhawtRqtR.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 83487,
+      "name": "Xie Miao",
+      "role": "actor",
+      "character": "Huang Mingjin",
+      "popularity": 1.1677
+    },
+    {
+      "id": 18725,
+      "title": "The Enforcer",
+      "release_date": "1995-02-08",
+      "popularity": 1.8493
+    },
+    {
+      "id": 52908,
+      "name": "Collin Chou",
+      "role": "actor",
+      "character": "Thug",
+      "popularity": 0.6668
+    },
+    {
+      "id": 605,
+      "title": "The Matrix Revolutions",
+      "release_date": "2003-11-05",
+      "popularity": 10.0338
+    },
+    {
+      "id": 530,
+      "name": "Carrie-Anne Moss",
+      "role": "actor",
+      "character": "Trinity",
+      "popularity": 2.3786
+    },
+    {
+      "id": 77,
+      "title": "Memento",
+      "release_date": "2000-10-11",
+      "popularity": 8.4239
+    }
+  ],
+  "steps": 3
+}

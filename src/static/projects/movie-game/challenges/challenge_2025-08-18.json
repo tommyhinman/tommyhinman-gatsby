@@ -1,0 +1,39 @@
+{
+  "date": "2025-08-18",
+  "difficulty": "hard",
+  "start_movie": {
+    "id": 155,
+    "title": "The Dark Knight",
+    "year": "2008",
+    "poster_path": "/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+  },
+  "end_movie": {
+    "id": 550,
+    "title": "Fight Club",
+    "year": "1999",
+    "poster_path": "/jSziioSwPVrOy9Yow3XhWIBDjq1.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 64,
+      "name": "Gary Oldman",
+      "role": "actor",
+      "character": "Gordon",
+      "popularity": 13.8871
+    },
+    {
+      "id": 675,
+      "title": "Harry Potter and the Order of the Phoenix",
+      "release_date": "2007-07-08",
+      "popularity": 20.5165
+    },
+    {
+      "id": 1283,
+      "name": "Helena Bonham Carter",
+      "role": "actor",
+      "character": "Bellatrix Lestrange",
+      "popularity": 2.5334
+    }
+  ],
+  "steps": 1
+}

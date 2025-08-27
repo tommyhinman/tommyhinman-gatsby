@@ -1,0 +1,45 @@
+{
+  "date": "2025-08-01",
+  "difficulty": "hard",
+  "start_movie": {
+    "id": 197,
+    "title": "Braveheart",
+    "year": "1995",
+    "poster_path": "/or1gBugydmjToAEq7OZY0owwFk.jpg"
+  },
+  "end_movie": {
+    "id": 762,
+    "title": "Monty Python and the Holy Grail",
+    "year": "1975",
+    "poster_path": "/hWx1ANiWEWWyzKPN0us35HCGnhQ.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 1957,
+      "name": "Sophie Marceau",
+      "role": "actor",
+      "character": "Princess Isabelle",
+      "popularity": 2.0961
+    },
+    {
+      "id": 36643,
+      "title": "The World Is Not Enough",
+      "release_date": "1999-11-17",
+      "popularity": 5.0356
+    },
+    {
+      "id": 8930,
+      "name": "John Cleese",
+      "role": "actor",
+      "character": "R",
+      "popularity": 0.9542
+    },
+    {
+      "id": 762,
+      "title": "Monty Python and the Holy Grail",
+      "release_date": "1975-04-03",
+      "popularity": 5.6489
+    }
+  ],
+  "steps": 2
+}

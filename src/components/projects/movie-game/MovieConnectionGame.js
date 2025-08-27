@@ -20,10 +20,22 @@ const MovieConnectionGame = ({
   const [hintedMovies, setHintedMovies] = useState(new Set());
   const [showShareResults, setShowShareResults] = useState(false);
 
+  // Guard clause to handle undefined challenge (after all hooks)
+  if (!challenge) {
+    return (
+      <div className="game-container">
+        <div className="loading">
+          <p>Loading challenge...</p>
+        </div>
+      </div>
+    );
+  }
+
   const handleMovieSelect = (movieStep) => {
     // Check if this is the end movie
-    if (movieStep.movie.title.toLowerCase().includes(challenge.end_movie.title.toLowerCase()) ||
-        challenge.end_movie.title.toLowerCase().includes(movieStep.movie.title.toLowerCase())) {
+    if (challenge?.end_movie?.title && 
+        (movieStep.movie.title.toLowerCase().includes(challenge.end_movie.title.toLowerCase()) ||
+        challenge.end_movie.title.toLowerCase().includes(movieStep.movie.title.toLowerCase()))) {
       setGameStatus("won");
     }
     
@@ -42,7 +54,7 @@ const MovieConnectionGame = ({
       
       if (userPath.length === 0) {
         // First step hint - show info about the start movie
-        movieId = challenge.start_movie.id;
+        movieId = challenge?.start_movie?.id;
       } else {
         // Show info about the current movie in the path
         const currentMovie = userPath[userPath.length - 1].movie;
@@ -71,7 +83,7 @@ const MovieConnectionGame = ({
 
   const generateShareText = () => {
     const date = selectedDate;
-    const difficultyText = challenge.difficulty.charAt(0).toUpperCase() + challenge.difficulty.slice(1);
+    const difficultyText = challenge?.difficulty ? challenge.difficulty.charAt(0).toUpperCase() + challenge.difficulty.slice(1) : 'Unknown';
     const steps = userPath.length; // Total steps is just the user path length
     const hintsUsed = lifelinesUsed.hint;
     const backtracksUsed = lifelinesUsed.backtrack;
@@ -82,7 +94,7 @@ const MovieConnectionGame = ({
     
     // Start movie (always gray since it's given)
     emojiGrid += "⚪";
-    movieList += `${challenge.start_movie.title} (${challenge.start_movie.year})`;
+    movieList += `${challenge?.start_movie?.title || 'Unknown'} (${challenge?.start_movie?.year || 'Unknown'})`;
     
     // User path movies (green if not hinted, yellow if hinted, except the last one which is gray)
     userPath.forEach((step, index) => {
@@ -268,8 +280,8 @@ const MovieConnectionGame = ({
               <div className="movie-step start">
                 <div className="step-number">1</div>
                 <div className="movie-info">
-                  <span className="movie-title">{challenge.start_movie.title}</span>
-                  <span className="movie-year">({challenge.start_movie.year})</span>
+                  <span className="movie-title">{challenge?.start_movie?.title || 'Unknown'}</span>
+                  <span className="movie-year">({challenge?.start_movie?.year || 'Unknown'})</span>
                 </div>
                 <div className="step-label">START</div>
               </div>
@@ -305,10 +317,10 @@ const MovieConnectionGame = ({
                 return null;
               })}
               <div className="movie-step target">
-                <div className="step-number">{challenge.solution_path.length + 2}</div>
+                <div className="step-number">{challenge?.solution_path?.length ? challenge.solution_path.length + 2 : 2}</div>
                 <div className="movie-info">
-                  <span className="movie-title">{challenge.end_movie.title}</span>
-                  <span className="movie-year">({challenge.end_movie.year})</span>
+                  <span className="movie-title">{challenge?.end_movie?.title || 'Unknown'}</span>
+                  <span className="movie-year">({challenge?.end_movie?.year || 'Unknown'})</span>
                 </div>
                 <div className="step-label">TARGET</div>
               </div>
@@ -330,7 +342,7 @@ const MovieConnectionGame = ({
       <div className="game-header">
         <h1>Baconator</h1>
         <div className="difficulty-badge">
-          <div>Difficulty: {challenge.difficulty.charAt(0).toUpperCase() + challenge.difficulty.slice(1)}</div>
+          <div>Difficulty: {challenge?.difficulty ? challenge.difficulty.charAt(0).toUpperCase() + challenge.difficulty.slice(1) : 'Unknown'}</div>
           <div className="challenge-date">📅 {selectedDate}</div>
         </div>
       </div>
@@ -340,8 +352,8 @@ const MovieConnectionGame = ({
           <div className="movie-card start">
             <h3>START</h3>
             <div className="movie-info">
-              <h4>{challenge.start_movie.title}</h4>
-              <p>({challenge.start_movie.year})</p>
+              <h4>{challenge?.start_movie?.title || 'Unknown'}</h4>
+              <p>({challenge?.start_movie?.year || 'Unknown'})</p>
             </div>
           </div>
           
@@ -350,8 +362,8 @@ const MovieConnectionGame = ({
           <div className="movie-card end">
             <h3>END</h3>
             <div className="movie-info">
-              <h4>{challenge.end_movie.title}</h4>
-              <p>({challenge.end_movie.year})</p>
+              <h4>{challenge?.end_movie?.title || 'Unknown'}</h4>
+              <p>({challenge?.end_movie?.year || 'Unknown'})</p>
             </div>
           </div>
         </div>

@@ -72,16 +72,28 @@ const MovieSearch = ({ onMovieSelect, userPath, startMovie, endMovie }) => {
     if (userPath.length === 0) {
       return startMovie;
     }
-    return userPath[userPath.length - 1].movie;
+    return userPath[userPath.length - 1]?.movie;
   };
 
   const currentTarget = getCurrentConnectionTarget();
+
+  // Guard clause to handle undefined target
+  if (!currentTarget) {
+    return (
+      <div className="movie-search">
+        <div className="search-header">
+          <h3>Search for Movies</h3>
+          <p>Loading...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="movie-search">
       <div className="search-header">
         <h3>Search for Movies</h3>
-        <p>Find movies that connect to: <strong>{currentTarget.title}</strong></p>
+        <p>Find movies that connect to: <strong>{currentTarget?.title || 'Unknown'}</strong></p>
       </div>
 
       <div className="search-form">

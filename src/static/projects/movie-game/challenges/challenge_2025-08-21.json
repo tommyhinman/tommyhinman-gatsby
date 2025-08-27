@@ -1,0 +1,39 @@
+{
+  "date": "2025-08-21",
+  "difficulty": "medium",
+  "start_movie": {
+    "id": 497,
+    "title": "The Green Mile",
+    "year": "1999",
+    "poster_path": "/8VG8fDNiy50H4FedGwdSVUPoaJe.jpg"
+  },
+  "end_movie": {
+    "id": 85,
+    "title": "Raiders of the Lost Ark",
+    "year": "1981",
+    "poster_path": "/ceG9VzoRAVGwivFU403Wc3AHRys.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 31,
+      "name": "Tom Hanks",
+      "role": "actor",
+      "character": "Paul Edgecomb",
+      "popularity": 5.1552
+    },
+    {
+      "id": 640,
+      "title": "Catch Me If You Can",
+      "release_date": "2002-12-16",
+      "popularity": 12.4963
+    },
+    {
+      "id": 488,
+      "name": "Steven Spielberg",
+      "role": "director",
+      "character": "",
+      "popularity": 2.7147
+    }
+  ],
+  "steps": 1
+}

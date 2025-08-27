@@ -1,0 +1,39 @@
+{
+  "date": "2025-08-16",
+  "difficulty": "medium",
+  "start_movie": {
+    "id": 122,
+    "title": "The Lord of the Rings: The Return of the King",
+    "year": "2003",
+    "poster_path": "/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg"
+  },
+  "end_movie": {
+    "id": 101,
+    "title": "L\u00e9on: The Professional",
+    "year": "1994",
+    "poster_path": "/bxB2q91nKYp8JNzqE7t7TWBVupB.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 1327,
+      "name": "Ian McKellen",
+      "role": "actor",
+      "character": "Gandalf",
+      "popularity": 2.2694
+    },
+    {
+      "id": 591,
+      "title": "The Da Vinci Code",
+      "release_date": "2006-05-17",
+      "popularity": 7.9461
+    },
+    {
+      "id": 1003,
+      "name": "Jean Reno",
+      "role": "actor",
+      "character": "Captain Bezu Fache",
+      "popularity": 3.1328
+    }
+  ],
+  "steps": 1
+}

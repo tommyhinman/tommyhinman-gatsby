@@ -1,0 +1,58 @@
+{
+  "date": "2025-08-22",
+  "difficulty": "medium",
+  "start_movie": {
+    "id": 1891,
+    "title": "The Empire Strikes Back",
+    "year": "1980",
+    "poster_path": "/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg"
+  },
+  "end_movie": {
+    "id": 197,
+    "title": "Braveheart",
+    "year": "1995",
+    "poster_path": "/or1gBugydmjToAEq7OZY0owwFk.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 2,
+      "name": "Mark Hamill",
+      "role": "actor",
+      "character": "Luke Skywalker",
+      "popularity": 1.9783
+    },
+    {
+      "id": 11,
+      "title": "Star Wars",
+      "release_date": "1977-05-25",
+      "popularity": 15.9017
+    },
+    {
+      "id": 1,
+      "name": "George Lucas",
+      "role": "writer",
+      "character": "",
+      "popularity": 1.3439
+    },
+    {
+      "id": 322525,
+      "title": "Laddie: The Man Behind the Movies",
+      "release_date": "2017-11-12",
+      "popularity": 0.8742
+    },
+    {
+      "id": 2461,
+      "name": "Mel Gibson",
+      "role": "actor",
+      "character": "Self",
+      "popularity": 3.5043
+    },
+    {
+      "id": 197,
+      "title": "Braveheart",
+      "release_date": "1995-05-24",
+      "popularity": 9.225
+    }
+  ],
+  "steps": 3
+}

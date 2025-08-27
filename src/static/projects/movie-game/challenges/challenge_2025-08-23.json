@@ -1,0 +1,58 @@
+{
+  "date": "2025-08-23",
+  "difficulty": "easy",
+  "start_movie": {
+    "id": 103,
+    "title": "Taxi Driver",
+    "year": "1976",
+    "poster_path": "/ekstpH614fwDX8DUln1a2Opz0N8.jpg"
+  },
+  "end_movie": {
+    "id": 284,
+    "title": "The Apartment",
+    "year": "1960",
+    "poster_path": "/hhSRt1KKfRT0yEhEtRW3qp31JFU.jpg"
+  },
+  "solution_path": [
+    {
+      "id": 380,
+      "name": "Robert De Niro",
+      "role": "actor",
+      "character": "Travis Bickle",
+      "popularity": 3.8503
+    },
+    {
+      "id": 890823,
+      "title": "Mr. Saturday Night",
+      "release_date": "2021-11-13",
+      "popularity": 2.3731
+    },
+    {
+      "id": 514,
+      "name": "Jack Nicholson",
+      "role": "actor",
+      "character": "",
+      "popularity": 1.834
+    },
+    {
+      "id": 11050,
+      "title": "Terms of Endearment",
+      "release_date": "1983-11-20",
+      "popularity": 1.5467
+    },
+    {
+      "id": 4090,
+      "name": "Shirley MacLaine",
+      "role": "actor",
+      "character": "Aurora Greenway",
+      "popularity": 1.494
+    },
+    {
+      "id": 284,
+      "title": "The Apartment",
+      "release_date": "1960-06-21",
+      "popularity": 2.944
+    }
+  ],
+  "steps": 3
+}
