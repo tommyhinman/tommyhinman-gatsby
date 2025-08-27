@@ -55,5 +55,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`,
+    `gatsby-plugin-copy-challenges`,
   ],
 }

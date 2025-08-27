@@ -1,0 +1,6 @@
+{
+  "name": "gatsby-plugin-copy-challenges",
+  "version": "1.0.0",
+  "description": "Gatsby plugin to copy challenge files during build",
+  "main": "gatsby-node.js"
+}
